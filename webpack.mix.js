@@ -31,7 +31,7 @@ mix.styles(
         "node_modules/gentelella/vendors/pnotify/dist/pnotify.css",
         "node_modules/gentelella/vendors/pnotify/dist/pnotify.buttons.css",
         "node_modules/gentelella/vendors/select2/dist/css/select2.min.css",
-        "node_modules/gentelella/build/css/custom.min.css",
+        "node_modules/gentelella/build/css/custom.min.css"
     ],
     "public/assets/admin/css/admin.css"
 ).version();
@@ -56,7 +56,7 @@ mix.scripts(
         "node_modules/gentelella/vendors/pnotify/dist/pnotify.js",
         "node_modules/gentelella/vendors/pnotify/dist/pnotify.buttons.js",
         "node_modules/gentelella/vendors/select2/dist/js/select2.full.min.js",
-        "node_modules/gentelella/build/js/custom.js",
+        "public/js/custom.js"
     ],
     "public/assets/admin/js/admin.js"
 )
