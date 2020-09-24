@@ -42,6 +42,12 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'name' => 'required',
+            'email' => 'required|unique:users|max:255',
+            'password' => 'required|min:8|confirmed',
+        ]);
+
         try {
             $user = User::create([
                 'name' => $request->input('name'),
@@ -51,7 +57,6 @@ class UserController extends Controller
 
             $user->givePermissionTo($request->input('permissions'));
         } catch (\Exception $e) {
-            dd($e);
             return redirect()->back()
                 ->withErrors("Something went wrong");
         }

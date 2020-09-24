@@ -68,24 +68,6 @@
                                             </div>
 
                                             <div class="form-group row">
-                                                <label for="contact_number"
-                                                    class="col-sm-2 col-form-label control-label">{{ __('Contact Number') }}</label>
-
-                                                <div class="col-md-6">
-                                                    <input id="contact_number" type="text"
-                                                        class="form-control @error('contact_number') is-invalid @enderror"
-                                                        name="contact_number" value="{{ old('contact_number') }}"
-                                                        required autocomplete="contact_number">
-
-                                                    @error('contact_number')
-                                                    <span class="invalid-feedback" role="alert">
-                                                        <strong>{{ $message }}</strong>
-                                                    </span>
-                                                    @enderror
-                                                </div>
-                                            </div>
-
-                                            <div class="form-group row">
                                                 <label for="password"
                                                     class="col-sm-2 col-form-label control-label">{{ __('Password') }}</label>
 
