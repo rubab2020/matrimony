@@ -20,18 +20,21 @@ mix.js("resources/js/app.js", "public/js").postCss(
 mix.styles(
     [
         "node_modules/gentelella/vendors/bootstrap/dist/css/bootstrap.min.css",
+        // 'node_modules/gentelella/vendors/font-awesome/css/font-awesome.min.css',
         "node_modules/@fortawesome/fontawesome-free/css/all.css",
+        "node_modules/gentelella/vendors/nprogress/nprogress.css",
         "node_modules/gentelella/vendors/iCheck/skins/flat/green.css",
         "node_modules/gentelella/vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css",
+        "node_modules/gentelella/vendors/jqvmap/dist/jqvmap.min.css",
         "node_modules/gentelella/vendors/bootstrap-daterangepicker/daterangepicker.css",
         "node_modules/gentelella/vendors/bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.css",
+        "node_modules/gentelella/build/css/custom.min.css",
         "node_modules/gentelella/vendors/datatables.net-bs/css/dataTables.bootstrap.min.css",
         "node_modules/gentelella/vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css",
         "node_modules/gentelella/vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css",
         "node_modules/gentelella/vendors/pnotify/dist/pnotify.css",
         "node_modules/gentelella/vendors/pnotify/dist/pnotify.buttons.css",
-        "node_modules/gentelella/vendors/select2/dist/css/select2.min.css",
-        "node_modules/gentelella/build/css/custom.min.css"
+        "node_modules/gentelella/vendors/select2/dist/css/select2.min.css"
     ],
     "public/assets/admin/css/admin.css"
 ).version();
@@ -45,6 +48,9 @@ mix.scripts(
         "node_modules/gentelella/vendors/nprogress/nprogress.js",
         "node_modules/gentelella/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js",
         "node_modules/gentelella/vendors/iCheck/icheck.min.js",
+        "node_modules/gentelella/vendors/echarts/dist/echarts.min.js",
+        "node_modules/gentelella/vendors/skycons/skycons.js",
+        "node_modules/gentelella/vendors/DateJS/build/date.js",
         "node_modules/gentelella/vendors/moment/min/moment.min.js",
         "node_modules/gentelella/vendors/bootstrap-daterangepicker/daterangepicker.js",
         "node_modules/gentelella/vendors/bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js",

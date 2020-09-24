@@ -30,7 +30,8 @@
           @can("User Management")
           <li><a><i class="fa fa-users"></i> Users <span class="fa fa-chevron-down"></span></a>
             <ul class="nav child_menu">
-              <li><a href="#!"> All Users</a></li>
+              <li><a href="{{ route('admin.users.index') }}"> All Users</a></li>
+              <li><a href="{{ route('admin.users.create') }}"> Creat Users</a></li>
             </ul>
           </li>
           @endcan

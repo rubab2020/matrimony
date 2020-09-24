@@ -11,6 +11,7 @@
 
     <title>{{ $title ?? env('APP_NAME') }}</title>
 
+    <link rel="stylesheet" href="https://unpkg.com/normalize.css@8.0.1/normalize.css">
     {{ Html::style(mix('assets/admin/css/admin.css')) }}
 
     @livewireStyles
@@ -27,14 +28,15 @@
 
             <!-- page content -->
             <div class="right_col" role="main">
-                @yield('content')
+                {{ $slot }}
             </div>
             <!-- /page content -->
 
             <!-- footer content -->
             <footer>
                 <div class="pull-right">
-                    {{ env('APP_NAME') }} © <a href="{{ url('') }}">{{ date('Y') }}</a>
+                    {{ env('APP_NAME') }} © <a href="{{ url('') }}">{{ date('Y') }}</a> | Made with <i
+                        class="fa fa-heart"></i> <a href="https://appxor.com"> appXor</a>
                 </div>
                 <div class="clearfix"></div>
             </footer>
