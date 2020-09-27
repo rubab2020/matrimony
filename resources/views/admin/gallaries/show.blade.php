@@ -27,20 +27,12 @@
             <div class="row">
               <div class="col-md-12">
                 <div class="panel panel-default">
-                  <div class="panel-heading">View Items </div>
+                  <div class="panel-heading">View I </div>
                   <div class="panel-body">
                     <table class="table">
                       <tr>
-                        <th width="200px">Name</th>
-                        <td>{{ $setting->name }}</td>
-                      </tr>
-                      <tr>
-                        <td>Content</td>
-                        @if($setting->id < 7)
-                          <td>{{ $setting->content }}</td>
-                        @else
-                          <td><image height="300px" src="{{asset('/assets/admin/images/setting/'.$setting->content)}}"></td>
-                        @endif 
+                        <th width="200px">Image</td>
+                        <td><image height="300px" src="{{asset('/assets/admin/images/gallaries/'.$gallary->image)}}"></td>
                       </tr>
                     </table>
                   </div>

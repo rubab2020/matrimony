@@ -4,7 +4,7 @@
   <div class="">
     <div class="page-title">
       <div class="title_left">
-        <h3>Setting</small></h3>
+        <h3>Gallaries</small></h3>
       </div>
     </div>
 
@@ -14,7 +14,6 @@
       <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="x_panel">
           <div class="x_title">
-            <h2>View Items</h2>
             <ul class="nav navbar-right panel_toolbox">
               <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
               </li>
@@ -27,36 +26,25 @@
             <div class="row">
               <div class="col-md-12">
                 <div class="panel panel-default">
-                  <div class="panel-heading">View Items </div>
+                  <div class="panel-heading">Upload New image </div>
                   <div class="panel-body">
                     <table class="table">
                       <tr>
-                        <th width="200px">Name</th>
-                        <td>{{ $setting->name }}</td>
-                      </tr>
-                      <tr>
-                        <th width="200px">Content</th>
+                        <th width="200px">Image</th>
                         <td>
-                         <form class="form-horizontal" action="{{ url()->route('admin.setting.update', $setting->id) }}"
+                         <form class="form-horizontal" action="{{ url()->route('admin.gallaries.store') }}"
                            method="post" enctype="multipart/form-data">
                            @csrf
-                           @method('put')
-                            <div class="form-group"> 
-                               @if($setting->id < 7)
-                                  <textarea class="form-control @error('content') is-invalid @enderror"
-                                     rows="5" id="content" type="content" name="content" required > {{ $setting->content ?? old('content')}}
-                                   </textarea>
-                                @else
-                                  <input type="file" class="form-control-file" id="content" name="content" onchange="previewFile(this)" required >
-                                  <img id="previewImg" alt=" image" style="max-height:100px;margin-top:20px;" />
-                                @endif
+                            <div class="form-group">       
+                                  <input type="file" class="form-control-file" id="image" name="image" onchange="previewFile(this)" required >
+                                  <img id="previewImg" alt=" preview image" style="max-width:130px;margin-top:20px;" />
                                 @error('content')
                                 <span class="invalid-feedback" role="alert">
                                   <strong>{{ $message }}</strong>
                                 </span>
                                 @enderror  
                            </div>
-                           {{ Form::submit('Update', ['class' => 'btn btn-info btn-sm']) }}
+                           {{ Form::submit('Upload', ['class' => 'btn btn-info btn-sm']) }}
                          </form>
                         </td>
                       </tr>

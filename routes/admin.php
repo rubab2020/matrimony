@@ -19,3 +19,4 @@ Route::get('/dashboard', function () {
 
 Route::resource('/users', 'UserController');
 Route::resource('/setting','SettingController');
+Route::resource('/gallaries','GallaryController');
