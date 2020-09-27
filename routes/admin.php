@@ -18,3 +18,4 @@ Route::get('/dashboard', function () {
 })->name('dashboard');
 
 Route::resource('/users', 'UserController');
+Route::resource('/setting','SettingController');

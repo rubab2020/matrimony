@@ -49,8 +49,8 @@
             </ul>
           </li>
           @endcan
-          @can("Settings Management")
-          <li><a href="#!"><i class="fa fa-cog"></i> Settings</a></li>
+          @can("Setting Management")
+          <li><a href="{{ route('admin.setting.index') }}"><i class="fa fa-cog"></i> Settings</a></li>
           @endcan
         </ul>
       </div>
