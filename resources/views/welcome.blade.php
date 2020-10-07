@@ -120,7 +120,8 @@
                     <hr class="divider my-4" />
                     <p class="text-center text-white mt-0">
                         <button class="btn btn-sm btn-primary">Create Profile</button> Or
-                        <button class="btn btn-sm btn-dark">Send Us</button> your info to let us create.
+                        <button class="btn btn-sm btn-dark" data-toggle="modal" data-target="#sendUsModal">Send
+                            Us</button> your info to let us create.
                     </p>
                 </div>
                 {{-- <div class="col-lg-10 align-self-end">
@@ -327,6 +328,37 @@
             </div>
         </div>
     </section>
+
+    <!-- Send Us Modal -->
+    <div class="modal fade" id="sendUsModal" tabindex="-1" role="dialog" aria-labelledby="sendUsModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="sendUsModalLabel">Send Your Profile Details</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <ul>
+                        <li>
+                            Please downlaod <button class="btn btn-primary btn-sm">this form</button>
+                        </li>
+                        <li>
+                            Fill Up the form and send it back to <a href="mailto:info@matrimony.com">
+                                info@matrimony.com
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Footer-->
     <footer class="bg-light py-5">
         <div class="container">
