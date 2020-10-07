@@ -1,0 +1,51 @@
+@media (min-width: 992px) {
+    #mainNav {
+        box-shadow: none;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+}
+
+header.masthead {
+    padding-top: 10rem;
+    padding-bottom: calc(10rem - 4.5rem);
+    background: linear-gradient(
+            to bottom,
+            rgba(248, 142, 66, 0.294) 0%,
+            rgba(255, 255, 255, 0.274) 100%
+        ),
+        url("https://images.pexels.com/photos/3865895/pexels-photo-3865895.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+}
+
+#home-search-form {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    color: #fff;
+    border-radius: 15px;
+}
+
+.rounded-full {
+    border-radius: 9999px;
+    width: 10rem;
+    height: 10rem;
+    object-fit: cover;
+}
+
+.cool-font .nav-link {
+    font-family: "Tangerine", cursive !important;
+    font-size: 1.9rem !important;
+}
+
+.cool-font {
+    font-family: "Tangerine", cursive !important;
+}
+h2.cool-font {
+    font-size: 2.9rem;
+}
+.navbar-brand.cool-font {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
