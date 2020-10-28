@@ -22,6 +22,7 @@
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="{{ asset('assets/web/css/styles.css') }}" rel="stylesheet" />
     <link href="{{ asset('assets/web/css/custom.css') }}" rel="stylesheet" />
+    <link href="{{ asset('assets/web/css/search.css') }}" rel="stylesheet" />
 
     @yield('style')
 </head>
@@ -46,7 +47,11 @@
         </div>
     </nav>
 
-    {{ $slot }}
+    @if(isset($slot))
+        {{ $slot }}
+    @endif
+
+    @yield('content')
 
     <!-- Footer-->
     <footer class="bg-light py-5">

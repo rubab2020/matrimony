@@ -28,3 +28,7 @@ Route::get('/register', function () {
 Route::get('/setting', function () {
     return view('dashboard');
 });
+
+Route::get('/search', function () {
+    return view('search');
+});

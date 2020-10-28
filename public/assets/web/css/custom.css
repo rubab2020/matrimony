@@ -42,3 +42,8 @@ h2.cool-font {
     font-size: 1.5rem;
     font-weight: bold;
 }
+
+.page-content {
+    min-height: 79.5vh;
+    margin-top: 100px;
+}
