@@ -23,6 +23,7 @@
     <!-- custom css -->
     <link href="{{ asset('assets/web/css/custom.css') }}" rel="stylesheet" />
     <link href="{{ asset('assets/web/css/search.css') }}" rel="stylesheet" />
+    <link href="{{ asset('assets/web/css/profile.css') }}" rel="stylesheet" />
 
     @yield('style')
 </head>

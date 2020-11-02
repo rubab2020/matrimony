@@ -32,3 +32,6 @@ Route::get('/setting', function () {
 Route::get('/search', function () {
     return view('search');
 });
+Route::get('/profile', function () {
+    return view('profile');
+});

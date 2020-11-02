@@ -48,7 +48,8 @@
             <div class="row h-100 align-items-center justify-content-center" style="width: 100%;">
                 <div class="col-lg-3">
                     <div id="home-search-form">
-                        <form>
+                        <form action="/search" method="POST">
+                            {{csrf_field()}}
                             <div class="form-group">
                                 <label class="col-form-label col-form-label-sm" for="exampleFormControlSelect1">Looking
                                     For</label>

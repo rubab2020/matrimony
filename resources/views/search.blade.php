@@ -183,18 +183,20 @@
 					      <div class="row">
 					        <div class="col-4">
 					        	<div class="card profile-card">
-		    		        	<img src="https://images.pexels.com/photos/946351/pexels-photo-946351.jpeg?w=500&h=650&auto=compress&cs=tinysrgb" alt="profile-sample1" class="background"/>
-		    		        	<img src="https://randomuser.me/api/portraits/women/20.jpg" alt="profile-image" class="profile"/>
-		                    <div class="card-content">
-		                    	<h2>#AccountId
-		                    		<small>Private Service Holder</small>
-
-		                    	</h3>
-		                    	<div class="icon-block">
-		                    		<a href="#"><span class="icon"><i class="fas fa-cart-plus"></i></span></a>
-		                    		<a href="#"><span class="icon"><i class="fas fa-star"></i></span></a>
-		                    		<a href="#"><span class="icon"><i class="fas fa-share"></i></span></a></div>
-		                    </div>
+    		        			<img src="https://images.pexels.com/photos/946351/pexels-photo-946351.jpeg?w=500&h=650&auto=compress&cs=tinysrgb" alt="profile-sample1" class="background"/>
+		    		        	<a href="/profile">
+		    		        		<img src="https://randomuser.me/api/portraits/women/20.jpg" alt="profile-image" class="profile"/>
+		    		        	</a>
+	                    <div class="card-content">
+	                    	<h2>
+	                    		<a href="/profile">#AccountId</a>
+	                    		<small>Private Service Holder</small>
+	                    	</h2>
+	                    	<div class="icon-block">
+	                    		<a href="#"><span class="icon"><i class="fas fa-cart-plus"></i></span></a>
+	                    		<a href="#"><span class="icon"><i class="fas fa-star"></i></span></a>
+	                    		<a href="#"><span class="icon"><i class="fas fa-share"></i></span></a></div>
+	                    </div>
 		                </div>
 					        </div>
 					        <div class="col-8">
@@ -239,7 +241,7 @@
 					          	</div>
 
 					          	<hr>
-					          	<p style="margin-bottom: 0px;">I have completed MBA from the Dhaka university. I am doing the job at a Govt Bank. Now I am looking for a sensible life partner.
+					          	<p class="card-description">I have completed MBA from the Dhaka university. I am doing the job at a Govt Bank. Now I am looking for a sensible life partner.
 											</p>
 					            <br>
 					            <!-- <a href="#" class="btn btn-primary btn-sm float-right">Read More</a> -->
@@ -247,25 +249,27 @@
 					        </div>
 					      </div>
 					    </div>
-
 					    <br>
+
 					    <!-- profile -->
 							<div class="card">
 					      <div class="row">
 					        <div class="col-4">
 					        	<div class="card profile-card">
-		    		        	<img src="https://images.pexels.com/photos/946351/pexels-photo-946351.jpeg?w=500&h=650&auto=compress&cs=tinysrgb" alt="profile-sample1" class="background"/>
-		    		        	<img src="https://randomuser.me/api/portraits/women/20.jpg" alt="profile-image" class="profile"/>
-		                    <div class="card-content">
-		                    	<h2>#AccountId
-		                    		<small>Private Service Holder</small>
-
-		                    	</h3>
-		                    	<div class="icon-block">
-		                    		<a href="#"><span class="icon"><i class="fas fa-cart-plus"></i></span></a>
-		                    		<a href="#"><span class="icon"><i class="fas fa-star"></i></span></a>
-		                    		<a href="#"><span class="icon"><i class="fas fa-share"></i></span></a></div>
-		                    </div>
+    		        			<img src="https://images.pexels.com/photos/946351/pexels-photo-946351.jpeg?w=500&h=650&auto=compress&cs=tinysrgb" alt="profile-sample1" class="background"/>
+		    		        	<a href="/profile">
+		    		        		<img src="https://randomuser.me/api/portraits/women/20.jpg" alt="profile-image" class="profile"/>
+		    		        	</a>
+	                    <div class="card-content">
+	                    	<h2>
+	                    		<a href="/profile">#AccountId</a>
+	                    		<small>Private Service Holder</small>
+	                    	</h2>
+	                    	<div class="icon-block">
+	                    		<a href="#"><span class="icon"><i class="fas fa-cart-plus"></i></span></a>
+	                    		<a href="#"><span class="icon"><i class="fas fa-star"></i></span></a>
+	                    		<a href="#"><span class="icon"><i class="fas fa-share"></i></span></a></div>
+	                    </div>
 		                </div>
 					        </div>
 					        <div class="col-8">
@@ -310,7 +314,7 @@
 					          	</div>
 
 					          	<hr>
-					          	<p style="margin-bottom: 0px;">I have completed MBA from the Dhaka university. I am doing the job at a Govt Bank. Now I am looking for a sensible life partner.
+					          	<p class="card-description">I have completed MBA from the Dhaka university. I am doing the job at a Govt Bank. Now I am looking for a sensible life partner.
 											</p>
 					            <br>
 					            <!-- <a href="#" class="btn btn-primary btn-sm float-right">Read More</a> -->
@@ -318,25 +322,27 @@
 					        </div>
 					      </div>
 					    </div>
-
 					    <br>
+
 					    <!-- profile -->
 							<div class="card">
 					      <div class="row">
 					        <div class="col-4">
 					        	<div class="card profile-card">
-		    		        	<img src="https://images.pexels.com/photos/946351/pexels-photo-946351.jpeg?w=500&h=650&auto=compress&cs=tinysrgb" alt="profile-sample1" class="background"/>
-		    		        	<img src="https://randomuser.me/api/portraits/women/20.jpg" alt="profile-image" class="profile"/>
-		                    <div class="card-content">
-		                    	<h2>#AccountId
-		                    		<small>Private Service Holder</small>
-
-		                    	</h3>
-		                    	<div class="icon-block">
-		                    		<a href="#"><span class="icon"><i class="fas fa-cart-plus"></i></span></a>
-		                    		<a href="#"><span class="icon"><i class="fas fa-star"></i></span></a>
-		                    		<a href="#"><span class="icon"><i class="fas fa-share"></i></span></a></div>
-		                    </div>
+    		        			<img src="https://images.pexels.com/photos/946351/pexels-photo-946351.jpeg?w=500&h=650&auto=compress&cs=tinysrgb" alt="profile-sample1" class="background"/>
+		    		        	<a href="/profile">
+		    		        		<img src="https://randomuser.me/api/portraits/women/20.jpg" alt="profile-image" class="profile"/>
+		    		        	</a>
+	                    <div class="card-content">
+	                    	<h2>
+	                    		<a href="/profile">#AccountId</a>
+	                    		<small>Private Service Holder</small>
+	                    	</h2>
+	                    	<div class="icon-block">
+	                    		<a href="#"><span class="icon"><i class="fas fa-cart-plus"></i></span></a>
+	                    		<a href="#"><span class="icon"><i class="fas fa-star"></i></span></a>
+	                    		<a href="#"><span class="icon"><i class="fas fa-share"></i></span></a></div>
+	                    </div>
 		                </div>
 					        </div>
 					        <div class="col-8">
@@ -381,7 +387,7 @@
 					          	</div>
 
 					          	<hr>
-					          	<p style="margin-bottom: 0px;">I have completed MBA from the Dhaka university. I am doing the job at a Govt Bank. Now I am looking for a sensible life partner.
+					          	<p class="card-description">I have completed MBA from the Dhaka university. I am doing the job at a Govt Bank. Now I am looking for a sensible life partner.
 											</p>
 					            <br>
 					            <!-- <a href="#" class="btn btn-primary btn-sm float-right">Read More</a> -->
@@ -389,25 +395,27 @@
 					        </div>
 					      </div>
 					    </div>
-
 					    <br>
+
 					    <!-- profile -->
 							<div class="card">
 					      <div class="row">
 					        <div class="col-4">
 					        	<div class="card profile-card">
-		    		        	<img src="https://images.pexels.com/photos/946351/pexels-photo-946351.jpeg?w=500&h=650&auto=compress&cs=tinysrgb" alt="profile-sample1" class="background"/>
-		    		        	<img src="https://randomuser.me/api/portraits/women/20.jpg" alt="profile-image" class="profile"/>
-		                    <div class="card-content">
-		                    	<h2>#AccountId
-		                    		<small>Private Service Holder</small>
-
-		                    	</h3>
-		                    	<div class="icon-block">
-		                    		<a href="#"><span class="icon"><i class="fas fa-cart-plus"></i></span></a>
-		                    		<a href="#"><span class="icon"><i class="fas fa-star"></i></span></a>
-		                    		<a href="#"><span class="icon"><i class="fas fa-share"></i></span></a></div>
-		                    </div>
+    		        			<img src="https://images.pexels.com/photos/946351/pexels-photo-946351.jpeg?w=500&h=650&auto=compress&cs=tinysrgb" alt="profile-sample1" class="background"/>
+		    		        	<a href="/profile">
+		    		        		<img src="https://randomuser.me/api/portraits/women/20.jpg" alt="profile-image" class="profile"/>
+		    		        	</a>
+	                    <div class="card-content">
+	                    	<h2>
+	                    		<a href="/profile">#AccountId</a>
+	                    		<small>Private Service Holder</small>
+	                    	</h2>
+	                    	<div class="icon-block">
+	                    		<a href="#"><span class="icon"><i class="fas fa-cart-plus"></i></span></a>
+	                    		<a href="#"><span class="icon"><i class="fas fa-star"></i></span></a>
+	                    		<a href="#"><span class="icon"><i class="fas fa-share"></i></span></a></div>
+	                    </div>
 		                </div>
 					        </div>
 					        <div class="col-8">
@@ -452,7 +460,7 @@
 					          	</div>
 
 					          	<hr>
-					          	<p style="margin-bottom: 0px;">I have completed MBA from the Dhaka university. I am doing the job at a Govt Bank. Now I am looking for a sensible life partner.
+					          	<p class="card-description">I have completed MBA from the Dhaka university. I am doing the job at a Govt Bank. Now I am looking for a sensible life partner.
 											</p>
 					            <br>
 					            <!-- <a href="#" class="btn btn-primary btn-sm float-right">Read More</a> -->
@@ -460,25 +468,27 @@
 					        </div>
 					      </div>
 					    </div>
-
 					    <br>
+
 					    <!-- profile -->
 							<div class="card">
 					      <div class="row">
 					        <div class="col-4">
 					        	<div class="card profile-card">
-		    		        	<img src="https://images.pexels.com/photos/946351/pexels-photo-946351.jpeg?w=500&h=650&auto=compress&cs=tinysrgb" alt="profile-sample1" class="background"/>
-		    		        	<img src="https://randomuser.me/api/portraits/women/20.jpg" alt="profile-image" class="profile"/>
-		                    <div class="card-content">
-		                    	<h2>#AccountId
-		                    		<small>Private Service Holder</small>
-
-		                    	</h3>
-		                    	<div class="icon-block">
-		                    		<a href="#"><span class="icon"><i class="fas fa-cart-plus"></i></span></a>
-		                    		<a href="#"><span class="icon"><i class="fas fa-star"></i></span></a>
-		                    		<a href="#"><span class="icon"><i class="fas fa-share"></i></span></a></div>
-		                    </div>
+    		        			<img src="https://images.pexels.com/photos/946351/pexels-photo-946351.jpeg?w=500&h=650&auto=compress&cs=tinysrgb" alt="profile-sample1" class="background"/>
+		    		        	<a href="/profile">
+		    		        		<img src="https://randomuser.me/api/portraits/women/20.jpg" alt="profile-image" class="profile"/>
+		    		        	</a>
+	                    <div class="card-content">
+	                    	<h2>
+	                    		<a href="/profile">#AccountId</a>
+	                    		<small>Private Service Holder</small>
+	                    	</h2>
+	                    	<div class="icon-block">
+	                    		<a href="#"><span class="icon"><i class="fas fa-cart-plus"></i></span></a>
+	                    		<a href="#"><span class="icon"><i class="fas fa-star"></i></span></a>
+	                    		<a href="#"><span class="icon"><i class="fas fa-share"></i></span></a></div>
+	                    </div>
 		                </div>
 					        </div>
 					        <div class="col-8">
@@ -523,7 +533,7 @@
 					          	</div>
 
 					          	<hr>
-					          	<p style="margin-bottom: 0px;">I have completed MBA from the Dhaka university. I am doing the job at a Govt Bank. Now I am looking for a sensible life partner.
+					          	<p class="card-description">I have completed MBA from the Dhaka university. I am doing the job at a Govt Bank. Now I am looking for a sensible life partner.
 											</p>
 					            <br>
 					            <!-- <a href="#" class="btn btn-primary btn-sm float-right">Read More</a> -->
@@ -531,25 +541,27 @@
 					        </div>
 					      </div>
 					    </div>
-
 					    <br>
+
 					    <!-- profile -->
 							<div class="card">
 					      <div class="row">
 					        <div class="col-4">
 					        	<div class="card profile-card">
-		    		        	<img src="https://images.pexels.com/photos/946351/pexels-photo-946351.jpeg?w=500&h=650&auto=compress&cs=tinysrgb" alt="profile-sample1" class="background"/>
-		    		        	<img src="https://randomuser.me/api/portraits/women/20.jpg" alt="profile-image" class="profile"/>
-		                    <div class="card-content">
-		                    	<h2>#AccountId
-		                    		<small>Private Service Holder</small>
-
-		                    	</h3>
-		                    	<div class="icon-block">
-		                    		<a href="#"><span class="icon"><i class="fas fa-cart-plus"></i></span></a>
-		                    		<a href="#"><span class="icon"><i class="fas fa-star"></i></span></a>
-		                    		<a href="#"><span class="icon"><i class="fas fa-share"></i></span></a></div>
-		                    </div>
+    		        			<img src="https://images.pexels.com/photos/946351/pexels-photo-946351.jpeg?w=500&h=650&auto=compress&cs=tinysrgb" alt="profile-sample1" class="background"/>
+		    		        	<a href="/profile">
+		    		        		<img src="https://randomuser.me/api/portraits/women/20.jpg" alt="profile-image" class="profile"/>
+		    		        	</a>
+	                    <div class="card-content">
+	                    	<h2>
+	                    		<a href="/profile">#AccountId</a>
+	                    		<small>Private Service Holder</small>
+	                    	</h2>
+	                    	<div class="icon-block">
+	                    		<a href="#"><span class="icon"><i class="fas fa-cart-plus"></i></span></a>
+	                    		<a href="#"><span class="icon"><i class="fas fa-star"></i></span></a>
+	                    		<a href="#"><span class="icon"><i class="fas fa-share"></i></span></a></div>
+	                    </div>
 		                </div>
 					        </div>
 					        <div class="col-8">
@@ -594,7 +606,7 @@
 					          	</div>
 
 					          	<hr>
-					          	<p style="margin-bottom: 0px;">I have completed MBA from the Dhaka university. I am doing the job at a Govt Bank. Now I am looking for a sensible life partner.
+					          	<p class="card-description">I have completed MBA from the Dhaka university. I am doing the job at a Govt Bank. Now I am looking for a sensible life partner.
 											</p>
 					            <br>
 					            <!-- <a href="#" class="btn btn-primary btn-sm float-right">Read More</a> -->
@@ -602,25 +614,27 @@
 					        </div>
 					      </div>
 					    </div>
-
 					    <br>
+
 					    <!-- profile -->
 							<div class="card">
 					      <div class="row">
 					        <div class="col-4">
 					        	<div class="card profile-card">
-		    		        	<img src="https://images.pexels.com/photos/946351/pexels-photo-946351.jpeg?w=500&h=650&auto=compress&cs=tinysrgb" alt="profile-sample1" class="background"/>
-		    		        	<img src="https://randomuser.me/api/portraits/women/20.jpg" alt="profile-image" class="profile"/>
-		                    <div class="card-content">
-		                    	<h2>#AccountId
-		                    		<small>Private Service Holder</small>
-
-		                    	</h3>
-		                    	<div class="icon-block">
-		                    		<a href="#"><span class="icon"><i class="fas fa-cart-plus"></i></span></a>
-		                    		<a href="#"><span class="icon"><i class="fas fa-star"></i></span></a>
-		                    		<a href="#"><span class="icon"><i class="fas fa-share"></i></span></a></div>
-		                    </div>
+    		        			<img src="https://images.pexels.com/photos/946351/pexels-photo-946351.jpeg?w=500&h=650&auto=compress&cs=tinysrgb" alt="profile-sample1" class="background"/>
+		    		        	<a href="/profile">
+		    		        		<img src="https://randomuser.me/api/portraits/women/20.jpg" alt="profile-image" class="profile"/>
+		    		        	</a>
+	                    <div class="card-content">
+	                    	<h2>
+	                    		<a href="/profile">#AccountId</a>
+	                    		<small>Private Service Holder</small>
+	                    	</h2>
+	                    	<div class="icon-block">
+	                    		<a href="#"><span class="icon"><i class="fas fa-cart-plus"></i></span></a>
+	                    		<a href="#"><span class="icon"><i class="fas fa-star"></i></span></a>
+	                    		<a href="#"><span class="icon"><i class="fas fa-share"></i></span></a></div>
+	                    </div>
 		                </div>
 					        </div>
 					        <div class="col-8">
@@ -665,7 +679,7 @@
 					          	</div>
 
 					          	<hr>
-					          	<p style="margin-bottom: 0px;">I have completed MBA from the Dhaka university. I am doing the job at a Govt Bank. Now I am looking for a sensible life partner.
+					          	<p class="card-description">I have completed MBA from the Dhaka university. I am doing the job at a Govt Bank. Now I am looking for a sensible life partner.
 											</p>
 					            <br>
 					            <!-- <a href="#" class="btn btn-primary btn-sm float-right">Read More</a> -->
@@ -673,25 +687,27 @@
 					        </div>
 					      </div>
 					    </div>
-
 					    <br>
+
 					    <!-- profile -->
 							<div class="card">
 					      <div class="row">
 					        <div class="col-4">
 					        	<div class="card profile-card">
-		    		        	<img src="https://images.pexels.com/photos/946351/pexels-photo-946351.jpeg?w=500&h=650&auto=compress&cs=tinysrgb" alt="profile-sample1" class="background"/>
-		    		        	<img src="https://randomuser.me/api/portraits/women/20.jpg" alt="profile-image" class="profile"/>
-		                    <div class="card-content">
-		                    	<h2>#AccountId
-		                    		<small>Private Service Holder</small>
-
-		                    	</h3>
-		                    	<div class="icon-block">
-		                    		<a href="#"><span class="icon"><i class="fas fa-cart-plus"></i></span></a>
-		                    		<a href="#"><span class="icon"><i class="fas fa-star"></i></span></a>
-		                    		<a href="#"><span class="icon"><i class="fas fa-share"></i></span></a></div>
-		                    </div>
+    		        			<img src="https://images.pexels.com/photos/946351/pexels-photo-946351.jpeg?w=500&h=650&auto=compress&cs=tinysrgb" alt="profile-sample1" class="background"/>
+		    		        	<a href="/profile">
+		    		        		<img src="https://randomuser.me/api/portraits/women/20.jpg" alt="profile-image" class="profile"/>
+		    		        	</a>
+	                    <div class="card-content">
+	                    	<h2>
+	                    		<a href="/profile">#AccountId</a>
+	                    		<small>Private Service Holder</small>
+	                    	</h2>
+	                    	<div class="icon-block">
+	                    		<a href="#"><span class="icon"><i class="fas fa-cart-plus"></i></span></a>
+	                    		<a href="#"><span class="icon"><i class="fas fa-star"></i></span></a>
+	                    		<a href="#"><span class="icon"><i class="fas fa-share"></i></span></a></div>
+	                    </div>
 		                </div>
 					        </div>
 					        <div class="col-8">
@@ -736,7 +752,7 @@
 					          	</div>
 
 					          	<hr>
-					          	<p style="margin-bottom: 0px;">I have completed MBA from the Dhaka university. I am doing the job at a Govt Bank. Now I am looking for a sensible life partner.
+					          	<p class="card-description">I have completed MBA from the Dhaka university. I am doing the job at a Govt Bank. Now I am looking for a sensible life partner.
 											</p>
 					            <br>
 					            <!-- <a href="#" class="btn btn-primary btn-sm float-right">Read More</a> -->
@@ -744,25 +760,27 @@
 					        </div>
 					      </div>
 					    </div>
-
 					    <br>
+
 					    <!-- profile -->
 							<div class="card">
 					      <div class="row">
 					        <div class="col-4">
 					        	<div class="card profile-card">
-		    		        	<img src="https://images.pexels.com/photos/946351/pexels-photo-946351.jpeg?w=500&h=650&auto=compress&cs=tinysrgb" alt="profile-sample1" class="background"/>
-		    		        	<img src="https://randomuser.me/api/portraits/women/20.jpg" alt="profile-image" class="profile"/>
-		                    <div class="card-content">
-		                    	<h2>#AccountId
-		                    		<small>Private Service Holder</small>
-
-		                    	</h3>
-		                    	<div class="icon-block">
-		                    		<a href="#"><span class="icon"><i class="fas fa-cart-plus"></i></span></a>
-		                    		<a href="#"><span class="icon"><i class="fas fa-star"></i></span></a>
-		                    		<a href="#"><span class="icon"><i class="fas fa-share"></i></span></a></div>
-		                    </div>
+    		        			<img src="https://images.pexels.com/photos/946351/pexels-photo-946351.jpeg?w=500&h=650&auto=compress&cs=tinysrgb" alt="profile-sample1" class="background"/>
+		    		        	<a href="/profile">
+		    		        		<img src="https://randomuser.me/api/portraits/women/20.jpg" alt="profile-image" class="profile"/>
+		    		        	</a>
+	                    <div class="card-content">
+	                    	<h2>
+	                    		<a href="/profile">#AccountId</a>
+	                    		<small>Private Service Holder</small>
+	                    	</h2>
+	                    	<div class="icon-block">
+	                    		<a href="#"><span class="icon"><i class="fas fa-cart-plus"></i></span></a>
+	                    		<a href="#"><span class="icon"><i class="fas fa-star"></i></span></a>
+	                    		<a href="#"><span class="icon"><i class="fas fa-share"></i></span></a></div>
+	                    </div>
 		                </div>
 					        </div>
 					        <div class="col-8">
@@ -807,7 +825,7 @@
 					          	</div>
 
 					          	<hr>
-					          	<p style="margin-bottom: 0px;">I have completed MBA from the Dhaka university. I am doing the job at a Govt Bank. Now I am looking for a sensible life partner.
+					          	<p class="card-description">I have completed MBA from the Dhaka university. I am doing the job at a Govt Bank. Now I am looking for a sensible life partner.
 											</p>
 					            <br>
 					            <!-- <a href="#" class="btn btn-primary btn-sm float-right">Read More</a> -->
@@ -815,25 +833,27 @@
 					        </div>
 					      </div>
 					    </div>
-
 					    <br>
+
 					    <!-- profile -->
 							<div class="card">
 					      <div class="row">
 					        <div class="col-4">
 					        	<div class="card profile-card">
-		    		        	<img src="https://images.pexels.com/photos/946351/pexels-photo-946351.jpeg?w=500&h=650&auto=compress&cs=tinysrgb" alt="profile-sample1" class="background"/>
-		    		        	<img src="https://randomuser.me/api/portraits/women/20.jpg" alt="profile-image" class="profile"/>
-		                    <div class="card-content">
-		                    	<h2>#AccountId
-		                    		<small>Private Service Holder</small>
-
-		                    	</h3>
-		                    	<div class="icon-block">
-		                    		<a href="#"><span class="icon"><i class="fas fa-cart-plus"></i></span></a>
-		                    		<a href="#"><span class="icon"><i class="fas fa-star"></i></span></a>
-		                    		<a href="#"><span class="icon"><i class="fas fa-share"></i></span></a></div>
-		                    </div>
+    		        			<img src="https://images.pexels.com/photos/946351/pexels-photo-946351.jpeg?w=500&h=650&auto=compress&cs=tinysrgb" alt="profile-sample1" class="background"/>
+		    		        	<a href="/profile">
+		    		        		<img src="https://randomuser.me/api/portraits/women/20.jpg" alt="profile-image" class="profile"/>
+		    		        	</a>
+	                    <div class="card-content">
+	                    	<h2>
+	                    		<a href="/profile">#AccountId</a>
+	                    		<small>Private Service Holder</small>
+	                    	</h2>
+	                    	<div class="icon-block">
+	                    		<a href="#"><span class="icon"><i class="fas fa-cart-plus"></i></span></a>
+	                    		<a href="#"><span class="icon"><i class="fas fa-star"></i></span></a>
+	                    		<a href="#"><span class="icon"><i class="fas fa-share"></i></span></a></div>
+	                    </div>
 		                </div>
 					        </div>
 					        <div class="col-8">
@@ -878,7 +898,7 @@
 					          	</div>
 
 					          	<hr>
-					          	<p style="margin-bottom: 0px;">I have completed MBA from the Dhaka university. I am doing the job at a Govt Bank. Now I am looking for a sensible life partner.
+					          	<p class="card-description">I have completed MBA from the Dhaka university. I am doing the job at a Govt Bank. Now I am looking for a sensible life partner.
 											</p>
 					            <br>
 					            <!-- <a href="#" class="btn btn-primary btn-sm float-right">Read More</a> -->
@@ -886,25 +906,27 @@
 					        </div>
 					      </div>
 					    </div>
-
 					    <br>
+
 					    <!-- profile -->
 							<div class="card">
 					      <div class="row">
 					        <div class="col-4">
 					        	<div class="card profile-card">
-		    		        	<img src="https://images.pexels.com/photos/946351/pexels-photo-946351.jpeg?w=500&h=650&auto=compress&cs=tinysrgb" alt="profile-sample1" class="background"/>
-		    		        	<img src="https://randomuser.me/api/portraits/women/20.jpg" alt="profile-image" class="profile"/>
-		                    <div class="card-content">
-		                    	<h2>#AccountId
-		                    		<small>Private Service Holder</small>
-
-		                    	</h3>
-		                    	<div class="icon-block">
-		                    		<a href="#"><span class="icon"><i class="fas fa-cart-plus"></i></span></a>
-		                    		<a href="#"><span class="icon"><i class="fas fa-star"></i></span></a>
-		                    		<a href="#"><span class="icon"><i class="fas fa-share"></i></span></a></div>
-		                    </div>
+    		        			<img src="https://images.pexels.com/photos/946351/pexels-photo-946351.jpeg?w=500&h=650&auto=compress&cs=tinysrgb" alt="profile-sample1" class="background"/>
+		    		        	<a href="/profile">
+		    		        		<img src="https://randomuser.me/api/portraits/women/20.jpg" alt="profile-image" class="profile"/>
+		    		        	</a>
+	                    <div class="card-content">
+	                    	<h2>
+	                    		<a href="/profile">#AccountId</a>
+	                    		<small>Private Service Holder</small>
+	                    	</h2>
+	                    	<div class="icon-block">
+	                    		<a href="#"><span class="icon"><i class="fas fa-cart-plus"></i></span></a>
+	                    		<a href="#"><span class="icon"><i class="fas fa-star"></i></span></a>
+	                    		<a href="#"><span class="icon"><i class="fas fa-share"></i></span></a></div>
+	                    </div>
 		                </div>
 					        </div>
 					        <div class="col-8">
@@ -949,7 +971,7 @@
 					          	</div>
 
 					          	<hr>
-					          	<p style="margin-bottom: 0px;">I have completed MBA from the Dhaka university. I am doing the job at a Govt Bank. Now I am looking for a sensible life partner.
+					          	<p class="card-description">I have completed MBA from the Dhaka university. I am doing the job at a Govt Bank. Now I am looking for a sensible life partner.
 											</p>
 					            <br>
 					            <!-- <a href="#" class="btn btn-primary btn-sm float-right">Read More</a> -->
@@ -957,25 +979,27 @@
 					        </div>
 					      </div>
 					    </div>
-
 					    <br>
+
 					    <!-- profile -->
 							<div class="card">
 					      <div class="row">
 					        <div class="col-4">
 					        	<div class="card profile-card">
-		    		        	<img src="https://images.pexels.com/photos/946351/pexels-photo-946351.jpeg?w=500&h=650&auto=compress&cs=tinysrgb" alt="profile-sample1" class="background"/>
-		    		        	<img src="https://randomuser.me/api/portraits/women/20.jpg" alt="profile-image" class="profile"/>
-		                    <div class="card-content">
-		                    	<h2>#AccountId
-		                    		<small>Private Service Holder</small>
-
-		                    	</h3>
-		                    	<div class="icon-block">
-		                    		<a href="#"><span class="icon"><i class="fas fa-cart-plus"></i></span></a>
-		                    		<a href="#"><span class="icon"><i class="fas fa-star"></i></span></a>
-		                    		<a href="#"><span class="icon"><i class="fas fa-share"></i></span></a></div>
-		                    </div>
+    		        			<img src="https://images.pexels.com/photos/946351/pexels-photo-946351.jpeg?w=500&h=650&auto=compress&cs=tinysrgb" alt="profile-sample1" class="background"/>
+		    		        	<a href="/profile">
+		    		        		<img src="https://randomuser.me/api/portraits/women/20.jpg" alt="profile-image" class="profile"/>
+		    		        	</a>
+	                    <div class="card-content">
+	                    	<h2>
+	                    		<a href="/profile">#AccountId</a>
+	                    		<small>Private Service Holder</small>
+	                    	</h2>
+	                    	<div class="icon-block">
+	                    		<a href="#"><span class="icon"><i class="fas fa-cart-plus"></i></span></a>
+	                    		<a href="#"><span class="icon"><i class="fas fa-star"></i></span></a>
+	                    		<a href="#"><span class="icon"><i class="fas fa-share"></i></span></a></div>
+	                    </div>
 		                </div>
 					        </div>
 					        <div class="col-8">
@@ -1020,7 +1044,7 @@
 					          	</div>
 
 					          	<hr>
-					          	<p style="margin-bottom: 0px;">I have completed MBA from the Dhaka university. I am doing the job at a Govt Bank. Now I am looking for a sensible life partner.
+					          	<p class="card-description">I have completed MBA from the Dhaka university. I am doing the job at a Govt Bank. Now I am looking for a sensible life partner.
 											</p>
 					            <br>
 					            <!-- <a href="#" class="btn btn-primary btn-sm float-right">Read More</a> -->
@@ -1028,96 +1052,27 @@
 					        </div>
 					      </div>
 					    </div>
-
-							<br>
-					    <!-- profile -->
-							<div class="card">
-					      <div class="row">
-					        <div class="col-4">
-					        	<div class="card profile-card">
-		    		        	<img src="https://images.pexels.com/photos/946351/pexels-photo-946351.jpeg?w=500&h=650&auto=compress&cs=tinysrgb" alt="profile-sample1" class="background"/>
-		    		        	<img src="https://randomuser.me/api/portraits/women/20.jpg" alt="profile-image" class="profile"/>
-		                    <div class="card-content">
-		                    	<h2>#AccountId
-		                    		<small>Private Service Holder</small>
-
-		                    	</h3>
-		                    	<div class="icon-block">
-		                    		<a href="#"><span class="icon"><i class="fas fa-cart-plus"></i></span></a>
-		                    		<a href="#"><span class="icon"><i class="fas fa-star"></i></span></a>
-		                    		<a href="#"><span class="icon"><i class="fas fa-share"></i></span></a></div>
-		                    </div>
-		                </div>
-					        </div>
-					        <div class="col-8">
-					          <div class="card-block">
-					          	<div class="row">
-					          		<div class="col-6">
-					          			<div class="row attribute">
-					          				<div class="col-5 attribute-title">Age:</div>
-					          				<div class="col-7 attribute-value">25</div>
-					          			</div>
-					          			<div class="row attribute">
-					          				<div class="col-5 attribute-title">Gender:</div>
-					          				<div class="col-7 attribute-value">Female</div>
-					          			</div>
-					          			<div class="row attribute">
-					          				<div class="col-5 attribute-title">Height:</div>
-					          				<div class="col-7 attribute-value">5'2''</div>
-					          			</div>
-					          			<div class="row attribute">
-					          				<div class="col-5 attribute-title">Education:</div>
-					          				<div class="col-7 attribute-value">BSC</div>
-					          			</div>
-					          		</div>
-					          		<div class="col-6">
-					          			<div class="row attribute">
-					          				<div class="col-5 attribute-title">Religion:</div>
-					          				<div class="col-7 attribute-value">Muslim</div>
-					          			</div>
-					          			<div class="row attribute">
-					          				<div class="col-5 attribute-title">Caste:</div>
-					          				<div class="col-7 attribute-value">Sunni</div>
-					          			</div>
-					          			<div class="row attribute">
-					          				<div class="col-5 attribute-title">City:</div>
-					          				<div class="col-7 attribute-value">Dhaka</div>
-					          			</div>
-					          			<div class="row attribute">
-					          				<div class="col-5 attribute-title">Country:</div>
-					          				<div class="col-7 attribute-value">Bangladesh</div>
-					          			</div>
-					          		</div>
-					          	</div>
-
-					          	<hr>
-					          	<p style="margin-bottom: 0px;">I have completed MBA from the Dhaka university. I am doing the job at a Govt Bank. Now I am looking for a sensible life partner.
-											</p>
-					            <br>
-					            <!-- <a href="#" class="btn btn-primary btn-sm float-right">Read More</a> -->
-					          </div>
-					        </div>
-					      </div>
-					    </div>
-
 					    <br>
+
 					    <!-- profile -->
 							<div class="card">
 					      <div class="row">
 					        <div class="col-4">
 					        	<div class="card profile-card">
-		    		        	<img src="https://images.pexels.com/photos/946351/pexels-photo-946351.jpeg?w=500&h=650&auto=compress&cs=tinysrgb" alt="profile-sample1" class="background"/>
-		    		        	<img src="https://randomuser.me/api/portraits/women/20.jpg" alt="profile-image" class="profile"/>
-		                    <div class="card-content">
-		                    	<h2>#AccountId
-		                    		<small>Private Service Holder</small>
-
-		                    	</h3>
-		                    	<div class="icon-block">
-		                    		<a href="#"><span class="icon"><i class="fas fa-cart-plus"></i></span></a>
-		                    		<a href="#"><span class="icon"><i class="fas fa-star"></i></span></a>
-		                    		<a href="#"><span class="icon"><i class="fas fa-share"></i></span></a></div>
-		                    </div>
+    		        			<img src="https://images.pexels.com/photos/946351/pexels-photo-946351.jpeg?w=500&h=650&auto=compress&cs=tinysrgb" alt="profile-sample1" class="background"/>
+		    		        	<a href="/profile">
+		    		        		<img src="https://randomuser.me/api/portraits/women/20.jpg" alt="profile-image" class="profile"/>
+		    		        	</a>
+	                    <div class="card-content">
+	                    	<h2>
+	                    		<a href="/profile">#AccountId</a>
+	                    		<small>Private Service Holder</small>
+	                    	</h2>
+	                    	<div class="icon-block">
+	                    		<a href="#"><span class="icon"><i class="fas fa-cart-plus"></i></span></a>
+	                    		<a href="#"><span class="icon"><i class="fas fa-star"></i></span></a>
+	                    		<a href="#"><span class="icon"><i class="fas fa-share"></i></span></a></div>
+	                    </div>
 		                </div>
 					        </div>
 					        <div class="col-8">
@@ -1162,7 +1117,7 @@
 					          	</div>
 
 					          	<hr>
-					          	<p style="margin-bottom: 0px;">I have completed MBA from the Dhaka university. I am doing the job at a Govt Bank. Now I am looking for a sensible life partner.
+					          	<p class="card-description">I have completed MBA from the Dhaka university. I am doing the job at a Govt Bank. Now I am looking for a sensible life partner.
 											</p>
 					            <br>
 					            <!-- <a href="#" class="btn btn-primary btn-sm float-right">Read More</a> -->
@@ -1170,25 +1125,27 @@
 					        </div>
 					      </div>
 					    </div>
-
 					    <br>
+
 					    <!-- profile -->
 							<div class="card">
 					      <div class="row">
 					        <div class="col-4">
 					        	<div class="card profile-card">
-		    		        	<img src="https://images.pexels.com/photos/946351/pexels-photo-946351.jpeg?w=500&h=650&auto=compress&cs=tinysrgb" alt="profile-sample1" class="background"/>
-		    		        	<img src="https://randomuser.me/api/portraits/women/20.jpg" alt="profile-image" class="profile"/>
-		                    <div class="card-content">
-		                    	<h2>#AccountId
-		                    		<small>Private Service Holder</small>
-
-		                    	</h3>
-		                    	<div class="icon-block">
-		                    		<a href="#"><span class="icon"><i class="fas fa-cart-plus"></i></span></a>
-		                    		<a href="#"><span class="icon"><i class="fas fa-star"></i></span></a>
-		                    		<a href="#"><span class="icon"><i class="fas fa-share"></i></span></a></div>
-		                    </div>
+    		        			<img src="https://images.pexels.com/photos/946351/pexels-photo-946351.jpeg?w=500&h=650&auto=compress&cs=tinysrgb" alt="profile-sample1" class="background"/>
+		    		        	<a href="/profile">
+		    		        		<img src="https://randomuser.me/api/portraits/women/20.jpg" alt="profile-image" class="profile"/>
+		    		        	</a>
+	                    <div class="card-content">
+	                    	<h2>
+	                    		<a href="/profile">#AccountId</a>
+	                    		<small>Private Service Holder</small>
+	                    	</h2>
+	                    	<div class="icon-block">
+	                    		<a href="#"><span class="icon"><i class="fas fa-cart-plus"></i></span></a>
+	                    		<a href="#"><span class="icon"><i class="fas fa-star"></i></span></a>
+	                    		<a href="#"><span class="icon"><i class="fas fa-share"></i></span></a></div>
+	                    </div>
 		                </div>
 					        </div>
 					        <div class="col-8">
@@ -1233,7 +1190,7 @@
 					          	</div>
 
 					          	<hr>
-					          	<p style="margin-bottom: 0px;">I have completed MBA from the Dhaka university. I am doing the job at a Govt Bank. Now I am looking for a sensible life partner.
+					          	<p class="card-description">I have completed MBA from the Dhaka university. I am doing the job at a Govt Bank. Now I am looking for a sensible life partner.
 											</p>
 					            <br>
 					            <!-- <a href="#" class="btn btn-primary btn-sm float-right">Read More</a> -->
@@ -1241,6 +1198,8 @@
 					        </div>
 					      </div>
 					    </div>
+					    <br>
+
 
 					    <br>
 					    <nav aria-label="..." class="float-right">

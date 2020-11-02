@@ -76,6 +76,10 @@ text-transform: uppercase;
     box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
 }
 /*.btn { margin-top: auto; } */
+.card-description {
+	margin-bottom: 0px; 
+	color: gray;
+}
 
 .profile-card {
 	font-family: 'Open Sans', Arial, sans-serif;
@@ -107,9 +111,9 @@ text-transform: uppercase;
 .profile-card .profile {
 	border-radius: 50%;
 	position: absolute;
-	bottom: 50%;
+	bottom: 46%;
 	left: 50%;
-	max-width: 100px;
+	max-width: 120px;
 	opacity: 1;
 	box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5);
 	border: 2px solid rgba(255, 255, 255, 1);
