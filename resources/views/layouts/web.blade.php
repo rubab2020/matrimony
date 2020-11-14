@@ -9,19 +9,20 @@
     <title>Creative - Start Bootstrap Theme</title>
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
-    <!-- Font Awesome icons (free version)-->
-    <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
     <!-- Google fonts-->
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto&family=Crimson+Text:ital,wght@0,400;1,600&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
     <!-- Third party plugin CSS-->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css"
-        rel="stylesheet" />
+    <link href="{{ asset('assets/web/css/magnific-popup.min.css') }}" rel="stylesheet" />
+    <link href="{{ asset('assets/web/css/jquery-ui.css') }}" rel="stylesheet">
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="{{ asset('assets/web/css/styles.css') }}" rel="stylesheet" />
+    <!-- custom css -->
     <link href="{{ asset('assets/web/css/custom.css') }}" rel="stylesheet" />
+    <link href="{{ asset('assets/web/css/search.css') }}" rel="stylesheet" />
+    <link href="{{ asset('assets/web/css/profile.css') }}" rel="stylesheet" />
 
     @yield('style')
 </head>
@@ -30,7 +31,7 @@
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
         <div class="container">
-            <a class="navbar-brand js-scroll-trigger" href="#page-top">Matrimony</a>
+            <a class="navbar-brand js-scroll-trigger" href="{{ url('/') }}">Matrimony</a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
                 data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
                 aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
@@ -46,25 +47,33 @@
         </div>
     </nav>
 
+    @if(isset($slot))
     {{ $slot }}
+    @endif
+
+    @yield('content')
 
     <!-- Footer-->
     <footer class="bg-light py-5">
         <div class="container">
             <div class="small text-center text-muted">Copyright © 2020 - Matrimony</div>
-            <div class="small text-center text-muted">Made with <i class="fa fa-heart"></i> <a
-                    href="https://www.appxor.com">appXor</a></div>
+            <div class="small text-center text-muted">
+                Made with <i class="fa fa-heart"></i> <a href="https://www.appxor.com">appXor</a>
+            </div>
         </div>
     </footer>
     <!-- Bootstrap core JS-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ asset('assets/web/js/jquery.min.js') }}"></script>
+    <script src="{{ asset('assets/web/js/bootstrap.bundle.min.js') }}"></script>
     <!-- Third party plugin JS-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <script src="{{ asset('assets/web/js/fontawesome.js') }}" crossorigin="anonymous"></script>
+    <script src="{{ asset('assets/web/js/jquery.easing.min.js') }}"></script>
+    <script src="{{ asset('assets/web/js/jquery.magnific-popup.min.js') }}"></script>
+    <script src="{{ asset('assets/web/js/jquery-ui.min.js') }}"></script>
     <!-- Core theme JS-->
     <script src="{{ asset('assets/web/js/scripts.js') }}"></script>
-
+    <!-- custom JS -->
+    <script src="{{ asset('assets/web/js/custom.js') }}"></script>
     @yield('script')
 </body>
 

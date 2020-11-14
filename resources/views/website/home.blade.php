@@ -1,3 +1,4 @@
+@section('style')
 <style>
     #mainNav {
         box-shadow: none;
@@ -27,6 +28,7 @@
         }
     }
 </style>
+@endsection
 
 <x-web-layout>
     <!-- Masthead-->
@@ -35,7 +37,7 @@
             <div class="row h-100 align-items-center justify-content-center" style="width: 100%;">
                 <div class="col-lg-3">
                     <div id="home-search-form">
-                        <form>
+                        <form action="{{ url('/search') }}">
                             <div class="form-group">
                                 <label class="col-form-label col-form-label-sm" for="exampleFormControlSelect1">Looking
                                     For</label>
@@ -335,7 +337,7 @@
                         <li>
                             Fill Up the form and send it back to <a href="mailto:info@matrimony.com">
                                 info@matrimony.com
-                            </a>
+                            </a> or to our messanger fb.com/matrimony
                         </li>
                     </ul>
                 </div>

@@ -28,3 +28,11 @@ Route::get('/register', function () {
 Route::get('/setting', function () {
     return view('dashboard');
 });
+
+Route::get('/search', function () {
+    return view('website.search');
+});
+
+Route::get('/profile', function () {
+    return view('website.profile');
+});
