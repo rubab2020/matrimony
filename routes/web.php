@@ -30,8 +30,9 @@ Route::get('/setting', function () {
 });
 
 Route::get('/search', function () {
-    return view('search');
+    return view('website.search');
 });
+
 Route::get('/profile', function () {
-    return view('profile');
+    return view('website.profile');
 });
