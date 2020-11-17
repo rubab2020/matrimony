@@ -128,26 +128,51 @@
                                 <h3 class="login-heading mb-4">Register</h3>
                                 <form>
                                     <div class="form-label-group">
-                                        <input type="email" id="inputEmail" class="form-control"
-                                            placeholder="Email address" required autofocus>
-                                        <label for="inputEmail">Email address</label>
+                                        <select name="profile_for" class="form-control" required>
+                                            <option value="">Select Profile For</option>
+                                            <option value="myself">Myself</option>
+                                            <option value="offspring">Offspring (Son / Daughter)</option>
+                                            <option value="friend">Friend</option>
+                                            <option value="cousin">Cousin</option>
+                                            <option value="cousin">GrandChildren</option>
+                                        </select>
+                                    </div>
+
+                                     <div class="form-label-group">
+                                        <input type="text" name="name" class="form-control" placeholder="Name" required autofocus>
+                                        <label>Name</label>
                                     </div>
 
                                     <div class="form-label-group">
-                                        <input type="password" id="inputPassword" class="form-control"
-                                            placeholder="Password" required>
-                                        <label for="inputPassword">Password</label>
+                                        <select name="gender" class="form-control" required>
+                                            <option value="">Select Gender</option>
+                                            <option value="m">Male</option>
+                                            <option value="f">Female</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <div class="form-label-group">
+                                        <input type="email" name="email" class="form-control" placeholder="Email address" required autofocus>
+                                        <label>Email address</label>
                                     </div>
 
-                                    <div class="custom-control custom-checkbox mb-3">
+                                    <div class="form-label-group">
+                                        <input type="password" name="password" class="form-control" placeholder="Password" required>
+                                        <label>Password</label>
+                                    </div>
+
+                                    <!-- <div class="custom-control custom-checkbox mb-3">
                                         <input type="checkbox" class="custom-control-input" id="customCheck1">
                                         <label class="custom-control-label" for="customCheck1">Remember password</label>
-                                    </div>
+                                    </div> -->
+                                    
+                                    <small style="margin: 10px;">By Registering, You are agreeing to our <a href="/terms_and_conditions">Terms and Conditions</a> & <a href="/privacy_policy">Privacy Policy</a></small>
+
                                     <button
                                         class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2"
-                                        type="submit">Sign in</button>
+                                        type="submit">Sign Up</button>
                                     <div class="text-center">
-                                        <a class="small" href="#">Forgot password?</a></div>
+                                        <a class="small" href="/login">Have Account? Login</a></div>
                                 </form>
                             </div>
                         </div>

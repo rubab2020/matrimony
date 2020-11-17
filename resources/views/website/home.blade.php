@@ -106,7 +106,7 @@
                     <h1 class="text-center text-white mt-0 cool-font">Your love story begins from here <i>!</i> </h1>
                     <hr class="divider my-4" />
                     <p class="text-center text-white mt-0">
-                        <button class="btn btn-sm btn-primary">Create Profile</button> Or
+                        <a href="/register"><button class="btn btn-sm btn-primary">Create Profile</button></a> Or
                         <button class="btn btn-sm btn-dark" data-toggle="modal" data-target="#sendUsModal">Send
                             Us</button> your info to let us create.
                     </p>
