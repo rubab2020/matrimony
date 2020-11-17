@@ -15,8 +15,7 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
     <!-- Third party plugin CSS-->
-    <link href="{{ asset('assets/web/css/magnific-popup.min.css') }}"
-        rel="stylesheet" />
+    <link href="{{ asset('assets/web/css/magnific-popup.min.css') }}" rel="stylesheet" />
     <link href="{{ asset('assets/web/css/jquery-ui.css') }}" rel="stylesheet">
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="{{ asset('assets/web/css/styles.css') }}" rel="stylesheet" />
@@ -32,7 +31,7 @@
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
         <div class="container">
-            <a class="navbar-brand js-scroll-trigger" href="/">Matrimony</a>
+            <a class="navbar-brand js-scroll-trigger" href="{{ url('/') }}">Matrimony</a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
                 data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
                 aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
@@ -49,7 +48,7 @@
     </nav>
 
     @if(isset($slot))
-        {{ $slot }}
+    {{ $slot }}
     @endif
 
     @yield('content')

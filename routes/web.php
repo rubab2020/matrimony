@@ -30,8 +30,16 @@ Route::get('/setting', function () {
 });
 
 Route::get('/search', function () {
-    return view('search');
+    return view('website.search');
 });
+
 Route::get('/profile', function () {
-    return view('profile');
+    return view('website.profile');
 });
+
+
+Route::post('/otp/send', 'OTPController@sendOTP')->name('otp.send');
+
+Route::post('/otp/resend', 'OTPController@resendOTP')->name('otp.resend');
+
+Route::post('/otp/verify', 'OTPController@verifyOTP')->name('otp.verify');
