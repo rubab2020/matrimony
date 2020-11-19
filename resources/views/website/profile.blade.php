@@ -273,7 +273,7 @@
 				</div>
 
 				<br>
-				<!-- adresses -->
+				<!-- family info -->
 				<div class="section-card">
 					<h4 class="section-title">Family Info</h4>
 					<p style="color: gray">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -282,6 +282,42 @@
 						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</div>
+
+				<br>
+				<!-- preference -->
+				<div class="section-card">
+					<h4 class="section-title">Preference</h4>
+					<div class="row">
+						<div class="col-6">
+							<div class="row attribute">
+								<div class="col-5 attribute-title">Age Range:</div>
+								<div class="col-7 attribute-value">18-20 years</div>
+							</div>
+							<div class="row attribute">
+								<div class="col-5 attribute-title">Height Rage:</div>
+								<div class="col-7 attribute-value">5'2" - 5'10"</div>
+							</div>
+							<div class="row attribute">
+								<div class="col-5 attribute-title">Disctrict:</div>
+								<div class="col-7 attribute-value">Barishal, Rajshahi, Tangail</div>
+							</div>
+						</div>
+						<div class="col-6">
+							<div class="row attribute">
+								<div class="col-5 attribute-title">Profession:</div>
+								<div class="col-7 attribute-value">Lawyer, Businessman</div>
+							</div>
+							<div class="row attribute">
+								<div class="col-5 attribute-title">Education:</div>
+								<div class="col-7 attribute-value">BSC,MSC</div>
+							</div>
+							<div class="row attribute">
+								<div class="col-5 attribute-title">Special preference:</div>
+								<div class="col-7 attribute-value">Has to relegious</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 
