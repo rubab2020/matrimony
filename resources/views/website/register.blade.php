@@ -118,7 +118,7 @@
 @endsection
 
 <x-web-layout>
-    <div class="container-fluid">
+    <div class="container-fluid mt-5">
         <div class="row no-gutter">
             <div class="col-md-8 col-lg-6 offset-md-2 offset-lg-3">
                 <div class="login d-flex align-items-center py-5">
@@ -144,16 +144,63 @@
                                     </div>
 
                                     <div class="form-label-group">
+                                        <input type="email" name="email" class="form-control" placeholder="Email address" required>
+                                        <label>Email address</label>
+                                    </div>
+
+                                    <div class="form-label-group">
+                                        <input type="text" name="phone" class="form-control" placeholder="Mobile No" required>
+                                        <label>Mobile No</label>
+                                    </div>
+
+                                    <div class="form-label-group">
                                         <select name="gender" class="form-control" required>
                                             <option value="">Select Gender</option>
-                                            <option value="m">Male</option>
-                                            <option value="f">Female</option>
+                                            <option value="male">Male</option>
+                                            <option value="female">Female</option>
                                         </select>
                                     </div>
-                                    
+
                                     <div class="form-label-group">
-                                        <input type="email" name="email" class="form-control" placeholder="Email address" required autofocus>
-                                        <label>Email address</label>
+                                        <input type="date" name="dob" class="form-control" id="dob" placeholder="" required>
+                                        <label>Date of Birth</label>
+                                    </div>
+
+                                    <div class="form-label-group">
+                                        <select name="religion" class="form-control" required>
+                                            <option value="">Select Religion</option>
+                                            <option value="muslim">Muslim</option>
+                                            <option value="hindu">Hindu</option>
+                                            <option value="christian">Christian</option>
+                                            <option value="anglican">Anglican</option>
+                                            <option value="atheist">Atheist</option>
+                                            <option value="baptist">Baptist</option>
+                                            <option value="buddhist">Buddhist</option>
+                                            <option value="evengelical">Evengelical</option>
+                                            <option value="jain">Jain</option>
+                                            <option value="jewish">Jewish</option>
+                                            <option value="sikh">Sikh</option>
+                                            <option value="spiritual but not religious">Spiritual But Not Religious</option>
+                                            <option value="not religious">Not Religious</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-label-group">
+                                        <select name="caste" class="form-control" required>
+                                            <option value="">Select Caste</option>
+                                            <option value="sunni">Sunni</option>
+                                            <option value="shiya">Shiya</option>
+                                            <option value="brahmins">Brahmins</option>
+                                            <option value="kshatriyas">Kshatriyas</option>
+                                            <option value="vaishyas">Vaishyas</option>
+                                            <option value="shudras">Shudras</option>
+                                            <option value="adivasi">Adivasi</option>
+                                            <option value="dalits">Dalits</option>
+                                            <option value="catholic">Catholic</option>
+                                            <option value="protestant">Protestant</option>
+                                            <option value="other">Other</option>
+                                        </select>
                                     </div>
 
                                     <div class="form-label-group">
@@ -166,11 +213,14 @@
                                         <label class="custom-control-label" for="customCheck1">Remember password</label>
                                     </div> -->
                                     
-                                    <small style="margin: 10px;">By Registering, You are agreeing to our <a href="/terms_and_conditions">Terms and Conditions</a> & <a href="/privacy_policy">Privacy Policy</a></small>
+                                    <small style="margin: 10px;">By Registering, You are agreeing to our <a href="/terms_and_conditions">Terms & Conditions</a> & <a href="/privacy_policy">Privacy Policy</a></small>
 
                                     <button
                                         class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2"
-                                        type="submit">Sign Up</button>
+                                        type="submit"
+                                    >
+                                        Sign Up
+                                    </button>
                                     <div class="text-center">
                                         <a class="small" href="/login">Have Account? Login</a></div>
                                 </form>
@@ -182,8 +232,14 @@
         </div>
     </div>
 
-    </x-admin-layout>
-
     @section('script')
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.js"></script>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.js"></script> -->
+        <!-- <script type="text/javascript">
+            $(document).ready(function () {
+                $('#dob').datepicker({
+                    format: "yyyy-mm-dd"
+                });
+            });
+        </script> -->
     @endsection
+</x-admin-layout>
