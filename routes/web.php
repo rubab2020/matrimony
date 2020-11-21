@@ -37,6 +37,9 @@ Route::get('/profile', function () {
     return view('website.profile');
 });
 
+Route::get('/checkout', function () {
+    return view('website.checkout');
+});
 
 Route::post('/otp/send', 'OTPController@sendOTP')->name('otp.send');
 
