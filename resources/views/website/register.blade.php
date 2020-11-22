@@ -33,6 +33,7 @@
     }
 
     .form-label-group>input,
+    .form-label-group>select,
     .form-label-group>label {
         padding: var(--input-padding-y) var(--input-padding-x);
         height: auto;
@@ -125,11 +126,13 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-md-9 col-lg-8 mx-auto">
+                                <br />
                                 <h3 class="login-heading mb-4">Register</h3>
+                                <hr />
                                 <form>
                                     <div class="form-label-group">
                                         <select name="profile_for" class="form-control" required>
-                                            <option value="">Select Profile For</option>
+                                            <option value="">Profile For</option>
                                             <option value="myself">Myself</option>
                                             <option value="offspring">Offspring (Son / Daughter)</option>
                                             <option value="friend">Friend</option>
@@ -138,21 +141,35 @@
                                         </select>
                                     </div>
 
-                                     <div class="form-label-group">
-                                        <input type="text" name="name" class="form-control" placeholder="Name" required autofocus>
-                                        <label>Name</label>
+                                    <div class="form-label-group">
+                                        <input type="text" name="name" id="name" class="form-control" placeholder="Name"
+                                            required>
+                                        <label for="name">Name</label>
                                     </div>
 
                                     <div class="form-label-group">
-                                        <input type="email" name="email" class="form-control" placeholder="Email address" required>
-                                        <label>Email address</label>
+                                        <input type="email" name="email" id="email" class="form-control"
+                                            placeholder="Email address" required>
+                                        <label for="email">Email address</label>
                                     </div>
 
                                     <div class="form-label-group">
-                                        <input type="text" name="phone" class="form-control" placeholder="Mobile No" required>
-                                        <label>Mobile No</label>
+                                        <input type="text" name="phone" id="phone" class="form-control"
+                                            placeholder="Mobile No" required>
+                                        <label for="phone">Mobile No</label>
                                     </div>
 
+                                    <div class="form-label-group">
+                                        <input type="password" name="password" id="password" class="form-control"
+                                            placeholder="Password" required>
+                                        <label for="password">Password</label>
+                                    </div>
+
+                                    <div class="form-label-group" id="dobField">
+                                        <input type="text" name="dob" id="dob" class="form-control" id="dob"
+                                            placeholder="Date of Birth" required>
+                                        <label for="dob">Date of Birth</label>
+                                    </div>
                                     <div class="form-label-group">
                                         <select name="gender" class="form-control" required>
                                             <option value="">Select Gender</option>
@@ -161,10 +178,6 @@
                                         </select>
                                     </div>
 
-                                    <div class="form-label-group">
-                                        <input type="date" name="dob" class="form-control" id="dob" placeholder="" required>
-                                        <label>Date of Birth</label>
-                                    </div>
 
                                     <div class="form-label-group">
                                         <select name="religion" class="form-control" required>
@@ -180,7 +193,8 @@
                                             <option value="jain">Jain</option>
                                             <option value="jewish">Jewish</option>
                                             <option value="sikh">Sikh</option>
-                                            <option value="spiritual but not religious">Spiritual But Not Religious</option>
+                                            <option value="spiritual but not religious">Spiritual But Not Religious
+                                            </option>
                                             <option value="not religious">Not Religious</option>
                                             <option value="other">Other</option>
                                         </select>
@@ -203,26 +217,22 @@
                                         </select>
                                     </div>
 
-                                    <div class="form-label-group">
-                                        <input type="password" name="password" class="form-control" placeholder="Password" required>
-                                        <label>Password</label>
-                                    </div>
-
                                     <!-- <div class="custom-control custom-checkbox mb-3">
                                         <input type="checkbox" class="custom-control-input" id="customCheck1">
                                         <label class="custom-control-label" for="customCheck1">Remember password</label>
                                     </div> -->
-                                    
-                                    <small style="margin: 10px;">By Registering, You are agreeing to our <a href="/terms_and_conditions">Terms & Conditions</a> & <a href="/privacy_policy">Privacy Policy</a></small>
+
+                                    <small style="margin: 10px;">By Registering, You are agreeing to our <a
+                                            href="/terms_and_conditions">Terms & Conditions</a> & <a
+                                            href="/privacy_policy">Privacy Policy</a></small>
 
                                     <button
                                         class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2"
-                                        type="submit"
-                                    >
+                                        type="submit">
                                         Sign Up
                                     </button>
                                     <div class="text-center">
-                                        <a class="small" href="/login">Have Account? Login</a></div>
+                                        <a class="small" href="{{ url('/login') }}">Have Account? Login</a></div>
                                 </form>
                             </div>
                         </div>
@@ -233,13 +243,15 @@
     </div>
 
     @section('script')
-        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.js"></script> -->
-        <!-- <script type="text/javascript">
-            $(document).ready(function () {
+    {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.js"></script> --}}
+    <script type="text/javascript">
+        $(document).ready(function () {
                 $('#dob').datepicker({
-                    format: "yyyy-mm-dd"
+                    format: "yyyy-mm-dd",
+                    autoclose: true,
+                    container:'#dobField'
                 });
             });
-        </script> -->
+    </script>
     @endsection
-</x-admin-layout>
+    </x-admin-layout>

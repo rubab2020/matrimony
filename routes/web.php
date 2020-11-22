@@ -41,6 +41,8 @@ Route::get('/checkout', function () {
     return view('website.checkout');
 });
 
+Route::post('/register', 'RegisterController@register')->name('customer.register');
+
 Route::post('/otp/send', 'OTPController@sendOTP')->name('otp.send');
 
 Route::post('/otp/resend', 'OTPController@resendOTP')->name('otp.resend');
