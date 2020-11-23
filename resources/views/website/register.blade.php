@@ -129,7 +129,8 @@
                                 <br />
                                 <h3 class="login-heading mb-4">Register</h3>
                                 <hr />
-                                <form>
+                                <form action="{{ route('customer.register') }}" method="POST">
+                                    @csrf
                                     <div class="form-label-group">
                                         <select name="profile_for" class="form-control" required>
                                             <option value="">Profile For</option>

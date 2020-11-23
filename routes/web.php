@@ -45,6 +45,10 @@ Route::get('/checkout', function () {
     return view('website.checkout');
 });
 
+Route::get('/verify/phone', function () {
+    return view('website.phone-verification');
+});
+
 Route::post('/register', 'RegisterController@register')->name('customer.register');
 
 Route::post('/otp/send', 'OTPController@sendOTP')->name('otp.send');
