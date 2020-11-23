@@ -37,6 +37,10 @@ Route::get('/profile', function () {
     return view('website.profile');
 });
 
+Route::get('profile-form', function () {
+    return view('website.customer.profile-form');
+});
+
 Route::get('/checkout', function () {
     return view('website.checkout');
 });
@@ -44,7 +48,5 @@ Route::get('/checkout', function () {
 Route::post('/register', 'RegisterController@register')->name('customer.register');
 
 Route::post('/otp/send', 'OTPController@sendOTP')->name('otp.send');
-
 Route::post('/otp/resend', 'OTPController@resendOTP')->name('otp.resend');
-
 Route::post('/otp/verify', 'OTPController@verifyOTP')->name('otp.verify');
