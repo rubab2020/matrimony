@@ -127,10 +127,10 @@
 @endsection
 
 <x-web-layout>
-    <div class="container-fluid mt-5">
+    <div class="container-fluid">
         <div class="row no-gutter">
             <div class="col-md-8 col-lg-6 offset-md-2 offset-lg-3">
-                <div class="login d-flex align-items-center py-5">
+                <div class="login d-flex align-items-center">
                     <div class="container">
                         <div class="row">
                             <div class="col-md-9 col-lg-8 mx-auto">
@@ -140,7 +140,8 @@
                                     here to verify your
                                     phone number to continue.</p>
 
-                                <form>
+                                <form action="{{ route('otp.verify') }}" method="POST">
+                                    @csrf
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-label-group">

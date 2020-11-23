@@ -2,5 +2,7 @@
     "/js/app.js": "/js/app.js?id=a74164344c370ff3f29d",
     "/css/app.css": "/css/app.css?id=aa3c26d5e0f2061f27a7",
     "/assets/admin/css/admin.css": "/assets/admin/css/admin.css?id=6b1319d6e29f471a789f",
-    "/assets/admin/js/admin.js": "/assets/admin/js/admin.js?id=8531a073dbd5e33c6bea"
+    "/assets/admin/js/admin.js": "/assets/admin/js/admin.js?id=8531a073dbd5e33c6bea",
+    "/assets/web/css/notification.css": "/assets/web/css/notification.css?id=ca42b33e98c68452a60e",
+    "/assets/web/js/notification.js": "/assets/web/js/notification.js?id=cd6adeab4ba67895545c"
 }

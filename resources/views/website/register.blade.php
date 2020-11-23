@@ -144,31 +144,32 @@
 
                                     <div class="form-label-group">
                                         <input type="text" name="name" id="name" class="form-control" placeholder="Name"
-                                            required>
+                                            required value="{{ old("name") }}">
                                         <label for="name">Name</label>
                                     </div>
 
                                     <div class="form-label-group">
                                         <input type="email" name="email" id="email" class="form-control"
-                                            placeholder="Email address" required>
+                                            placeholder="Email address" required value="{{ old("email") }}">
                                         <label for="email">Email address</label>
                                     </div>
 
                                     <div class="form-label-group">
                                         <input type="text" name="phone" id="phone" class="form-control"
-                                            placeholder="Mobile No" required>
+                                            placeholder="Mobile No" required value="{{ old("phone") }}" maxlength="11"
+                                            minlength="11" pattern="[0-9]+">
                                         <label for="phone">Mobile No</label>
                                     </div>
 
                                     <div class="form-label-group">
                                         <input type="password" name="password" id="password" class="form-control"
-                                            placeholder="Password" required>
+                                            placeholder="Password" required minlength="8">
                                         <label for="password">Password</label>
                                     </div>
 
                                     <div class="form-label-group" id="dobField">
                                         <input type="text" name="dob" id="dob" class="form-control" id="dob"
-                                            placeholder="Date of Birth" required>
+                                            placeholder="Date of Birth" required readonly value="{{ old("dob") }}">
                                         <label for="dob">Date of Birth</label>
                                     </div>
                                     <div class="form-label-group">
