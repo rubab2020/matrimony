@@ -38,7 +38,7 @@ Route::get('/profile', function () {
 });
 
 Route::get('profile-form', function () {
-    return view('website.customer.profile-form');
+    return view('website.profile-form');
 });
 
 Route::get('/checkout', function () {

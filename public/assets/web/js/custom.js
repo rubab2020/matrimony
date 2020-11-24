@@ -30,7 +30,7 @@ jQuery(document).ready(function(){
   $("#ageMin").val(ageRangeSlider.slider('values', 0));
   $("#ageMax").val(ageRangeSlider.slider('values', 1));
 
-  // ------------------ height range ---------------------------
+  // ------------ height range --------------------
   const decimalPoitArray = ['00', '08', '17', '25', '33', '42', '50', '58', '67', '75', '83', '92'];
 
   let convertCentemeterToFeet = function(value) {
@@ -84,4 +84,29 @@ jQuery(document).ready(function(){
   );
   $("#heightMin").val(Math.round(heightRangeSlider.slider('values', 0)));
   $("#heightMax").val(Math.round(heightRangeSlider.slider('values', 1)));
+
+
+  // ---------------------------------- 
+  // height select 
+  // ---------------------------------
+  let heightOutput = $("#heightOutput");
+  let heightSlider = $("#heightSlider");
+  heightSlider.slider({
+    range:false,
+    min:centemeterMin,
+    max:centemeterMax,
+    values:[centemeterMin],
+    step:oneFootInCentemeter,
+    slide:function(event, ui){
+      heightOutput.html(
+        formatToReadableFeet(convertCentemeterToFeet(ui.values[0]))
+      );
+      $("#height").val(Math.round(ui.values[0]));
+    }
+  });
+  heightOutput.html(
+    formatToReadableFeet(convertCentemeterToFeet(heightSlider.slider("values",0)))
+  );
+  $("#height").val(Math.round(heightSlider.slider('values', 0)));
+
 });
