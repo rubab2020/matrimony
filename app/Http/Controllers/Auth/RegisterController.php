@@ -21,7 +21,7 @@ class RegisterController extends Controller
         $request->validate([
             'name' => 'required',
             'email' => 'required|unique:customers|max:255',
-            'password' => 'required|min:8|confirmed',
+            'password' => 'required|min:8',
             'phone' => 'required|size:11',
         ]);
 
@@ -44,7 +44,7 @@ class RegisterController extends Controller
                 ->withErrors("Something went wrong");
         }
 
-        return view('website.phone-verification')
+        return redirect('/verify/phone')
             ->with('success', "Please verify your mobile number.");
     }
 }

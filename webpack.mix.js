@@ -83,3 +83,21 @@ mix.copy(
     ["node_modules/gentelella/production/images"],
     "public/assets/admin/images"
 );
+
+mix.styles(
+    [
+        "node_modules/gentelella/vendors/pnotify/dist/pnotify.css",
+        "node_modules/gentelella/vendors/pnotify/dist/pnotify.buttons.css"
+    ],
+    "public/assets/web/css/notification.css"
+).version();
+
+mix.scripts(
+    [
+        "node_modules/gentelella/vendors/pnotify/dist/pnotify.js",
+        "node_modules/gentelella/vendors/pnotify/dist/pnotify.buttons.js"
+    ],
+    "public/assets/web/js/notification.js"
+)
+    .version()
+    .sourceMaps();

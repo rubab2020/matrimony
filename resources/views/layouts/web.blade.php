@@ -24,7 +24,7 @@
     <link href="{{ asset('assets/web/css/custom.css') }}" rel="stylesheet" />
     <link href="{{ asset('assets/web/css/search.css') }}" rel="stylesheet" />
     <link href="{{ asset('assets/web/css/profile.css') }}" rel="stylesheet" />
-
+    {{ Html::style(mix('assets/web/css/notification.css')) }}
     @yield('style')
 </head>
 
@@ -76,6 +76,8 @@
     <script src="{{ asset('assets/web/js/scripts.js') }}"></script>
     <!-- custom JS -->
     <script src="{{ asset('assets/web/js/custom.js') }}"></script>
+    {{ Html::script(mix('assets/web/js/notification.js')) }}
+    @include('admin.sections.alert')
     @yield('script')
 </body>
 

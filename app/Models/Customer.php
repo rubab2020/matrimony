@@ -9,9 +9,11 @@ class Customer extends Authenticatable
 {
   use Notifiable;
 
+  protected $guarded = ['id'];
+
   protected $guard = 'customer';
 
   protected $hidden = [
-      'password', 'remember_token',
+    'password', 'remember_token',
   ];
 }
