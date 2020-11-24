@@ -20,6 +20,7 @@ class PermissionSeeder extends Seeder
             3 => ['name' => 'Setting Management', 'guard_name' => 'web'],
             4 => ['name' => 'Gallery Management', 'guard_name' => 'web'],
             5 => ['name' => 'Page Management', 'guard_name' => 'web'],
+            6 => ['name' => 'Profile Management', 'guard_name' => 'web'],
         ];
 
         foreach ($permissions as $key => $value) {

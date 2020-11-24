@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ShareProfileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,6 +37,7 @@ Route::get('/search', function () {
 Route::get('/profile', function () {
     return view('website.profile');
 });
+Route::get('/shareprofile/share','App\Http\Controllers\ShareProfileController@share')->name('shareprofile.share');
 
 
 Route::post('/otp/send', 'OTPController@sendOTP')->name('otp.send');
@@ -43,3 +45,4 @@ Route::post('/otp/send', 'OTPController@sendOTP')->name('otp.send');
 Route::post('/otp/resend', 'OTPController@resendOTP')->name('otp.resend');
 
 Route::post('/otp/verify', 'OTPController@verifyOTP')->name('otp.verify');
+

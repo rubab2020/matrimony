@@ -58,6 +58,9 @@
           @can("Page Management")
           <li><a href="{{ route('admin.pages.index') }}"><i class="fa fa-cog"></i> Pages</a></li>
           @endcan
+          @can("Profile Management")
+          <li><a href="{{ route('admin.pages.index') }}"><i class="fa fa-cog"></i> Profile Management</a></li>
+          @endcan
         </ul>
       </div>
 
