@@ -17,13 +17,14 @@
     <!-- Third party plugin CSS-->
     <link href="{{ asset('assets/web/css/magnific-popup.min.css') }}" rel="stylesheet" />
     <link href="{{ asset('assets/web/css/jquery-ui.css') }}" rel="stylesheet">
+    <link href="{{asset('assets/web/css/bootstrap-datepicker.min.css')}}" rel="stylesheet" type="text/css">
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="{{ asset('assets/web/css/styles.css') }}" rel="stylesheet" />
     <!-- custom css -->
     <link href="{{ asset('assets/web/css/custom.css') }}" rel="stylesheet" />
     <link href="{{ asset('assets/web/css/search.css') }}" rel="stylesheet" />
     <link href="{{ asset('assets/web/css/profile.css') }}" rel="stylesheet" />
-
+    {{ Html::style(mix('assets/web/css/notification.css')) }}
     @yield('style')
 </head>
 
@@ -70,10 +71,13 @@
     <script src="{{ asset('assets/web/js/jquery.easing.min.js') }}"></script>
     <script src="{{ asset('assets/web/js/jquery.magnific-popup.min.js') }}"></script>
     <script src="{{ asset('assets/web/js/jquery-ui.min.js') }}"></script>
+    <script src="{{asset('assets/web/js/bootstrap-datepicker.min.js')}}"></script>
     <!-- Core theme JS-->
     <script src="{{ asset('assets/web/js/scripts.js') }}"></script>
     <!-- custom JS -->
     <script src="{{ asset('assets/web/js/custom.js') }}"></script>
+    {{ Html::script(mix('assets/web/js/notification.js')) }}
+    @include('admin.sections.alert')
     @yield('script')
 </body>
 

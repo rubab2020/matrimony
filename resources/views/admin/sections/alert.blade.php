@@ -1,12 +1,12 @@
 <script>
-@if (count($errors) > 0)
+    @if (count($errors) > 0)
     @foreach ($errors->all() as $error)
     $( document ).ready(function() {
         new PNotify({
             title: 'Error',
             text: '{{ $error }}',
             type: 'error',
-            hide: true,
+            hide: false,
             styling: 'fontawesome',
             addclass: 'pnotify-center',
             delay: 2000,
@@ -35,7 +35,7 @@ $( document ).ready(function() {
         title: 'Error',
         text: '{!! Session::get('error') !!}',
         type: 'error',
-        hide: true,
+        hide: false,
         styling: 'fontawesome',
         addclass: 'pnotify-center',
         delay: 2000,

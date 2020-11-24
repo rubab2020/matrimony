@@ -69,3 +69,12 @@ header.pagehead {
 #page-content{
     margin-top: -450px;
 }
+
+.checkout-close {
+    position: absolute;
+    top: 25%;
+    right: -15px;
+    color: red;
+    opacity: 1;
+    border: 1px solid red;
+}

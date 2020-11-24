@@ -19,21 +19,22 @@ class OTPController extends Controller
 
       public function sendOTP(Request $request)
       {
-            $OTP = $this->OTP->generateOTP($request->phone_number);
+            $OTP = $this->OTP->generateOTP(session('customer')->phone);
             if (!App::environment('local')) {
                   SendSMS::dispatch($OTP->phone_number, __('otp_message', ['otp' => $OTP->otp]));
             }
-            return response()->json([
-                  "status" => true,
-                  "status_code" => 200,
-                  "data" => [],
-                  "message" => __("OTP has been sent.")
-            ], 200);
+            return view('website.phone-verification');
+            // return response()->json([
+            //       "status" => true,
+            //       "status_code" => 200,
+            //       "data" => [],
+            //       "message" => __("OTP has been sent.")
+            // ], 200);
       }
 
       public function resendOTP(Request $request)
       {
-            $OTP = $this->OTP->generateOTP($request->phone_number);
+            $OTP = $this->OTP->generateOTP(session('customer')->phone);
 
             if (!App::environment('local')) {
                   SendSMS::dispatch($OTP->phone_number, __('otp_message', ['otp' => $OTP->otp]));
@@ -48,20 +49,9 @@ class OTPController extends Controller
 
       public function verifyOTP(Request $request)
       {
-            if ($this->OTP->getOTP($request->phone_number, $request->otp)) {
-                  return response()->json([
-                        "status" => true,
-                        "status_code" => 200,
-                        "data" => [],
-                        "message" => __("OTP verified.")
-                  ], 200);
+            if ($this->OTP->getOTP(session('customer')->phone, $request->otp)) {
+                  return redirect('/')->with('success', 'Welcome');
             }
-
-            return response()->json([
-                  "status" => false,
-                  "status_code" => 400,
-                  "data" => [],
-                  "message" => __("OTP did not match.")
-            ], 400);
+            return redirect('/verify/phone')->withErrors("OTP didn't match. Another OTP has been sent.");
       }
 }
