@@ -1,7 +1,7 @@
 @extends('layouts.web')
 
 @section('style')
-	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bs-stepper/dist/css/bs-stepper.min.css">
+	<link rel="stylesheet" type="text/css" href="{{ asset('assets/web/css/bs-stepper.min.css') }}">
 @endsection
 
 @section('content')
@@ -72,11 +72,11 @@
 							    			</div>
 							    			<div class="form-group">
 							    				<label class="col-form-label">Blood Group</label>
-							    				{!! Form::select('blood_group', [''=>'Select', 'A+'=>'A+', 'A-'=>'A-', 'B+'=>'B+','B+-'=>'B-','AB+'=>'AB+','AB-'=>'AB-','O+'=>'O+','O-'=>'O-'], null, ['class'=>'form-control']) !!}
+							    				{!! Form::select('blood_group', $bloodGroups, null, ['class'=>'form-control']) !!}
 							    			</div>
 							    			<div class="form-group">
 							    				<label class="col-form-label">Marital Status</label>
-							    				{!! Form::select('marital_status', [''=>'Select', 'single'=>'Single', 'married'=>'Married', 'devorced'=>'Devorced'], null, ['class'=>'form-control']) !!}
+							    				{!! Form::select('marital_status', $martialStatuses, null, ['class'=>'form-control']) !!}
 							    			</div>
 							    			<div class="form-group">Children</label>
 							    				{!! Form::select('children', [''=>'Select']+range(1,10), null, ['class'=>'form-control']) !!}
@@ -133,22 +133,21 @@
 							    			</div>
 							    			<div class="form-group">
 							    				<label class="col-form-label">Weight (Kg)</label>
-							    				{!! Form::select('body_type', ['slim'=>'Slim', 'average'=>'Average', 'chubby'=> 'Chubby', 'fat'=>'Fat', 'fit'=> 'Fit', 'athletic'=>
-							    				'Athletic', 'bodybuilder'=>'Bodybuilder'], null, ['class'=>'form-control']) !!}
+							    				{!! Form::select('body_type', $bodyTypes, null, ['class'=>'form-control']) !!}
 							    			</div>
 						    			</div>
 						    			<div class="col-6">
 							    			<div class="form-group">
 							    				<label class="col-form-label">Eye Color</label>
-							    				{!! Form::select('eye_color', ['amber'=>'Amber', 'blue'=>'Blue', 'brown'=>'Brown', 'gray'=>'Gray', 'green'=>'Green', 'hazel'=>'Hazel', 'red'=>'Red'], null, ['class'=>'form-control']) !!}
+							    				{!! Form::select('eye_color', $eyeColors, null, ['class'=>'form-control']) !!}
 							    			</div>
 							    			<div class="form-group">
 							    				<label class="col-form-label">Hair Color</label>
-							    				{!! Form::select('hair_color', ['black'=>'black', 'brown'=>'brown', 'blond'=>'blond', 'red'=>'red', 'gray'=>'gray', 'white'=>'white', 'red'=>'Red'], null, ['class'=>'form-control']) !!}
+							    				{!! Form::select('hair_color', $hairColors, null, ['class'=>'form-control']) !!}
 							    			</div>
 							    			<div class="form-group">
 							    				<label class="col-form-label">Complexion</label>
-							    				{!! Form::select('complexion', ['fair'=>'fair', 'brown'=>'brown', 'black'=>'black', 'light'=>'light', 'medium'=>'medium', 'olive'=>'olive'], null, ['class'=>'form-control']) !!}
+							    				{!! Form::select('complexion', $complexions, null, ['class'=>'form-control']) !!}
 							    			</div>
 						    			</div>
 					    			</div>
@@ -168,11 +167,11 @@
 							    		<div class="col-6">
 							    			<div class="form-group">
 							    				<label class="col-form-label">Education</label>
-							    				{!! Form::select('education', [''=>'Select']+\App\Http\Repositories\Config::getEducationList(), null, ['class'=>'form-control']) !!}
+							    				{!! Form::select('education', [''=>'Select']+$educations, null, ['class'=>'form-control']) !!}
 							    			</div>
 							    			<div class="form-group">
 							    				<label class="col-form-label">Occupation</label>
-							    				{!! Form::select('occupation', [''=>'Select']+\App\Http\Repositories\Config::getOccupationList(), null, ['class'=>'form-control']) !!}
+							    				{!! Form::select('occupation', [''=>'Select']+$occupations, null, ['class'=>'form-control']) !!}
 							    			</div>
 							    			<div class="form-group">
 							    				<label class="col-form-label">Annual Income</label>
@@ -207,11 +206,11 @@
 							    			</div>
 							    			<div class="form-group">
 							    				<label class="col-form-label">CIty</label>
-							    				{!! Form::select('pre_city', [''=>'Select']+\App\Http\Repositories\Config::getCityList(), null, ['class'=>'form-control']) !!}
+							    				{!! Form::select('pre_city', [''=>'Select']+$cities, null, ['class'=>'form-control']) !!}
 							    			</div>
 							    			<div class="form-group">
 							    				<label class="col-form-label">District</label>
-							    				{!! Form::select('pre_district', [''=>'Select']+\App\Http\Repositories\Config::getDistrictList(), null, ['class'=>'form-control']) !!}
+							    				{!! Form::select('pre_district', [''=>'Select']+$districts, null, ['class'=>'form-control']) !!}
 							    			</div>
 							    			<div class="form-group">
 							    				<label class="col-form-label">Postal Code</label>
@@ -219,7 +218,7 @@
 							    			</div>
 							    			<div class="form-group">
 							    				<label class="col-form-label">Country</label>
-							    				{!! Form::select('pre_country', [''=>'Select']+\App\Http\Repositories\Config::getCountryList(), null, ['class'=>'form-control']) !!}
+							    				{!! Form::select('pre_country', [''=>'Select']+$countries, null, ['class'=>'form-control']) !!}
 							    			</div>
 						    			</div>
 							    		<div class="col-6">
@@ -260,30 +259,56 @@
 			    		<div id="preference" class="content" role="tabpanel" aria-labelledby="preference-trigger">
 			    			<div class="row">
 					    		<div class="col-12">
+					    			<h4>Set your desired cadidate preference</h4>
 					    			<div class="row">
 							    		<div class="col-6">
+							    			<div class="form-group">
+							    				<label class="col-form-label">Age Range</label>
+													<div id="ageRangeSlider"></div>
+													<br>
+													Range:<span id="ageRangeOutput"></span>
+													<input type="text" id="ageMin" hidden="" readonly="">
+													<input type="text" id="ageMax" hidden="" readonly="">
+							    			</div>
+							    			<div class="form-group">
+							    				<label class="col-form-label">Height Range</label>
+													<div id="heightRangeSlider"></div>
+													<br>
+													Range:<span id="heightRangeOutput"></span>
+													<input type="text" id="heightMin" hidden="" readonly="">
+													<input type="text" id="heightMax" hidden="" readonly="">
+							    			</div>
+							    			<div class="form-group">
+							    				<label class="col-form-label">Districts</label>
+      										{!! Form::select('pref_districts', $districts, null, ['class'=>'form-control', 'id'=> 'prefDistricts', 'multiple'=>'multiple']) !!}
+							    				<small>(Hold Ctrl button for multi select)</small>
+							    			</div>
+							    		</div>
+							    		<div class="col-6">
+							    			<div class="form-group">
+							    				<label class="col-form-label">Occupations</label>
+      										{!! Form::select('pref_occupations', $occupations, null, ['class'=>'form-control', 'id'=> 'prefOccupations', 'multiple'=>'multiple']) !!}
+							    				<small>(Hold Ctrl button for multi select)</small>
+							    			</div>
+							    			<div class="form-group">
+							    				<label class="col-form-label">Educations</label>
+      										{!! Form::select('pref_educations', $educations, null, ['class'=>'form-control', 'id'=> 'prefEducations', 'multiple'=>'multiple']) !!}
+							    				<small>(Hold Ctrl button for multi select)</small>
+							    			</div>
+							    			<div class="form-group">
+							    				<label class="col-form-label">Special Preference</label>
+							    				{!! Form::text('special_preference', null, ['class'=>'form-control']) !!}
+							    			</div>
 							    		</div>
 						    		</div>
+						    		<div class="controls">
+						          <button class="btn btn-primary float-left btnPrevious" type="button"> &#171; Previous</button>
+						          <button class="btn btn-primary float-right btnNext" type="button">Next &#187;</button>
+						        </div>
 					    		</div>
 				    		</div>
 			    		</div>
 
-			    			<!-- <div class="row">
-					    		<div class="col-12">
-					    			<div class="row">
-							    		<div class="col-6">
-							    			<div class="form-group">
-							    			</div>
-						    			</div>
-					    			</div>
-
-					    			
-							    	<div class="controls">
-						          <button class="btn btn-primary float-left btnPrevious" type="button"> &#171; Previous</button>
-						          <button class="btn btn-primary float-right btnNext" type="button">Next &#187;</button>
-						        </div>
-				    			</div>
-			    			</div> -->
 					  </div>
 					</div>
 
@@ -294,7 +319,7 @@
 @endsection
 
 @section('script')
-		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bs-stepper/dist/js/bs-stepper.min.js"></script>
+		<script type="text/javascript" src="{{ asset('assets/web/js/bs-stepper.min.js') }}"></script>
 		<script type="text/javascript">
 			$(document).ready(function () {
 				// ------------stepper --------------------
@@ -311,6 +336,7 @@
 				  stepper.previous();
 				});
 
+				// ---------- pic upload -------------
 				$('#profilePicUpload').change(function(){
 					$('#preivewProfilePic').empty();
 					$('#preivewProfilePic').append('<img src="'+URL.createObjectURL(event.target.files[0])+'" width="70px" height="70px"/>');
