@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Repositories\Helpers\ConfigHelper;
 use App\Models\Customer;
+use App\Models\Gallery;
+
 class ProfileController extends Controller
 {
     private $uploadPath;
@@ -95,15 +97,14 @@ class ProfileController extends Controller
 
 	private function saveImages($images, $customerId)
     {
-        if($images){
-            foreach($images as $image){
+        if($images) {
+            foreach($images as $image) {
                 $profilePictureName = null;
                 
-                $profilePictureName = Product::getPhotoPath($product->id);
-                $imageBgName = CustomHelper::saveImage($image, $this->uploadPath, 600, 600);
+                $imageName = CustomHelper::saveImage($image, $this->uploadPath, 600, 600);
 
-                $pImage = new ProductImage;
-                $pImage->image = $profilePictureName;
+                $pImage = new Gallery;
+                $pImage->image = $imangeName;
                 $pImage->customer_id = $customerId;
                 $pImage->save();
             }

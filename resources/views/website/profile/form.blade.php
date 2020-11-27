@@ -117,7 +117,7 @@
                     {!! Form::select('occupation', [''=>'Select']+$occupations, null, ['class'=>'form-control']) !!}
                 </div>
                 <div class="form-group">
-                    <label class="col-form-label">Annual Income</label>
+                    <label class="col-form-label">Annual Income (Taka)</label>
                     {!! Form::text('annual_income', null, ['class'=>'form-control']) !!}
                 </div>
             </div>
@@ -173,11 +173,11 @@
                     </div>
                     <div class="form-group">
                         <label class="col-form-label">CIty</label>
-                        {!! Form::select('per_city', $cities, null, ['class'=>'form-control']) !!}
+                        {!! Form::select('per_city', [''=>'Select']+$cities, null, ['class'=>'form-control']) !!}
                     </div>
                     <div class="form-group">
                         <label class="col-form-label">District</label>
-                        {!! Form::select('per_district', $districts, null, ['class'=>'form-control']) !!}
+                        {!! Form::select('per_district', [''=>'Select']+$districts, null, ['class'=>'form-control']) !!}
                     </div>
                     <div class="form-group">
                         <label class="col-form-label">Postal Code</label>
@@ -185,7 +185,7 @@
                     </div>
                     <div class="form-group">
                         <label class="col-form-label">Country</label>
-                        {!! Form::select('per_country', $countries, null, ['class'=>'form-control']) !!}
+                        {!! Form::select('per_country', [''=>'Select']+$countries, null, ['class'=>'form-control']) !!}
                     </div>
                 </div>
             </div>
