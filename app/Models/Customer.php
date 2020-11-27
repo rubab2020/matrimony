@@ -9,11 +9,18 @@ class Customer extends Authenticatable
 {
   use Notifiable;
 
-  protected $guarded = ['id'];
+	private static $_uploadPath = 'images/uploads/profiles/';
 
-  protected $guard = 'customer';
+	protected $guarded = ['id'];
 
-  protected $hidden = [
-    'password', 'remember_token',
-  ];
+	protected $guard = 'customer';
+
+	protected $hidden = [
+	    'password', 'remember_token',
+  	];
+
+	public static function getUploadPath()
+	{
+		return static::$_uploadPath;
+	}
 }

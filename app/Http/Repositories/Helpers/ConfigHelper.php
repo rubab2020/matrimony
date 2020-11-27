@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Repositories;
+namespace App\Http\Repositories\Helpers;
 
-class Config
+class ConfigHelper
 {
 	public static function getEducationList()
 	{

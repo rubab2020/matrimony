@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Repositories\Config;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,35 +34,11 @@ Route::get('/search', function () {
 });
 
 Route::get('/profile', function () {
-    return view('website.profile');
+    return view('website.profile.profile');
 });
+Route::get('profile/create', 'ProfileController@create');
+Route::post('profile/save', 'ProfileController@store');
 
-Route::get('profile-form', function () {
-	$bloodGroups = [''=>'Select', 'A+'=>'A+', 'A-'=>'A-', 'B+'=>'B+','B+-'=>'B-','AB+'=>'AB+','AB-'=>'AB-','O+'=>'O+','O-'=>'O-'];	
-	$martialStatuses = [''=>'Select', 'single'=>'Single', 'married'=>'Married', 'devorced'=>'Devorced'];
-	$bodyTypes = [''=>'Select', 'slim'=>'Slim', 'average'=>'Average', 'chubby'=> 'Chubby', 'fat'=>'Fat', 'fit'=> 'Fit', 'athletic'=>'Athletic', 'bodybuilder'=>'Bodybuilder'];
-	$eyeColors = [''=>'Select', 'amber'=>'Amber', 'blue'=>'Blue', 'brown'=>'Brown', 'gray'=>'Gray', 'green'=>'Green', 'hazel'=>'Hazel', 'red'=>'Red'];
-	$hairColors = [''=>'Select', 'black'=>'black', 'brown'=>'brown', 'blond'=>'blond', 'red'=>'red', 'gray'=>'gray', 'white'=>'white', 'red'=>'Red'];
-	$complexions = [''=>'Select', 'fair'=>'fair', 'brown'=>'brown', 'black'=>'black', 'light'=>'light', 'medium'=>'medium', 'olive'=>'olive'];
-	$educations = Config::getEducationList();
-	$occupations = Config::getOccupationList();
-	$cities = Config::getCityList();
-	$districts = Config::getDistrictList();
-	$countries = Config::getCountryList();
-    return view('website.profile-form', compact(
-    	'bloodGroups', 
-    	'martialStatuses', 
-    	'bodyTypes', 
-    	'eyeColors', 
-    	'hairColors', 
-    	'complexions',
-    	'educations',
-    	'occupations',
-    	'cities',
-    	'districts',
-    	'countries'
-	));
-});
 
 Route::get('/checkout', function () {
     return view('website.checkout');
