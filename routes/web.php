@@ -17,12 +17,8 @@ Route::get('/', function () {
     return view('website.home');
 });
 
-Route::get('/login', function () {
-    return view('website.login');
-});
-
-Route::get('/register', function () {
-    return view('website.register');
+Route::get('/home', function () {
+    return view('website.home');
 });
 
 Route::get('/setting', function () {
@@ -44,10 +40,27 @@ Route::get('/checkout', function () {
     return view('website.checkout');
 });
 
-Route::get('/verify/phone', 'OTPController@sendOTP');
 
+// auth
+Route::get('/register', function () {
+    return view('website..auth.register');
+});
 Route::post('/register', 'Auth\RegisterController@register')->name('customer.register');
+Route::get('/login', function () {
+    return view('website.auth.login');
+});
+Route::post('/login', 'Auth\LoginController@login')->name('customer.login');
+Route::get('logout', 'Auth\LoginController@logout');
+
+Route::get('/verify/phone', 'OTPController@sendOTP');
 
 Route::post('/otp/send', 'OTPController@sendOTP')->name('otp.send');
 Route::post('/otp/resend', 'OTPController@resendOTP')->name('otp.resend');
 Route::post('/otp/verify', 'OTPController@verifyOTP')->name('otp.verify');
+
+Route::group(['prefix' => 'customer', 'middleware' => ['auth:customer']], function() {
+	Route::get('dashboard', function() {
+		return view('website.dashboard');
+	})->name('customer.dashboard');
+});
+
