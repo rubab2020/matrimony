@@ -7,7 +7,7 @@
 
     .login,
     .image {
-        min-height: 100vh;
+        min-height: 80.5vh;
     }
 
     .bg-image {
@@ -126,28 +126,39 @@
                         <div class="row">
                             <div class="col-md-9 col-lg-8 mx-auto">
                                 <h3 class="login-heading mb-4">Login</h3>
-                                <form>
+                                <form action="{{ route('customer.login') }}" method="POST">
+                                    @csrf
                                     <div class="form-label-group">
-                                        <input type="email" id="inputEmail" class="form-control"
-                                            placeholder="Email address" required autofocus autocomplete="off">
+                                        <input name="email" type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus autocomplete="off">
                                         <label for="inputEmail">Email address</label>
+
+                                        @error('email')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                        @enderror
                                     </div>
 
                                     <div class="form-label-group">
-                                        <input type="password" id="inputPassword" class="form-control"
-                                            placeholder="Password" required>
+                                        <input name="password" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
                                         <label for="inputPassword">Password</label>
+
+                                        @error('password')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                        @enderror
                                     </div>
 
-                                    <div class="custom-control custom-checkbox mb-3">
-                                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                   <!--  <div class="custom-control custom-checkbox mb-3">
+                                        <input name="remember" type="checkbox" class="custom-control-input" id="customCheck1" {{ old('remember') ? 'checked' : '' }}>
                                         <label class="custom-control-label" for="customCheck1">Remember password</label>
-                                    </div>
-                                    <button
-                                        class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2"
-                                        type="submit">Sign in</button>
+                                    </div> -->
+
+                                    <button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit">Sign in</button>
                                     <div class="text-center">
-                                        <a class="small" href="#">Forgot password?</a></div>
+                                        <a class="small" href="#">Forgot password?</a>
+                                    </div>
                                 </form>
                             </div>
                         </div>
@@ -155,9 +166,9 @@
                 </div>
             </div>
         </div>
+    </div>
+</x-admin-layout>
 
-        </x-admin-layout>
-
-        @section('script')
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.js"></script>
-        @endsection
+@section('script')
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.js"></script>
+@endsection

@@ -72,7 +72,7 @@
 				<div class="filter">
 					<h3 class="title">Profession</h3>
 					<ul class="options">
-						<li><label><input type="checkbox" name="candidate_type" value="groom">Doctor</label></li>
+						<li><label><input type="checkbox" name="candidate_type" value="bride">Doctor</label></li>
 						<li><label><input type="checkbox" name="candidate_type" value="bride">Engineer</label></li>
 						<li><label><input type="checkbox" name="candidate_type" value="bride">Architect</label></li>
 						<li><label><input type="checkbox" name="candidate_type" value="bride">Banker</label></li>
@@ -82,12 +82,10 @@
 						<li><label><input type="checkbox" name="candidate_type" value="bride">Salesman</label></li>
 						<li><label><input type="checkbox" name="candidate_type" value="bride">Operator</label></li>
 						<li><label><input type="checkbox" name="candidate_type" value="bride">Armed Force</label></li>
-						<li><label><input type="checkbox" name="candidate_type" value="bride">Public Service
-								Holder</label></li>
-						<li><label><input type="checkbox" name="candidate_type" value="bride">Private Service
-								Holder</label></li>
+						<li><label><input type="checkbox" name="candidate_type" value="bride">Public Service Holder</label></li>
+						<li><label><input type="checkbox" name="candidate_type" value="bride">Private Service Holder</label></li>
 						<li><label><input type="checkbox" name="candidate_type" value="bride">Nurse</label></li>
-						<li><label><input type="checkbox" name="candidate_type" value="groom">Other</label></li>
+						<li><label><input type="checkbox" name="candidate_type" value="bride">Other</label></li>
 					</ul>
 				</div>
 
@@ -119,8 +117,7 @@
 						<li><label><input type="checkbox" name="candidate_type" value="groom">MPhil</label></li>
 						<li><label><input type="checkbox" name="candidate_type" value="groom">Some College</label></li>
 						<li><label><input type="checkbox" name="candidate_type" value="groom">High School</label></li>
-						<li><label><input type="checkbox" name="candidate_type" value="groom">Incomplete High
-								School</label></li>
+						<li><label><input type="checkbox" name="candidate_type" value="groom">Incomplete High School</label></li>
 					</ul>
 				</div>
 
@@ -138,10 +135,8 @@
 					<ul class="options">
 						<li><label><input type="checkbox" name="candidate_type" value="groom">Muslim</label></li>
 						<li><label><input type="checkbox" name="candidate_type" value="groom">Hindu</label></li>
-						<li><label><input type="checkbox" name="candidate_type"
-									value="groom">Christian(Catholic)</label></li>
-						<li><label><input type="checkbox" name="candidate_type"
-									value="groom">Christian(Protestant)</label></li>
+						<li><label><input type="checkbox" name="candidate_type" value="groom">Christian(Catholic)</label></li>
+						<li><label><input type="checkbox" name="candidate_type" value="groom">Christian(Protestant)</label></li>
 						<li><label><input type="checkbox" name="candidate_type" value="groom">Christian(Other)</label>
 						</li>
 						<li><label><input type="checkbox" name="candidate_type" value="groom">Anglican</label></li>
@@ -152,8 +147,7 @@
 						<li><label><input type="checkbox" name="candidate_type" value="groom">Jain</label></li>
 						<li><label><input type="checkbox" name="candidate_type" value="groom">Jewish</label></li>
 						<li><label><input type="checkbox" name="candidate_type" value="groom">Sikh</label></li>
-						<li><label><input type="checkbox" name="candidate_type" value="groom">Spiritual But Not
-								Religious</label></li>
+						<li><label><input type="checkbox" name="candidate_type" value="groom">Spiritual But Not Religious</label></li>
 						<li><label><input type="checkbox" name="candidate_type" value="groom">Not Religious</label></li>
 						<li><label><input type="checkbox" name="candidate_type" value="groom">Other</label></li>
 					</ul>
@@ -167,12 +161,9 @@
 						<li><label><input type="checkbox" name="candidate_type" value="groom">Divorced</label></li>
 						<li><label><input type="checkbox" name="candidate_type" value="groom">Widowed</label></li>
 						<li><label><input type="checkbox" name="candidate_type" value="groom">Married</label></li>
-						<li><label><input type="checkbox" name="candidate_type" value="groom">Domestic Partner</label>
-						</li>
-						<li><label><input type="checkbox" name="candidate_type" value="groom">Legally Separated</label>
-						</li>
-						<li><label><input type="checkbox" name="candidate_type" value="groom">Living Together</label>
-						</li>
+						<li><label><input type="checkbox" name="candidate_type" value="groom">Domestic Partner</label></li>
+						<li><label><input type="checkbox" name="candidate_type" value="groom">Legally Separated</label></li>
+						<li><label><input type="checkbox" name="candidate_type" value="groom">Living Together</label></li>
 					</ul>
 				</div>
 
