@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ShareProfileController;
+use App\Http\Controllers\MessageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -54,4 +55,7 @@ Route::post('/register', 'Auth\RegisterController@register')->name('customer.reg
 Route::post('/otp/send', 'OTPController@sendOTP')->name('otp.send');
 Route::post('/otp/resend', 'OTPController@resendOTP')->name('otp.resend');
 Route::post('/otp/verify', 'OTPController@verifyOTP')->name('otp.verify');
+Route::get('/message','MessageController@index')->name('message');
+Route::get('/message/{id}', 'MessageController@getMessage')->name('message/id');
+Route::post('send_message', 'MessageController@sendMessage');
 
