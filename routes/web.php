@@ -60,16 +60,13 @@ Route::get('/verify/phone', 'OTPController@sendOTP');
 Route::post('/otp/send', 'OTPController@sendOTP')->name('otp.send');
 Route::post('/otp/resend', 'OTPController@resendOTP')->name('otp.resend');
 Route::post('/otp/verify', 'OTPController@verifyOTP')->name('otp.verify');
-<<<<<<< HEAD
 Route::get('/message','MessageController@index')->name('message');
 Route::get('/message/{id}', 'MessageController@getMessage')->name('message/id');
 Route::post('send_message', 'MessageController@sendMessage');
-=======
 
 Route::group(['prefix' => 'customer', 'middleware' => ['auth:customer']], function() {
 	Route::get('dashboard', function() {
 		return view('website.dashboard');
 	})->name('customer.dashboard');
 });
->>>>>>> 9d57137504c8065dc288842ab86a055ab3225a8c
 
