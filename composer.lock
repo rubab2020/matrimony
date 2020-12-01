@@ -1837,7 +1837,11 @@
                 }
             ],
             "description": "A front-end framework for Laravel.",
+<<<<<<< HEAD
             "time": "2020-11-30T21:19:19+00:00"
+=======
+            "time": "2020-11-17T14:58:56+00:00"
+>>>>>>> 773b9f7e32fa2d57fdbf96acb988492dfda2204d
         },
         {
             "name": "mobiledetect/mobiledetectlib",
@@ -6347,7 +6351,11 @@
                 "testing",
                 "xunit"
             ],
+<<<<<<< HEAD
             "time": "2020-12-01T04:58:47+00:00"
+=======
+            "time": "2020-11-10T12:53:30+00:00"
+>>>>>>> 773b9f7e32fa2d57fdbf96acb988492dfda2204d
         },
         {
             "name": "sebastian/cli-parser",

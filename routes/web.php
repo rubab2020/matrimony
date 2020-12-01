@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+
 use App\Http\Controllers\ShareProfileController;
 use App\Http\Controllers\MessageController;
 use App\Http\Helpers\ConfigHelper;
@@ -36,7 +37,7 @@ Route::get('/search', function () {
 Route::get('/profile', function () {
     return view('website.profile.profile');
 });
-Route::get('/shareprofile/share','App\Http\Controllers\ShareProfileController@share')->name('shareprofile.share');
+Route::get('/shareprofile/share', 'ShareProfileController@share')->name('shareprofile.share');
 Route::get('profile/create', 'ProfileController@create');
 Route::post('profile/save', 'ProfileController@store');
 
@@ -71,4 +72,3 @@ Route::group(['prefix' => 'customer', 'middleware' => ['auth:customer']], functi
         return view('website.home');
     })->name('customer.home');
 });
-
