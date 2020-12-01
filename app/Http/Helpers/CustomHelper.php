@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Repositories\Helpers;
+namespace App\Http\Helpers;
 
 class CustomHelper
 {

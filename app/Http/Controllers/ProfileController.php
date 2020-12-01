@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Http\Repositories\Helpers\ConfigHelper;
+use App\Http\Helpers\ConfigHelper;
 use App\Models\Customer;
 use App\Models\Gallery;
 

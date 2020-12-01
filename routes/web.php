@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ShareProfileController;
 use App\Http\Controllers\MessageController;
+use App\Http\Helpers\ConfigHelper;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,11 +17,11 @@ use App\Http\Controllers\MessageController;
 */
 
 Route::get('/', function () {
-    return view('website.home');
-});
+    $ages = range(18,80);
+    $ages = array_combine($ages,$ages);
 
-Route::get('/home', function () {
-    return view('website.home');
+    $religions = ConfigHelper::getReligionList();
+    return view('website.welcome', compact('ages', 'religions'));
 });
 
 Route::get('/setting', function () {
@@ -28,7 +29,8 @@ Route::get('/setting', function () {
 });
 
 Route::get('/search', function () {
-    return view('website.search');
+    $religions = ConfigHelper::getReligionList();
+    return view('website.search', compact('religions'));
 });
 
 Route::get('/profile', function () {
@@ -38,11 +40,9 @@ Route::get('/shareprofile/share','App\Http\Controllers\ShareProfileController@sh
 Route::get('profile/create', 'ProfileController@create');
 Route::post('profile/save', 'ProfileController@store');
 
-
 Route::get('/checkout', function () {
     return view('website.checkout');
 });
-
 
 // auth
 Route::get('/register', function () {
@@ -54,19 +54,21 @@ Route::get('/login', function () {
 });
 Route::post('/login', 'Auth\LoginController@login')->name('customer.login');
 Route::get('logout', 'Auth\LoginController@logout');
-
 Route::get('/verify/phone', 'OTPController@sendOTP');
 
+// otp
 Route::post('/otp/send', 'OTPController@sendOTP')->name('otp.send');
 Route::post('/otp/resend', 'OTPController@resendOTP')->name('otp.resend');
 Route::post('/otp/verify', 'OTPController@verifyOTP')->name('otp.verify');
+
+// message
 Route::get('/message','MessageController@index')->name('message');
 Route::get('/message/{id}', 'MessageController@getMessage')->name('message/id');
 Route::post('send_message', 'MessageController@sendMessage');
 
 Route::group(['prefix' => 'customer', 'middleware' => ['auth:customer']], function() {
-	Route::get('dashboard', function() {
-		return view('website.dashboard');
-	})->name('customer.dashboard');
+    Route::get('home', function () {
+        return view('website.home');
+    })->name('customer.home');
 });
 
