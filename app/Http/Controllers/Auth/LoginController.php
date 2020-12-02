@@ -6,7 +6,6 @@ use App\Models\Customer;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Validator;
 
 class LoginController extends Controller
 {
@@ -18,14 +17,10 @@ class LoginController extends Controller
     public function login(Request $request)
     {
         // Validate form data
-        $validator = Validator::make($request->only('email','password'), [
+        $request->validate([
             'email' => 'required|email',
             'password' => 'required|min:8'
         ]);
-
-        if($validator->fails()) {
-            return redirect()->back()->withErrors($validator);
-        }
 
         // Attempt to log the user in
         if(Auth::guard('customer')->attempt([
@@ -33,11 +28,13 @@ class LoginController extends Controller
     		'password' => $request->password
         		
     	])){
-            return redirect()->to('/customer/dashboard');
+            return redirect()->to('/customer/home');
         }
 
         // if unsuccessful
-        return redirect()->back()->withInput($request->only('email'))->with('error', 'Login failed. Email and password don\'t match.');
+        return redirect()->back()
+                ->withInput($request->only('email'))
+                ->withErrors('Login failed. Email and password don\'t match.');
     }
 
     public function logout()

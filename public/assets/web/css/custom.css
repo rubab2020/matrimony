@@ -43,7 +43,7 @@ h2.cool-font {
     font-weight: bold;
 }
 
-<<<<<<< HEAD
+/*<<<<<<< HEAD*/
 header.pagehead {
     padding-top: -10 rem;
     margin-top: -300px;
@@ -77,4 +77,9 @@ header.pagehead {
     color: red;
     opacity: 1;
     border: 1px solid red;
+}
+
+
+.page-content {
+    margin-top: 100px !important;
 }

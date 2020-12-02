@@ -7,7 +7,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class Customer extends Authenticatable
 {
-  use Notifiable;
+  	use Notifiable;
 
 	private static $_uploadPath = 'images/uploads/profiles/';
 

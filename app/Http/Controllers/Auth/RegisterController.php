@@ -6,6 +6,7 @@ use Hash;
 use App\Models\Customer;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Haruncpi\LaravelIdGenerator\IdGenerator;
 
 class RegisterController extends Controller
 {
@@ -25,8 +26,13 @@ class RegisterController extends Controller
             'phone' => 'required|size:11',
         ]);
 
+
+
         try {
+            $profileId = IdGenerator::generate(['table' => 'customers','field'=>'id', 'length' => 8, 'prefix' =>date('P')]);
+            
             $customer = Customer::create([
+                'profile_id' => $profileId,
                 'name' => $request->input('name'),
                 'email' => $request->input('email'),
                 'profile_for' => $request->input('profile_for'),
