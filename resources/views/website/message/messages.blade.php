@@ -1,7 +1,12 @@
 @extends('layouts.web')
 
 @section('content')
-    <div class="container-fluid" style="padding-top:235px;">
+    <div class="container-fluid" style="padding-top:90px;">
+         <div class="section-card">
+            <h3 class="section-title" style="text-align:center">Your Purchased Profile</h3>
+            <p style="text-align:center;font-family:Roboto;color:red;">Click on the profile to start chat</p>
+        </div>
+        <br>
         <div class="row">
             <div class="col-md-4">
                 <div class="user-wrapper">
@@ -9,7 +14,7 @@
                         @foreach($users as $user)
                             <li class="user" id="{{ $user->id }}">
                                 {{--will show unread count notification--}}
-                                @if($user->unread)
+                                 @if($user->unread)
                                     <span class="pending">{{ $user->unread }}</span>
                                 @endif
 
@@ -24,6 +29,7 @@
                                     </div>
                                 </div>
                             </li>
+                            <br/>
                         @endforeach
                     </ul>
                 </div>
@@ -34,6 +40,7 @@
             </div>
         </div>
     </div>
+    <br><br><br><br><br><br><br><br><br><br><br>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://js.pusher.com/7.0/pusher.min.js"></script>
     <script>
@@ -42,6 +49,7 @@
         $(document).ready(function () {
             // ajax setup form csrf token
             $.ajaxSetup({
+               
                 headers: {
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                 }
@@ -84,7 +92,7 @@
                 receiver_id = $(this).attr('id');
                 $.ajax({
                     type: "get",
-                    url: "message/" + receiver_id, // need to create this route
+                    url: "message/" + receiver_id, 
                     data: "",
                     cache: false,
                     success: function (data) {
@@ -96,15 +104,14 @@
 
             $(document).on('keyup', '.input-text input', function (e) {
                 var message = $(this).val();
-
-                // check if enter key is pressed and message is not null also receiver is selected
                 if (e.keyCode == 13 && message != '' && receiver_id != '') {
-                    $(this).val(''); // while pressed enter text box will be empty
+                    $(this).val(''); 
 
                     var datastr = "receiver_id=" + receiver_id + "&message=" + message;
+                    // alert(datastr);
                     $.ajax({
                         type: "post",
-                        url: "send_message", // need to create this post route
+                        url: "message/send",
                         data: datastr,
                         cache: false,
                         success: function (data) {

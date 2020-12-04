@@ -65,7 +65,7 @@ Route::post('/otp/verify', 'OTPController@verifyOTP')->name('otp.verify');
 // message
 Route::get('/message','MessageController@index')->name('message');
 Route::get('/message/{id}', 'MessageController@getMessage')->name('message/id');
-Route::post('send_message', 'MessageController@sendMessage');
+Route::post('message/send', 'MessageController@sendMessage');
 
 Route::group(['prefix' => 'customer', 'middleware' => ['auth:customer']], function() {
     Route::get('home', function () {

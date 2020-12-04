@@ -5,6 +5,7 @@ use App;
 use Illuminate\Http\Request;
 use App\Models\Message;
 use App\Models\Customer;
+use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Pusher\Pusher;
@@ -20,6 +21,7 @@ class MessageController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
+        
     }
 
     /**
@@ -30,10 +32,10 @@ class MessageController extends Controller
     public function index()
     {
         // select all users except logged in user
-        $users = DB::select("select customers.id, customers.name, customers.email, count(is_read) as unread 
-        from customers LEFT  JOIN  messages ON customers.id = messages.from and is_read = 0 and messages.to = " . Auth::id() . "
-        where customers.id != " . Auth::id() . " 
-        group by customers.id, customers.name,customers.email");
+        $users = DB::select("select users.id, users.name, users.email, count(is_read) as unread 
+        from users LEFT  JOIN  messages ON users.id = messages.from and is_read = 0 and messages.to = " . Auth::id() . "
+        where users.id != " . Auth::id() . " 
+        group by users.id, users.name,users.email");
          //$users = Customer::all();
          return view('website.message.messages', ['users' => $users]);
     }
@@ -71,7 +73,6 @@ class MessageController extends Controller
         $from = Auth::id();
         $to = $request->receiver_id;
         $message = $request->message;
-
         $data = new Message();
         $data->from = $from;
         $data->to = $to;
@@ -79,7 +80,6 @@ class MessageController extends Controller
         $data->is_read = 0; // message will be unread when sending message
         $data->save();
 
-        // pusher
         $options = array(
             'cluster' => 'ap2',
             'useTLS' => true
