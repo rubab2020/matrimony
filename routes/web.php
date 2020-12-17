@@ -38,8 +38,6 @@ Route::get('/profile', function () {
     return view('website.profile.profile');
 });
 Route::get('/shareprofile/share', 'ShareProfileController@share')->name('shareprofile.share');
-Route::get('profile/create', 'ProfileController@create');
-Route::post('profile/save', 'ProfileController@store');
 
 Route::get('/checkout', function () {
     return view('website.checkout');
@@ -67,8 +65,13 @@ Route::get('/message','MessageController@index')->name('message');
 Route::get('/message/{id}', 'MessageController@getMessage')->name('message/id');
 Route::post('message/send', 'MessageController@sendMessage');
 
-Route::group(['prefix' => 'customer', 'middleware' => ['auth:customer']], function() {
+Route::group(['middleware' => ['auth:customer']], function() {
     Route::get('home', function () {
         return view('website.home');
-    })->name('customer.home');
+    })->name('home');
+
+    Route::get('profile/create', 'ProfileController@create');
+    Route::post('profile/save', 'ProfileController@store');
+    Route::get('profile/edit', 'ProfileController@edit');
+    Route::post('profile/update', 'ProfileController@update');
 });

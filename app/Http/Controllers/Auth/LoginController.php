@@ -28,7 +28,7 @@ class LoginController extends Controller
     		'password' => $request->password
         		
     	])){
-            return redirect()->to('/customer/home');
+            return redirect()->to('/home');
         }
 
         // if unsuccessful

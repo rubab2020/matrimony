@@ -16,6 +16,7 @@ class CustomHelper
   	public static function saveImage($image, $path, $width,  $height)
   	{
 		$imageLink = '';
+		$fileName = null;
 		$imageQuality = 75;
 
 		if($image){

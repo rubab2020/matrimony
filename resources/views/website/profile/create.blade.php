@@ -58,7 +58,7 @@
 					    	 steps content here 
 					    -------------------------------->
 
-					    {!! Form::open(['url' => '/profile/save']) !!}
+					    {!! Form::open(['url' => '/profile/save', 'files'=>true]) !!}
 					    	@include('website.profile.form', ['submitButtonText' => 'Save Profile'])
     					{!! Form::close() !!}
     				</div>

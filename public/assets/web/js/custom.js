@@ -14,11 +14,16 @@ jQuery(document).ready(function(){
   const ageMax = 80;
   let ageRangeOutput = $("#ageRangeOutput");
   let ageRangeSlider = $("#ageRangeSlider");
+  let expAgeStart = parseInt($("input[name='expect_age_start']").val());
+  let expAgeEnd = parseInt($("input[name='expect_age_end']").val());
   ageRangeSlider.slider({
     range:true,
     min:ageMin,
     max:ageMax,
-    values:[ageMin, ageMax],
+    values:[
+      expAgeStart ? expAgeStart : ageMin, 
+      expAgeEnd ? expAgeEnd : ageMax
+    ],
     step:1,
     slide:function(event, ui){
       ageRangeOutput.html(ui.values[0]+' - '+ui.values[1]);
@@ -61,11 +66,16 @@ jQuery(document).ready(function(){
   let centemeterMax = eightFeet*oneFootInCentemeter;
   let heightRangeOutput = $("#heightRangeOutput");
   let heightRangeSlider = $("#heightRangeSlider");
+  let expHeightStart = parseInt($("input[name='expect_height_start']").val());
+  let expHeightEnd = parseInt($("input[name='expect_height_end']").val());
   heightRangeSlider.slider({
     range:true,
     min:centemeterMin,
     max:centemeterMax,
-    values:[centemeterMin, centemeterMax],
+    values:[
+      expHeightStart ? expHeightStart : centemeterMin, 
+      expHeightEnd ? expHeightEnd : centemeterMax
+    ],
     step:oneFootInCentemeter,
     slide:function(event, ui){
       heightRangeOutput.html(
@@ -91,11 +101,12 @@ jQuery(document).ready(function(){
   // ---------------------------------
   let heightOutput = $("#heightOutput");
   let heightSlider = $("#heightSlider");
+  let height = parseInt($("input[name='height']").val());
   heightSlider.slider({
     range:false,
-    min:centemeterMin,
+    min: centemeterMin,
     max:centemeterMax,
-    values:[centemeterMin],
+    values:[height ? height : centemeterMin],
     step:oneFootInCentemeter,
     slide:function(event, ui){
       heightOutput.html(
