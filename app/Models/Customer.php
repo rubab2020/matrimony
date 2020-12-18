@@ -23,4 +23,9 @@ class Customer extends Authenticatable
 	{
 		return static::$_uploadPath;
 	}
+
+	public function getAgeAttribute() {
+		return \Carbon\Carbon::parse($this->dob)
+			->diffInYears(\Carbon\Carbon::now());
+	}
 }

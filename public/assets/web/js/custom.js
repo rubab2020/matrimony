@@ -120,4 +120,9 @@ jQuery(document).ready(function(){
   );
   $("#height").val(Math.round(heightSlider.slider('values', 0)));
 
+  // profle height convert from cm to inch
+  let profHeightCm = $('#profileHeight').html();
+  $('#profileHeight').html(
+    formatToReadableFeet(convertCentemeterToFeet(profHeightCm))
+  );
 });

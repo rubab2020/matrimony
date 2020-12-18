@@ -29,10 +29,7 @@ Route::get('/setting', function () {
     return view('dashboard');
 });
 
-Route::get('/search', function () {
-    $religions = ConfigHelper::getReligionList();
-    return view('website.search', compact('religions'));
-});
+Route::get('/search', 'SearchController@search');
 
 Route::get('/profile', function () {
     return view('website.profile.profile');

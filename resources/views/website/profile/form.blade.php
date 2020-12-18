@@ -22,7 +22,7 @@
                 </div>
                 <div class="form-group">
                     <label class="col-form-label">Marital Status</label>
-                    {!! Form::select('marital_status', $martialStatuses, old('marital_status', $profile->marital_status ?: null), ['class'=>'form-control']) !!}
+                    {!! Form::select('marital_status', [''=>'Select']+$martialStatuses, old('marital_status', $profile->marital_status ?: null), ['class'=>'form-control']) !!}
                 </div>
                 <div class="form-group">No of Children</label>
                     {!! Form::select('no_of_children', [''=>'Select']+range(1,10), old('no_of_children', $profile->no_of_children ?: null), ['class'=>'form-control']) !!}
@@ -214,35 +214,35 @@
             <div class="col-6">
                 <div class="form-group">
                     <label class="col-form-label">Desired Age Range</label>
-                        <div id="ageRangeSlider"></div>
-                        <br>
-                        Range:<span id="ageRangeOutput"></span>
-                        <input name="expect_age_start" value="{{ old('expect_age_start', $profile->expect_age_start ?: null) }}" type="text" id="ageMin" hidden="" readonly="">
-                        <input name="expect_age_end" value="{{ old('expect_age_end', $profile->expect_age_end ?: null) }}" type="text" id="ageMax" hidden="" readonly="">
+                    <div id="ageRangeSlider"></div>
+                    <br>
+                    Range:<span id="ageRangeOutput"></span>
+                    <input name="expect_age_start" value="{{ old('expect_age_start', $profile->expect_age_start ?: null) }}" type="text" id="ageMin" hidden="" readonly="">
+                    <input name="expect_age_end" value="{{ old('expect_age_end', $profile->expect_age_end ?: null) }}" type="text" id="ageMax" hidden="" readonly="">
                 </div>
                 <div class="form-group">
                     <label class="col-form-label">Desired Height Range</label>
-                        <div id="heightRangeSlider"></div>
-                        <br>
-                        Range:<span id="heightRangeOutput"></span>
-                        <input name="expect_height_start" value="{{ old('expect_height_start', $profile->expect_height_start ?: null) }}" type="text" id="heightMin" hidden="" readonly="">
-                        <input name="expect_height_end" value="{{ old('expect_height_end', $profile->expect_height_end ?: null) }}" type="text" id="heightMax" hidden="" readonly="">
+                    <div id="heightRangeSlider"></div>
+                    <br>
+                    Range:<span id="heightRangeOutput"></span>
+                    <input name="expect_height_start" value="{{ old('expect_height_start', $profile->expect_height_start ?: null) }}" type="text" id="heightMin" hidden="" readonly="">
+                    <input name="expect_height_end" value="{{ old('expect_height_end', $profile->expect_height_end ?: null) }}" type="text" id="heightMax" hidden="" readonly="">
                 </div>
                 <div class="form-group">
                     <label class="col-form-label">Desired Districts</label>
-                        {!! Form::select('expect_districts[]', $districts, old('expect_districts', $profile->expect_districts ?: null), ['class'=>'form-control', 'id'=> 'prefDistricts', 'multiple'=>'multiple']) !!}
+                    {!! Form::select('expect_districts[]', $districts, old('expect_districts', $profile->expect_districts ?: null), ['class'=>'form-control', 'id'=> 'prefDistricts', 'multiple'=>'multiple']) !!}
                     <small>(Hold Ctrl button for multi select)</small>
                 </div>
             </div>
             <div class="col-6">
                 <div class="form-group">
                     <label class="col-form-label">Desired Occupations</label>
-                        {!! Form::select('expect_occupations[]', $occupations, old('expect_occupations', $profile->expect_occupations ?: null), ['class'=>'form-control', 'id'=> 'prefOccupations', 'multiple'=>'multiple']) !!}
+                    {!! Form::select('expect_occupations[]', $occupations, old('expect_occupations', $profile->expect_occupations ?: null), ['class'=>'form-control', 'id'=> 'prefOccupations', 'multiple'=>'multiple']) !!}
                     <small>(Hold Ctrl button for multi select)</small>
                 </div>
                 <div class="form-group">
                     <label class="col-form-label">Desired Educations</label>
-                        {!! Form::select('expect_educations[]', $educations, old('expect_educations', $profile->expect_educations ?: null), ['class'=>'form-control', 'id'=> 'prefEducations', 'multiple'=>'multiple']) !!}
+                    {!! Form::select('expect_educations[]', $educations, old('expect_educations', $profile->expect_educations ?: null), ['class'=>'form-control', 'id'=> 'prefEducations', 'multiple'=>'multiple']) !!}
                     <small>(Hold Ctrl button for multi select)</small>
                 </div>
                 <div class="form-group">

@@ -43,8 +43,8 @@
                                     Looking For
                                 </label>
                                 <select name="candidate_type" class="form-control form-control-sm">
-                                    <option value="bride">Bride</option>
-                                    <option value="groom">Groom</option>
+                                    <option value="female">Bride</option>
+                                    <option value="male">Groom</option>
                                 </select>
                             </div>
                             <div class="form-row">
@@ -52,11 +52,11 @@
                                     <label class="col-form-label col-form-label-sm" for="exampleFormControlSelect1">
                                         Age Range
                                     </label>
-                                    {!! Form::select('age_min', [""=>'Select']+$ages, null, ['class'=>'form-control form-control-sm']) !!}
+                                    {!! Form::select('expect_age_start', [""=>'Select']+$ages, null, ['class'=>'form-control form-control-sm']) !!}
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label class="col-form-label col-form-label-sm" for="exampleFormControlSelect1">&nbsp;</label>
-                                    {!! Form::select('age_max', [""=>'Select']+$ages, null, ['class'=>'form-control form-control-sm']) !!}
+                                    {!! Form::select('expect_age_end', [""=>'Select']+$ages, null, ['class'=>'form-control form-control-sm']) !!}
                                 </div>
                             </div>
                             <div class="form-group">

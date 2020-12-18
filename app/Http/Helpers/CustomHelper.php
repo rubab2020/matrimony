@@ -37,4 +37,11 @@ class CustomHelper
 
 		return $fileName;
   	}
+
+  // 	public static function getAgeFromDob($dob) {
+  // 		$date = new DateTime($dob);
+		// $now = new DateTime();
+		// $interval = $now->diff($date);
+		// return $interval->y;
+  // 	}
 }

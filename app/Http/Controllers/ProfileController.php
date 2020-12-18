@@ -19,7 +19,7 @@ class ProfileController extends Controller
 	public function create()
 	{
 		$bloodGroups = [''=>'Select', 'A+'=>'A+', 'A-'=>'A-', 'B+'=>'B+','B+-'=>'B-','AB+'=>'AB+','AB-'=>'AB-','O+'=>'O+','O-'=>'O-'];	
-		$martialStatuses = [''=>'Select', 'single'=>'Single', 'married'=>'Married', 'devorced'=>'Devorced'];
+		$martialStatuses = ConfigHelper::getMaritalStatuses();
 		$bodyTypes = [''=>'Select', 'slim'=>'Slim', 'average'=>'Average', 'chubby'=> 'Chubby', 'fat'=>'Fat', 'fit'=> 'Fit', 'athletic'=>'Athletic', 'bodybuilder'=>'Bodybuilder'];
 		$eyeColors = [''=>'Select', 'amber'=>'Amber', 'blue'=>'Blue', 'brown'=>'Brown', 'gray'=>'Gray', 'green'=>'Green', 'hazel'=>'Hazel', 'red'=>'Red'];
 		$hairColors = [''=>'Select', 'black'=>'black', 'brown'=>'brown', 'blond'=>'blond', 'red'=>'red', 'gray'=>'gray', 'white'=>'white', 'red'=>'Red'];
