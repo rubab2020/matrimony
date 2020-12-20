@@ -194,11 +194,19 @@
 										<div class="col-md-4 col-12">
 											<div class="card profile-card">
 												<img 
-													src="{{ asset(App\Models\Customer::getUploadPath().'/'.$profile->profile_picture) }}"
+													src="{{asset(
+														$profile->profile_picture 
+														? App\Models\Customer::getUploadPath().'/'.$profile->profile_picture
+														: 'assets/web/assets/img/profile-avatar.png'
+													) }}"
 													alt="profile-sample1" 
 												class="background" />
 												<img 
-													src="{{asset(App\Models\Customer::getUploadPath().'/'.$profile->profile_picture) }}"
+													src="{{asset(
+														$profile->profile_picture 
+														? App\Models\Customer::getUploadPath().'/'.$profile->profile_picture
+														: 'assets/web/assets/img/profile-avatar.png'
+													) }}"
 													alt="profile-image" 
 													class="profile rounded-full" 
 												/>

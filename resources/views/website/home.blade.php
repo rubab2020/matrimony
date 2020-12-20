@@ -1,1 +1,8 @@
-Welcome  Id: {{ Auth::id() }} name: {{ Auth::user()->name }}
+@extends('layouts.web')
+
+@section('content')
+<div class="page-content">
+	<div class="container">
+		Welcome {{ Auth::user()->name }}
+	</div>
+</div>
