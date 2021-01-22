@@ -77,7 +77,7 @@
 
 				<!-- gallries -->
 				<div class="section-card">
-					<!-- gallaries-->
+					<!-- galleries-->
 					<div id="portfolio">
 						<div class="container-fluid p-0">
 							<div class="row no-gutters">

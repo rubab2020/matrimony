@@ -4,7 +4,7 @@
   <div class="">
     <div class="page-title">
       <div class="title_left">
-        <h3>Gallaries</small></h3>
+        <h3>galleries</small></h3>
       </div>
     </div>
 
@@ -32,20 +32,22 @@
                       <tr>
                         <th width="200px">Image</th>
                         <td>
-                         <form class="form-horizontal" action="{{ url()->route('admin.gallaries.store') }}"
-                           method="post" enctype="multipart/form-data">
-                           @csrf
-                            <div class="form-group">       
-                                  <input type="file" class="form-control-file" id="image" name="image" onchange="previewFile(this)" required >
-                                  <img id="previewImg" alt=" preview image" style="max-width:130px;margin-top:20px;" />
-                                @error('content')
-                                <span class="invalid-feedback" role="alert">
-                                  <strong>{{ $message }}</strong>
-                                </span>
-                                @enderror  
-                           </div>
-                           {{ Form::submit('Upload', ['class' => 'btn btn-info btn-sm']) }}
-                         </form>
+                          <form class="form-horizontal"
+                            action="{{ url()->route('admin.galleries.update',$gallery->id) }}" method="get"
+                            enctype="multipart/form-data">
+                            @csrf
+                            <div class="form-group">
+                              <input type="file" class="form-control-file" id="image" name="image"
+                                onchange="previewFile(this)" required>
+                              <img id="previewImg" alt=" preview image" style="max-width:130px;margin-top:20px;" />
+                              @error('content')
+                              <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                              </span>
+                              @enderror
+                            </div>
+                            {{ Form::submit('Update', ['class' => 'btn btn-info btn-sm']) }}
+                          </form>
                         </td>
                       </tr>
                     </table>

@@ -5,7 +5,8 @@
         <h3>Users</small></h3>
       </div>
       <div class="">
-        <a href="{{ url()->route('admin.gallaries.create') }}" class="btn btn-sm btn-primary pull-right">Add New image </a>
+        <a href="{{ url()->route('admin.galleries.create') }}" class="btn btn-sm btn-primary pull-right">Add New image
+        </a>
       </div>
     </div>
 
@@ -15,7 +16,7 @@
       <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="x_panel">
           <div class="x_title">
-            <h2>Gallaries</h2>
+            <h2>galleries</h2>
             <ul class="nav navbar-right panel_toolbox">
               <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
               </li>
@@ -36,15 +37,18 @@
               </thead>
               <tbody>
                 @php ($i = 0)
-                @foreach($gallaries as $gallary)
+                @foreach($galleries as $gallery)
                 <tr>
                   <td>{{ ++$i }}</td>
-                  <td><image height="100px" src="{{asset('/assets/admin/images/gallaries/'.$gallary->image)}}"></td>
+                  <td>
+                    <image height="100px" src="{{asset('/assets/admin/images/galleries/'.$gallery->image)}}">
+                  </td>
                   <td>
                     <div class="btn-group" role="group" aria-label="...">
-                      <a href="{{ route('admin.gallaries.show', $gallary->id) }}" class="btn btn-xs btn-success"><i
+                      <a href="{{ route('admin.galleries.show', $gallery->id) }}" class="btn btn-xs btn-success"><i
                           class="fa fa-eye"></i></a>
-                      <form action="{{ route('admin.gallaries.destroy', $gallary->id) }}" method="post" class="btn-group">
+                      <form action="{{ route('admin.galleries.destroy', $gallery->id) }}" method="post"
+                        class="btn-group">
                         {{ csrf_field() }}
                         {{ method_field('delete') }}
                         <button title="Delete" type="submit" class="btn btn-xs btn-danger"

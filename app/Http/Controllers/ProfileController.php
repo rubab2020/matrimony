@@ -10,38 +10,39 @@ use App\Models\Gallery;
 
 class ProfileController extends Controller
 {
-    private $uploadPath;
-    
-    function __construct(){
-        $this->uploadPath = Customer::getUploadPath();
-    }
+	private $uploadPath;
+
+	function __construct()
+	{
+		$this->uploadPath = Customer::getUploadPath();
+	}
 
 	public function create()
 	{
-		$bloodGroups = [''=>'Select', 'A+'=>'A+', 'A-'=>'A-', 'B+'=>'B+','B+-'=>'B-','AB+'=>'AB+','AB-'=>'AB-','O+'=>'O+','O-'=>'O-'];	
+		$bloodGroups = ['' => 'Select', 'A+' => 'A+', 'A-' => 'A-', 'B+' => 'B+', 'B+-' => 'B-', 'AB+' => 'AB+', 'AB-' => 'AB-', 'O+' => 'O+', 'O-' => 'O-'];
 		$martialStatuses = ConfigHelper::getMaritalStatuses();
-		$bodyTypes = [''=>'Select', 'slim'=>'Slim', 'average'=>'Average', 'chubby'=> 'Chubby', 'fat'=>'Fat', 'fit'=> 'Fit', 'athletic'=>'Athletic', 'bodybuilder'=>'Bodybuilder'];
-		$eyeColors = [''=>'Select', 'amber'=>'Amber', 'blue'=>'Blue', 'brown'=>'Brown', 'gray'=>'Gray', 'green'=>'Green', 'hazel'=>'Hazel', 'red'=>'Red'];
-		$hairColors = [''=>'Select', 'black'=>'black', 'brown'=>'brown', 'blond'=>'blond', 'red'=>'red', 'gray'=>'gray', 'white'=>'white', 'red'=>'Red'];
-		$complexions = [''=>'Select', 'fair'=>'fair', 'brown'=>'brown', 'black'=>'black', 'light'=>'light', 'medium'=>'medium', 'olive'=>'olive'];
+		$bodyTypes = ['' => 'Select', 'slim' => 'Slim', 'average' => 'Average', 'chubby' => 'Chubby', 'fat' => 'Fat', 'fit' => 'Fit', 'athletic' => 'Athletic', 'bodybuilder' => 'Bodybuilder'];
+		$eyeColors = ['' => 'Select', 'amber' => 'Amber', 'blue' => 'Blue', 'brown' => 'Brown', 'gray' => 'Gray', 'green' => 'Green', 'hazel' => 'Hazel', 'red' => 'Red'];
+		$hairColors = ['' => 'Select', 'black' => 'black', 'brown' => 'brown', 'blond' => 'blond', 'red' => 'red', 'gray' => 'gray', 'white' => 'white', 'red' => 'Red'];
+		$complexions = ['' => 'Select', 'fair' => 'fair', 'brown' => 'brown', 'black' => 'black', 'light' => 'light', 'medium' => 'medium', 'olive' => 'olive'];
 		$educations = ConfigHelper::getEducationList();
 		$occupations = ConfigHelper::getOccupationList();
 		$cities = ConfigHelper::getCityList();
 		$districts = ConfigHelper::getDistrictList();
 		$countries = ConfigHelper::getCountryList();
-		
-	    return view('website.profile.create', compact(
-	    	'bloodGroups', 
-	    	'martialStatuses', 
-	    	'bodyTypes', 
-	    	'eyeColors', 
-	    	'hairColors', 
-	    	'complexions',
-	    	'educations',
-	    	'occupations',
-	    	'cities',
-	    	'districts',
-	    	'countries'
+
+		return view('website.profile.create', compact(
+			'bloodGroups',
+			'martialStatuses',
+			'bodyTypes',
+			'eyeColors',
+			'hairColors',
+			'complexions',
+			'educations',
+			'occupations',
+			'cities',
+			'districts',
+			'countries'
 		));
 	}
 
@@ -49,10 +50,10 @@ class ProfileController extends Controller
 	{
 		$customer = Customer::find(\Auth::id());
 
-		if(!$customer)
+		if (!$customer)
 			return back()->with('error', 'User not found');
-	
-		if($request->file('profie_picture')){
+
+		if ($request->file('profie_picture')) {
 			$profilePictureName = CustomHelper::saveImage($request->file('profie_picture'), $this->uploadPath, 600, 600);
 			$customer->profile_picture = $profilePictureName;
 		}
@@ -93,76 +94,76 @@ class ProfileController extends Controller
 		$customer->expect_height_end = $request->input('expect_height_end');
 		$customer->expect_special_preference = $request->input('expect_special_preference');
 
-		if(!$customer->save()) {
+		if (!$customer->save()) {
 			return 	back()->with('error', 'Unable to save data. Please try again.');
 		}
 
 		$this->saveImages($request->file('images'), $customer->id);
-		
+
 		return redirect()->route('home');
 	}
 
 	private function saveImages($images, $customerId)
-    {
-        if($images) {
-            foreach($images as $image) {
-                $profilePictureName = null;
-                
-                $imageName = CustomHelper::saveImage($image, $this->uploadPath, 600, 600);
+	{
+		if ($images) {
+			foreach ($images as $image) {
+				$profilePictureName = null;
 
-                $pImage = new Gallery;
-                $pImage->image = $imageName;
-                $pImage->customer_id = $customerId;
-                $pImage->save();
-            }
-        }
-    }
+				$imageName = CustomHelper::saveImage($image, $this->uploadPath, 600, 600);
 
-    public function edit()
+				$pImage = new Gallery;
+				$pImage->image = $imageName;
+				$pImage->customer_id = $customerId;
+				$pImage->save();
+			}
+		}
+	}
+
+	public function edit()
 	{
 		$profile = \Auth::user();
 		$profile->expect_districts = explode(',', $profile->expect_districts);
 		$profile->expect_occupations = explode(',', $profile->expect_occupations);
 		$profile->expect_educations = explode(',', $profile->expect_educations);
 
-		$bloodGroups = [''=>'Select', 'A+'=>'A+', 'A-'=>'A-', 'B+'=>'B+','B+-'=>'B-','AB+'=>'AB+','AB-'=>'AB-','O+'=>'O+','O-'=>'O-'];	
-		$martialStatuses = [''=>'Select', 'single'=>'Single', 'married'=>'Married', 'devorced'=>'Devorced'];
-		$bodyTypes = [''=>'Select', 'slim'=>'Slim', 'average'=>'Average', 'chubby'=> 'Chubby', 'fat'=>'Fat', 'fit'=> 'Fit', 'athletic'=>'Athletic', 'bodybuilder'=>'Bodybuilder'];
-		$eyeColors = [''=>'Select', 'amber'=>'Amber', 'blue'=>'Blue', 'brown'=>'Brown', 'gray'=>'Gray', 'green'=>'Green', 'hazel'=>'Hazel', 'red'=>'Red'];
-		$hairColors = [''=>'Select', 'black'=>'black', 'brown'=>'brown', 'blond'=>'blond', 'red'=>'red', 'gray'=>'gray', 'white'=>'white', 'red'=>'Red'];
-		$complexions = [''=>'Select', 'fair'=>'fair', 'brown'=>'brown', 'black'=>'black', 'light'=>'light', 'medium'=>'medium', 'olive'=>'olive'];
+		$bloodGroups = ['' => 'Select', 'A+' => 'A+', 'A-' => 'A-', 'B+' => 'B+', 'B+-' => 'B-', 'AB+' => 'AB+', 'AB-' => 'AB-', 'O+' => 'O+', 'O-' => 'O-'];
+		$martialStatuses = ['' => 'Select', 'single' => 'Single', 'married' => 'Married', 'devorced' => 'Devorced'];
+		$bodyTypes = ['' => 'Select', 'slim' => 'Slim', 'average' => 'Average', 'chubby' => 'Chubby', 'fat' => 'Fat', 'fit' => 'Fit', 'athletic' => 'Athletic', 'bodybuilder' => 'Bodybuilder'];
+		$eyeColors = ['' => 'Select', 'amber' => 'Amber', 'blue' => 'Blue', 'brown' => 'Brown', 'gray' => 'Gray', 'green' => 'Green', 'hazel' => 'Hazel', 'red' => 'Red'];
+		$hairColors = ['' => 'Select', 'black' => 'black', 'brown' => 'brown', 'blond' => 'blond', 'red' => 'red', 'gray' => 'gray', 'white' => 'white', 'red' => 'Red'];
+		$complexions = ['' => 'Select', 'fair' => 'fair', 'brown' => 'brown', 'black' => 'black', 'light' => 'light', 'medium' => 'medium', 'olive' => 'olive'];
 		$educations = ConfigHelper::getEducationList();
 		$occupations = ConfigHelper::getOccupationList();
 		$cities = ConfigHelper::getCityList();
 		$districts = ConfigHelper::getDistrictList();
 		$countries = ConfigHelper::getCountryList();
-		$gallaries = Gallery::where('customer_id', \Auth::id())->pluck('image');
-		
-	    return view('website.profile.edit', compact(
-	    	'bloodGroups', 
-	    	'martialStatuses', 
-	    	'bodyTypes', 
-	    	'eyeColors', 
-	    	'hairColors', 
-	    	'complexions',
-	    	'educations',
-	    	'occupations',
-	    	'cities',
-	    	'districts',
-	    	'countries',
-	    	'profile',
-	    	'gallaries'
+		$galleries = Gallery::where('customer_id', \Auth::id())->pluck('image');
+
+		return view('website.profile.edit', compact(
+			'bloodGroups',
+			'martialStatuses',
+			'bodyTypes',
+			'eyeColors',
+			'hairColors',
+			'complexions',
+			'educations',
+			'occupations',
+			'cities',
+			'districts',
+			'countries',
+			'profile',
+			'galleries'
 		));
-	} 
+	}
 
 	public function update(Request $request)
 	{
 		$customer = Customer::find(\Auth::id());
 
-		if(!$customer)
+		if (!$customer)
 			return back()->with('error', 'User not found');
-		
-		if($request->file('profie_picture')){
+
+		if ($request->file('profie_picture')) {
 			$profilePictureName = CustomHelper::saveImage($request->file('profie_picture'), $this->uploadPath, 600, 600);
 			$customer->profile_picture = $profilePictureName;
 		}
@@ -203,12 +204,12 @@ class ProfileController extends Controller
 		$customer->expect_height_end = $request->input('expect_height_end');
 		$customer->expect_special_preference = $request->input('expect_special_preference');
 
-		if(!$customer->save()) {
+		if (!$customer->save()) {
 			return 	back()->with('error', 'Unable to save data. Please try again.');
 		}
-		
+
 		$this->saveImages($request->file('images'), $customer->id);
-		
+
 		return redirect()->route('home');
 	}
 }

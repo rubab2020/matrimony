@@ -141,5 +141,5 @@ return [
         ]),
     ],
 
-    // 'path' => '/admin'
+    'path' => '/admin'
 ];

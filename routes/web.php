@@ -18,8 +18,8 @@ use App\Http\Helpers\ConfigHelper;
 */
 
 Route::get('/', function () {
-    $ages = range(18,80);
-    $ages = array_combine($ages,$ages);
+    $ages = range(18, 80);
+    $ages = array_combine($ages, $ages);
 
     $religions = ConfigHelper::getReligionList();
     return view('website.welcome', compact('ages', 'religions'));
@@ -58,11 +58,11 @@ Route::post('/otp/resend', 'OTPController@resendOTP')->name('otp.resend');
 Route::post('/otp/verify', 'OTPController@verifyOTP')->name('otp.verify');
 
 // message
-Route::get('/message','MessageController@index')->name('message');
+Route::get('/message', 'MessageController@index')->name('message');
 Route::get('/message/{id}', 'MessageController@getMessage')->name('message/id');
 Route::post('message/send', 'MessageController@sendMessage');
 
-Route::group(['middleware' => ['auth:customer']], function() {
+Route::group(['middleware' => ['auth:customer']], function () {
     Route::get('home', function () {
         return view('website.home');
     })->name('home');

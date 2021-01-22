@@ -32,7 +32,9 @@
                     <table class="table">
                       <tr>
                         <th width="200px">Image</td>
-                        <td><image height="300px" src="{{asset('/assets/admin/images/gallaries/'.$gallary->image)}}"></td>
+                        <td>
+                          <image height="300px" src="{{asset('/assets/admin/images/galleries/'.$gallery->image)}}">
+                        </td>
                       </tr>
                     </table>
                   </div>

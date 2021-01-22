@@ -7,7 +7,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Creative - Start Bootstrap Theme</title>
+    <title>{{ env('APP_NAME') }}</title>
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
     <!-- Google fonts-->
@@ -43,29 +43,28 @@
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a></li>
                     @if(Auth::guard('customer')->check())
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <img 
-                                    src="{{ asset(
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img src="{{ asset(
                                         Auth::guard('customer')->user()->profile_picture 
                                         ? App\Models\Customer::getUploadPath().'/'.Auth::guard('customer')->user()->profile_picture
                                         : 'assets/web/assets/img/profile-avatar.png'
-                                    ) }}"  
-                                    class="rounded-circle" 
-                                    alt="Profile Pic"
-                                    style="width: auto; height: 40px; margin-top: -10px;">
-                                {{Auth::guard('customer')->user()->name}}
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{{ url('home') }}">Home</a>
-                                <a class="dropdown-item" href="{{ url('profile/edit') }}">Edit Profile</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="{{ url('logout') }}">logout</a>
-                            </div>
-                        </li>
+                                    ) }}" class="rounded-circle" alt="Profile Pic"
+                                style="width: auto; height: 40px; margin-top: -10px;">
+                            {{Auth::guard('customer')->user()->name}}
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{{ url('home') }}">Home</a>
+                            <a class="dropdown-item" href="{{ url('profile/edit') }}">Edit Profile</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="{{ url('logout') }}">logout</a>
+                        </div>
+                    </li>
                     @else
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ url('login') }}">Login</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ url('register') }}">Register</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ url('login') }}">Login</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ url('register') }}">Register</a>
+                    </li>
                     @endif
                 </ul>
             </div>
@@ -76,7 +75,7 @@
     {{ $slot }}
     @endif
 
-<!--     @if(Session::has('success'))
+    <!--     @if(Session::has('success'))
         <div class="alert alert-success">
           {{ Session::get('success') }}
         </div>
