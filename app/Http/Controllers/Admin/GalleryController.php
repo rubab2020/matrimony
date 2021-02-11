@@ -46,6 +46,7 @@ class GalleryController extends Controller
             $gallery->image = $imageName;
             $gallery->save();
         } catch (\Exception $e) {
+            dd($e);
             return redirect()->back()
                 ->withErrors("Something went wrong");
         }
