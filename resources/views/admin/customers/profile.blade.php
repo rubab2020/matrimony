@@ -138,16 +138,12 @@
 					<div class="row">
 						<div class="col-6">
 							<div class="row attribute">
-								<div class="col-5 attribute-title">Name:</div>
-								<div class="col-7 attribute-value">Private</div>
+								<div class="col-5 attribute-title">Marital Status:</div>
+								<div class="col-7 attribute-value">Unmarried</div>
 							</div>
 							<div class="row attribute">
-								<div class="col-5 attribute-title">Age:</div>
-								<div class="col-7 attribute-value">25</div>
-							</div>
-							<div class="row attribute">
-								<div class="col-5 attribute-title">Gender:</div>
-								<div class="col-7 attribute-value">Female</div>
+								<div class="col-5 attribute-title">Children:</div>
+								<div class="col-7 attribute-value">zero</div>
 							</div>
 							<div class="row attribute">
 								<div class="col-5 attribute-title">Languages:</div>
@@ -163,14 +159,6 @@
 							</div>
 						</div>
 						<div class="col-6">
-							<div class="row attribute">
-								<div class="col-5 attribute-title">Marital Status:</div>
-								<div class="col-7 attribute-value">Unmarried</div>
-							</div>
-							<div class="row attribute">
-								<div class="col-5 attribute-title">Children:</div>
-								<div class="col-7 attribute-value">zero</div>
-							</div>
 							<div class="row attribute">
 								<div class="col-5 attribute-title">Religion:</div>
 								<div class="col-7 attribute-value">Muslim</div>
@@ -199,16 +187,16 @@
 					<div class="row">
 						<div class="col-6">
 							<div class="row attribute">
-								<div class="col-5 attribute-title">Height:</div>
-								<div class="col-7 attribute-value">5'2''</div>
-							</div>
-							<div class="row attribute">
-								<div class="col-5 attribute-title">Wight:</div>
+								<div class="col-5 attribute-title">Weight:</div>
 								<div class="col-7 attribute-value">80kg</div>
 							</div>
 							<div class="row attribute">
 								<div class="col-5 attribute-title">Body Type:</div>
 								<div class="col-7 attribute-value">Slim</div>
+							</div>
+							<div class="row attribute">
+								<div class="col-5 attribute-title">Complexion:</div>
+								<div class="col-7 attribute-value">Fair</div>
 							</div>
 						</div>
 						<div class="col-6">
@@ -219,10 +207,6 @@
 							<div class="row attribute">
 								<div class="col-5 attribute-title">Hair Color:</div>
 								<div class="col-7 attribute-value">Black</div>
-							</div>
-							<div class="row attribute">
-								<div class="col-5 attribute-title">Complextion:</div>
-								<div class="col-7 attribute-value">Fair</div>
 							</div>
 						</div>
 					</div>
