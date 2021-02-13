@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Helpers\ConfigHelper;
 use App\Http\Helpers\CustomHelper;
 use App\Models\Customer;
-use App\Models\Gallery;
+use App\Models\Image;
 
 class ProfileController extends Controller
 {
@@ -111,7 +111,7 @@ class ProfileController extends Controller
 
 				$imageName = CustomHelper::saveImage($image, $this->uploadPath, 600, 600);
 
-				$pImage = new Gallery;
+				$pImage = new Image;
 				$pImage->image = $imageName;
 				$pImage->customer_id = $customerId;
 				$pImage->save();
@@ -137,7 +137,7 @@ class ProfileController extends Controller
 		$cities = ConfigHelper::getCityList();
 		$districts = ConfigHelper::getDistrictList();
 		$countries = ConfigHelper::getCountryList();
-		$galleries = Gallery::where('customer_id', \Auth::id())->pluck('image');
+		$galleries = Image::where('customer_id', \Auth::id())->pluck('image');
 
 		return view('website.profile.edit', compact(
 			'bloodGroups',
