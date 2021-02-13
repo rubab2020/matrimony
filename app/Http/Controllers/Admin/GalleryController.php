@@ -3,10 +3,10 @@
 namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
-use App\Models\Gallary;
+use App\Models\Gallery;
 use App\Http\Controllers\Controller;
 
-class GallaryController extends Controller
+class GalleryController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,18 +15,18 @@ class GallaryController extends Controller
      */
     public function index()
     {
-         $gallaries = Gallary::all();
-         return view('admin.gallaries.index', compact('gallaries'));
+        $galleries = Gallery::all();
+        return view('admin.galleries.index', compact('galleries'));
     }
 
-     /**
+    /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function create()
     {
-        return view('admin.gallaries.create');
+        return view('admin.galleries.create');
     }
 
     /**
@@ -40,20 +40,20 @@ class GallaryController extends Controller
 
         try {
             $image = $request->file('image');
-            $imageName = time().'.'.$image->extension();
-            $image->move(public_path('assets/admin/images/gallaries'),$imageName);
-            $gallary = new Gallary();
-            $gallary->image = $imageName;
-            $gallary->save();
+            $imageName = time() . '.' . $image->extension();
+            $image->move(public_path('assets/admin/images/galleries'), $imageName);
+            $gallery = new Gallery();
+            $gallery->image = $imageName;
+            $gallery->save();
         } catch (\Exception $e) {
             return redirect()->back()
                 ->withErrors("Something went wrong");
         }
-        return redirect()->route('admin.gallaries.index')
+        return redirect()->route('admin.galleries.index')
             ->with('success', "Successfully created image");
     }
 
-      /**
+    /**
      * Display the specified resource.
      *
      * @param  int  $id
@@ -61,8 +61,8 @@ class GallaryController extends Controller
      */
     public function show($id)
     {
-        $gallary = Gallary::find($id);
-        return view('admin.gallaries.show', compact('gallary'));
+        $gallery = Gallery::find($id);
+        return view('admin.galleries.show', compact('gallery'));
     }
 
     /**
@@ -73,18 +73,17 @@ class GallaryController extends Controller
      */
     public function destroy($id)
     {
-        $gallary = Gallary::find($id);
-        if ($gallary == null)
+        $gallery = Gallery::find($id);
+        if ($gallery == null)
             return redirect()->back()
                 ->withErrors("Image Not Found");
 
-        if ($gallary->delete()) {
-            return redirect()->route('admin.gallaries.index')
+        if ($gallery->delete()) {
+            return redirect()->route('admin.galleries.index')
                 ->with('success', "Successfully deleted image");
         }
 
         return redirect()->back()
             ->withErrors("Something went wrong");
     }
-   
 }

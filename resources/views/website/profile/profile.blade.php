@@ -27,7 +27,8 @@
 						<div class="icon-block">
 							<a href="#"><span class="icon"><i class="fas fa-unlock"></i></span></a>
 							<a href="#"><span class="icon"><i class="fas fa-star"></i></span></a>
-							<a href="sendUsModal" data-toggle="modal" data-target="#sendUsModal"><span class="icon"><i class="fas fa-share"></i></span></a>
+							<a href="sendUsModal" data-toggle="modal" data-target="#sendUsModal"><span class="icon"><i
+										class="fas fa-share"></i></span></a>
 						</div>
 						<div style="clear: both;"></div>
 					</div>
@@ -77,7 +78,7 @@
 
 				<!-- gallries -->
 				<div class="section-card">
-					<!-- gallaries-->
+					<!-- galleries-->
 					<div id="portfolio">
 						<div class="container-fluid p-0">
 							<div class="row no-gutters">
@@ -411,38 +412,39 @@
 	</div>
 </div>
 
- <!-- Send Us Modal -->
- <div class="modal fade" id="sendUsModal" tabindex="-1" role="dialog" aria-labelledby="sendUsModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="sendUsModalLabel">Share this Profile</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-					<form class="form-horizontal" id="submitform" action="{{ url()->route('shareprofile.share') }}"
-                                            method="get">
-                   			<ul>
-								<li>
-									Please Input a Phone Number to share:
-									<div class="form-label-group">
-										<input type="tel" name="phoneNumber" id="phoneNumber" class="form-control" placeholder="" pattern="[0-9]{11}" required autofocus>
-									</div>
-								</li>
-								<li>
-									Phone number format: 01714047395
-								</li>
-								<button type="submit" class="btn btn-primary btn-sm">Share Profile</button>
-                		    </ul>
-					</form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
+<!-- Send Us Modal -->
+<div class="modal fade" id="sendUsModal" tabindex="-1" role="dialog" aria-labelledby="sendUsModalLabel"
+	aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="sendUsModalLabel">Share this Profile</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<form class="form-horizontal" id="submitform" action="{{ url()->route('shareprofile.share') }}"
+					method="get">
+					<ul>
+						<li>
+							Please Input a Phone Number to share:
+							<div class="form-label-group">
+								<input type="tel" name="phoneNumber" id="phoneNumber" class="form-control"
+									placeholder="" pattern="[0-9]{11}" required autofocus>
+							</div>
+						</li>
+						<li>
+							Phone number format: 01714047395
+						</li>
+						<button type="submit" class="btn btn-primary btn-sm">Share Profile</button>
+					</ul>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
 @endsection

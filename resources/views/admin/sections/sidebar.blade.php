@@ -53,7 +53,7 @@
           <li><a href="{{ route('admin.setting.index') }}"><i class="fa fa-cog"></i> Settings</a></li>
           @endcan
           @can("Gallery Management")
-          <li><a href="{{ route('admin.gallaries.index') }}"><i class="fa fa-cog"></i> gallaries</a></li>
+          <li><a href="{{ route('admin.galleries.index') }}"><i class="fa fa-cog"></i> Galleries</a></li>
           @endcan
           @can("Page Management")
           <li><a href="{{ route('admin.pages.index') }}"><i class="fa fa-cog"></i> Pages</a></li>

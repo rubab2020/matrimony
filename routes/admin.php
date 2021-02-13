@@ -18,9 +18,7 @@ Route::get('/dashboard', function () {
 })->name('dashboard');
 
 Route::resource('/users', 'UserController');
-Route::resource('/setting','SettingController');
-Route::resource('/gallaries','GallaryController');
-Route::resource('/pages','PageController');
+Route::resource('/setting', 'SettingController');
+Route::resource('/galleries', 'GalleryController');
+Route::resource('/pages', 'PageController');
 Route::post('/pages/upload', 'PageController@upload')->name('pages.upload');
-
-
