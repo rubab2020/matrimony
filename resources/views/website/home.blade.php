@@ -592,7 +592,7 @@
                             <div class="row attribute">
                                 <div class="col-5 attribute-title">Height Rage:</div>
                                 <div class="col-7 attribute-value">
-                                    <span id="profileHeight">{{ Auth::user()->expect_height_start }}</span> - <span id="profileHeight">{{ Auth::user()->expect_height_end }}</span>
+                                    <span id="profileHeightStart">{{ Auth::user()->expect_height_start }}</span> - <span id="profileHeightEnd">{{ Auth::user()->expect_height_end }}</span>
                                 </div>
                             </div>
                             <div class="row attribute">

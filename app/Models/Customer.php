@@ -32,4 +32,8 @@ class Customer extends Authenticatable
 	public function getImagesAttribute() {
 		return $this->hasMany('App\Models\Image', 'customer_id', 'id');
 	}
+
+	public function images() {
+		return $this->hasMany('App\Models\Image', 'customer_id', 'id');
+	}
 }

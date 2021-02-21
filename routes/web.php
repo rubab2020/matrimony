@@ -31,9 +31,7 @@ Route::get('/setting', function () {
 
 Route::get('/search', 'SearchController@search');
 
-Route::get('/profile', function () {
-    return view('website.profile.profile');
-});
+Route::get('/profiles/{id}', 'ProfileController@show');
 Route::get('/shareprofile/share', 'ShareProfileController@share')->name('shareprofile.share');
 
 Route::get('/checkout', function () {
