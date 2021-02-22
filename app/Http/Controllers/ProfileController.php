@@ -197,9 +197,14 @@ class ProfileController extends Controller
 		$customer->per_country = $request->input('per_country');
 		$customer->expect_age_start = $request->input('expect_age_start');
 		$customer->expect_age_end = $request->input('expect_age_end');
-		$customer->expect_districts = implode(',', $request->input('expect_districts'));
-		$customer->expect_occupations = implode(',', $request->input('expect_occupations'));
-		$customer->expect_educations = implode(',', $request->input('expect_educations'));
+
+		$customer->expect_districts = json_encode($request->input('expect_districts'));
+		$customer->expect_occupations = json_encode($request->input('expect_occupations'));
+		$customer->expect_educations = json_encode($request->input('expect_educations'));
+		// $customer->expect_districts = implode(',', $request->input('expect_districts'));
+		// $customer->expect_occupations = implode(',', $request->input('expect_occupations'));
+		// $customer->expect_educations = implode(',', $request->input('expect_educations'));
+
 		$customer->expect_height_start = $request->input('expect_height_start');
 		$customer->expect_height_end = $request->input('expect_height_end');
 		$customer->expect_special_preference = $request->input('expect_special_preference');
@@ -215,6 +220,20 @@ class ProfileController extends Controller
 
 	public function show($pid) {
 		$profile = Customer::with('images')->where('profile_id', $pid)->first();
-		return view('website.profile.profile', compact('profile'));
+		$simmilarProfiles = $this->getSimmilarProfiles($profile); 
+		return view('website.profile.profile', compact('profile', 'simmilarProfiles'));
+	}
+
+	// based on age, denger height and religion
+	public function getSimmilarProfiles($profile)
+	{
+		return Customer::where(function($query) use ($profile){
+							$query->whereBetween('dob', [date($profile->dob, strtotime('-5 years')), date($profile->dob, strtotime('+5 years'))])
+							->OrWhereBetween('height', [$profile->height-5, $profile->height+5]);
+						})
+						->Where('gender', $profile->gender)
+						->Where('religion', $profile->religion)
+						->where('id', '!=', $profile->id)
+						->get();
 	}
 }

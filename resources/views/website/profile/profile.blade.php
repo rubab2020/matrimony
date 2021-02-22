@@ -62,7 +62,7 @@
 							</div>
 							<div class="row attribute">
 								<div class="col-5 attribute-title">Height:</div>
-								<div class="col-7 attribute-value"><span id="profileHeight">{{ $profile->height }}</span></div>
+								<div class="col-7 attribute-value"><span class="profileHeight">{{ $profile->height }}</span></div>
 							</div>
 						</div>
 						<div class="col-6">
@@ -292,7 +292,7 @@
 	                <div class="row attribute">
 	                    <div class="col-5 attribute-title">Height Rage:</div>
 	                    <div class="col-7 attribute-value">
-	                        <span id="profileHeightStart">{{ $profile->expect_height_start }}</span> - <span id="profileHeightEnd">{{ $profile->expect_height_end }}</span>
+	                        <span class="profileHeight">{{ $profile->expect_height_start }}</span> - <span class="profileHeight">{{ $profile->expect_height_end }}</span>
 	                    </div>
 	                </div>
 	                <div class="row attribute">
@@ -320,88 +320,32 @@
 
 			<!-- simmilar profiles -->
 			<div class="col-lg-3 col-md-4 col-12">
-				<h4>Simmilar Profiles</h4>
+				<h4>Similar Profiles</h4>
 				<div class="list-group">
 					<!-- profile -->
-					<a href="#" class="list-group-item list-group-item-action profiles">
-						<div class="row">
-							<div class="col-4">
-								<img class="profile-pic-sm"
-									src="https://images.unsplash.com/photo-1484240077054-d59279308559?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60">
+					@if($simmilarProfiles->count() == 0)
+						No Similar Profiles Found
+					@endif
+					@foreach($simmilarProfiles as $simmilarProfile) 
+						<a href="#" class="list-group-item list-group-item-action profiles">
+							<div class="row">
+								<div class="col-4">
+									<img class="profile-pic-sm"
+										src="{{asset(
+					              $simmilarProfile->profile_picture 
+					              ? App\Models\Customer::getUploadPath().'/'.$simmilarProfile->profile_picture
+					              : 'assets/web/assets/img/profile-avatar.png'
+					          ) }}">
+								</div>
+								<div class="col-8">
+									<div class="account-id">{{ $profile->name }}</div>
+									<div>{{ $simmilarProfile->age }} years, <span class="profileHeight">{{ $simmilarProfile->height }}</span></div>
+									<div>{{ ucfirst($simmilarProfile->occupation) }}, {{ ucfirst($simmilarProfile->highest_education) }}</div>
+									<div>{{ ucfirst($simmilarProfile->religion) }}</div>
+								</div>
 							</div>
-							<div class="col-8">
-								<div class="account-id">Sarah Ali</div>
-								<div>20 years, 5'2"</div>
-								<div>Software Engineer, BSC</div>
-								<div>Dhaka, Bangladesh</div>
-							</div>
-						</div>
-					</a>
-
-					<!-- profile -->
-					<a href="#" class="list-group-item list-group-item-action profiles">
-						<div class="row">
-							<div class="col-4">
-								<img class="profile-pic-sm"
-									src="https://images.unsplash.com/photo-1494898732449-aa3060d96fbd?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">
-							</div>
-							<div class="col-8">
-								<div class="account-id">Sarah Ali</div>
-								<div>20 years, 5'2"</div>
-								<div>Software Engineer, BSC</div>
-								<div>Dhaka, Bangladesh</div>
-							</div>
-						</div>
-					</a>
-
-					<!-- profile -->
-					<a href="#" class="list-group-item list-group-item-action profiles">
-						<div class="row">
-							<div class="col-4">
-								<img class="profile-pic-sm"
-									src="https://images.unsplash.com/photo-1484240077054-d59279308559?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60">
-							</div>
-							<div class="col-8">
-								<div class="account-id">Sarah Ali</div>
-								<div>20 years, 5'2"</div>
-								<div>Software Engineer, BSC</div>
-								<div>Dhaka, Bangladesh</div>
-							</div>
-						</div>
-					</a>
-
-					<!-- profile -->
-					<a href="#" class="list-group-item list-group-item-action profiles">
-						<div class="row">
-							<div class="col-4">
-								<img class="profile-pic-sm"
-									src="https://images.unsplash.com/photo-1494898732449-aa3060d96fbd?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">
-							</div>
-							<div class="col-8">
-								<div class="account-id">Sarah Ali</div>
-								<div>20 years, 5'2"</div>
-								<div>Software Engineer, BSC</div>
-								<div>Dhaka, Bangladesh</div>
-							</div>
-						</div>
-					</a>
-
-					<!-- profile -->
-					<a href="#" class="list-group-item list-group-item-action profiles">
-						<div class="row">
-							<div class="col-4">
-								<img class="profile-pic-sm"
-									src="https://images.unsplash.com/photo-1484240077054-d59279308559?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60">
-							</div>
-							<div class="col-8">
-								<div class="account-id">Sarah Ali</div>
-								<div>20 years, 5'2"</div>
-								<div>Software Engineer, BSC</div>
-								<div>Dhaka, Bangladesh</div>
-							</div>
-						</div>
-					</a>
-
+						</a>
+					@endforeach
 				</div>
 			</div>
 		</div>
@@ -430,16 +374,17 @@
 									placeholder="" pattern="[0-9]{11}" required autofocus>
 							</div>
 						</li>
-						<li>
-							Phone number format: 01714047395
+						<li style="color: gray">
+							Phone number format: 017XXXXXXXX
 						</li>
+						<br>
 						<button type="submit" class="btn btn-primary btn-sm">Share Profile</button>
 					</ul>
 				</form>
 			</div>
-			<div class="modal-footer">
+			<!-- <div class="modal-footer">
 				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-			</div>
+			</div> -->
 		</div>
 	</div>
 </div>
