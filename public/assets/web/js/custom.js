@@ -92,8 +92,8 @@ jQuery(document).ready(function(){
     +' - '
     +formatToReadableFeet(convertCentemeterToFeet(heightRangeSlider.slider("values",1)))
   );
-  $("#heightMin").val(Math.round(heightRangeSlider.slider('values', 0)));
-  $("#heightMax").val(Math.round(heightRangeSlider.slider('values', 1)));
+  $("#heightMin").val(heightRangeSlider.slider('values', 0));
+  $("#heightMax").val(heightRangeSlider.slider('values', 1));
 
 
   // ---------------------------------- 
@@ -124,5 +124,15 @@ jQuery(document).ready(function(){
   let profHeightCm = $('#profileHeight').html();
   $('#profileHeight').html(
     formatToReadableFeet(convertCentemeterToFeet(profHeightCm))
+  );
+
+  // profle height convert from cm to inch
+  let profHeightStartCm = $('#profileHeightStart').html();
+  $('#profileHeightStart').html(
+    formatToReadableFeet(convertCentemeterToFeet(profHeightStartCm))
+  );
+  let profHeightEndCm = $('#profileHeightEnd').html();
+  $('#profileHeightEnd').html(
+    formatToReadableFeet(convertCentemeterToFeet(profHeightEndCm))
   );
 });

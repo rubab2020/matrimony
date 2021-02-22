@@ -85,6 +85,7 @@ class SearchController extends Controller
 			->select(
 				'name',
 				'profile_picture',
+				'profile_id',
 				'occupation',
 				'about',
 				'dob',

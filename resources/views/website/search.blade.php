@@ -188,7 +188,7 @@
 					<div class="col-12">
 						<!-- profile -->
 						@foreach($profiles as $profile)
-							<a href="{{ url('/profile') }}">
+							<a href="{{ url('/profiles/'.$profile->profile_id) }}" target="_blank">
 								<div class="card">
 									<div class="row">
 										<div class="col-md-4 col-12">

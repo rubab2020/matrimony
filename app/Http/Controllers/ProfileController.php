@@ -212,4 +212,9 @@ class ProfileController extends Controller
 
 		return redirect()->route('home');
 	}
+
+	public function show($pid) {
+		$profile = Customer::with('images')->where('profile_id', $pid)->first();
+		return view('website.profile.profile', compact('profile'));
+	}
 }
