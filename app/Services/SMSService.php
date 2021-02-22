@@ -20,14 +20,15 @@ class SMSService
 
 		// $param = "Username=$username&Password=$password&From=$from&To=$number&Message=$message";
 
-		$number = $mobileNo;
 		// $message = strtoupper(bin2hex(iconv('UTF-8', 'UCS-2BE', $message)));
-		$username = env('SMS_GATEWAY_USERNAME');
-		$password = env('SMS_GATEWAY_PASSWORD');
-		$sid = env('SMS_GATEWAY_SID');
-		$url = "http://sms.sslwireless.com/pushapi/dynamic/server.php";
 
-		$param = "user=$username&pass=$password&sms[0][0]=$number&sms[0][1]=" . urlencode($message) . "&sms[0][2]=1&sid=$sid";
+		// $username = env('SMS_GATEWAY_USERNAME');
+		// $password = env('SMS_GATEWAY_PASSWORD');
+		// $sid = env('SMS_GATEWAY_SID');
+
+		$url = "https://smsplus.sslwireless.com/api/v3/send-sms";
+
+		$param = "sid=MARRIAGEFAIRNONBRAND&api_token=Marriagefair-06ecbdd7-d6e3-42d1-a5a8-d9d4ede8e62f&msisdn=" . $mobileNo . "&sms=" . urlencode($message) . "&csms_id=" . uniqid();
 
 		$crl = curl_init();
 		curl_setopt($crl, CURLOPT_SSL_VERIFYPEER, FALSE);
