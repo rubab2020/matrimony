@@ -3,10 +3,12 @@
 namespace App\Http\Controllers;
 
 use App;
+use Auth;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Repositories\OTPRepository;
 use App\Jobs\SendSMS;
+use App\Models\Customer;
 
 class OTPController extends Controller
 {
@@ -50,6 +52,8 @@ class OTPController extends Controller
       public function verifyOTP(Request $request)
       {
             if ($this->OTP->getOTP(session('customer')->phone, $request->otp)) {
+                  $customer = Customer::where('phone', session('customer')->phone)->first();
+                  Auth::guard('customer')->login($customer);
                   return redirect('/')->with('success', 'Welcome');
             }
             return redirect('/verify/phone')->withErrors("OTP didn't match. Another OTP has been sent.");
