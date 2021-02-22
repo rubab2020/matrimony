@@ -29,8 +29,8 @@ class RegisterController extends Controller
 
 
         try {
-            $profileId = IdGenerator::generate(['table' => 'customers', 'field'=> 'profile_id', 'length' => 10, 'prefix' =>'P']);
-            
+            $profileId = IdGenerator::generate(['table' => 'customers', 'field' => 'profile_id', 'length' => 10, 'prefix' => 'P']);
+
             $customer = Customer::create([
                 'profile_id' => $profileId,
                 'name' => $request->input('name'),
@@ -46,6 +46,7 @@ class RegisterController extends Controller
 
             session(['customer' => $customer]);
         } catch (\Exception $e) {
+            dd($e);
             return redirect()->back()
                 ->withErrors("Something went wrong");
         }

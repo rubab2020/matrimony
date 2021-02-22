@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Customer;
+use Gloudemans\Shoppingcart\Facades\Cart;
 use Illuminate\Http\Request;
 
 class CartController extends Controller
@@ -13,7 +15,9 @@ class CartController extends Controller
      */
     public function index()
     {
-        //
+        $items = Cart::content();
+
+        return view('website.checkout', compact('items'));
     }
 
     /**
@@ -80,5 +84,34 @@ class CartController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function addItem(Request $request, $id)
+    {
+        $profile = Customer::find($id);
+        if ($profile == null)
+            return back()->withErrors("Profile not found!");
+
+        $rate = 1500;
+
+
+        $item = Cart::search(function ($cartItem, $rowId) {
+            return $cartItem->id === 1;
+        });
+
+        if ($item->count() == 0)
+            Cart::add($id, $profile->name, 1, $rate, 0);
+
+        // Cart::add(1, "Imran Hossain", 1, 1500, 0);
+        // Cart::add(2, "Enamul Haque", 1, 1500, 0);
+
+        return redirect()->route('checkout')->with('success', "Successfully added profile");
+    }
+
+    public function removeItem(Request $request, $rowId)
+    {
+        Cart::remove($rowId);
+
+        return back()->with('success', "Successfully removed profile");
     }
 }

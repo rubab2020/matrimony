@@ -2,8 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 
-use App\Http\Controllers\ShareProfileController;
-use App\Http\Controllers\MessageController;
 use App\Http\Helpers\ConfigHelper;
 
 /*
@@ -34,9 +32,8 @@ Route::get('/search', 'SearchController@search');
 Route::get('/profiles/{id}', 'ProfileController@show');
 Route::get('/shareprofile/share', 'ShareProfileController@share')->name('shareprofile.share');
 
-Route::get('/checkout', function () {
-    return view('website.checkout');
-});
+Route::get('/item/add/{id}', 'CartController@addItem')->name('cart.item.add');
+Route::get('/item/remove/{rowId}', 'CartController@removeItem')->name('cart.item.remove');
 
 // auth
 Route::get('/register', function () {
@@ -60,6 +57,7 @@ Route::get('/message', 'MessageController@index')->name('message');
 Route::get('/message/{id}', 'MessageController@getMessage')->name('message/id');
 Route::post('message/send', 'MessageController@sendMessage');
 
+Route::get('/checkout', 'CartController@index')->name('checkout');
 Route::group(['middleware' => ['auth:customer']], function () {
     Route::get('home', function () {
         return view('website.home');
@@ -69,4 +67,12 @@ Route::group(['middleware' => ['auth:customer']], function () {
     Route::post('profile/save', 'ProfileController@store');
     Route::get('profile/edit', 'ProfileController@edit');
     Route::post('profile/update', 'ProfileController@update');
+});
+
+
+//bKash
+Route::prefix('/bkash')->group(function () {
+    Route::post('/token', 'BKashController@token')->name('bkash.token');
+    Route::get('/payment/create', 'BKashController@createPayment')->name('bkash.payment.create');
+    Route::any('/payment/execute', 'BKashController@executePayment')->name('bkash.payment.execute');
 });
