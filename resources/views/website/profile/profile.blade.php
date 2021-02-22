@@ -1,6 +1,8 @@
 @extends('layouts.web')
 
 @section('content')
+<link href="{{ asset('assets/web/css/profile.css') }}" rel="stylesheet" />
+
 <div class="page-content">
 	<div class="container">
 		<!-- <h3>Search Profiles</h3> -->

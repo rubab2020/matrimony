@@ -1,6 +1,8 @@
 @extends('layouts.web')
 
 @section('content')
+<link href="{{ asset('assets/web/css/profile.css') }}" rel="stylesheet" />
+
 <style type="text/css">
 /*body {
     background: lightgray;
