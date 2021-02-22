@@ -24,7 +24,6 @@
     <!-- custom css -->
     <link href="{{ asset('assets/web/css/custom.css') }}" rel="stylesheet" />
     <link href="{{ asset('assets/web/css/search.css') }}" rel="stylesheet" />
-    <link href="{{ asset('assets/web/css/profile.css') }}" rel="stylesheet" />
     <link href="{{ asset('assets/web/css/message.css') }}" rel="stylesheet" />
     {{ Html::style(mix('assets/web/css/notification.css')) }}
     @yield('style')
@@ -34,7 +33,7 @@
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
         <div class="container">
-            <a class="navbar-brand js-scroll-trigger" href="{{ url('/') }}">Matrimony</a>
+            <a class="navbar-brand js-scroll-trigger" href="{{ url('/') }}">Marriage Fair</a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
                 data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
                 aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>

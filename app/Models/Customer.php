@@ -17,7 +17,7 @@ class Customer extends Authenticatable
 
 	protected $hidden = [
 	    'password', 'remember_token',
-  	];
+	];
 
 	public static function getUploadPath()
 	{
@@ -27,5 +27,13 @@ class Customer extends Authenticatable
 	public function getAgeAttribute() {
 		return \Carbon\Carbon::parse($this->dob)
 			->diffInYears(\Carbon\Carbon::now());
+	}
+
+	public function getImagesAttribute() {
+		return $this->hasMany('App\Models\Image', 'customer_id', 'id');
+	}
+
+	public function images() {
+		return $this->hasMany('App\Models\Image', 'customer_id', 'id');
 	}
 }
