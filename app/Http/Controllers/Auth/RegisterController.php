@@ -29,8 +29,13 @@ class RegisterController extends Controller
 
 
         try {
+<<<<<<< HEAD
             $profileId = IdGenerator::generate(['table' => 'customers', 'field' => 'id', 'length' => 8, 'prefix' => date('P')]);
 
+=======
+            $profileId = IdGenerator::generate(['table' => 'customers', 'field'=> 'profile_id', 'length' => 10, 'prefix' =>'P']);
+            
+>>>>>>> 65bec15706e395b2fd91a81ac2939b902f2d3b91
             $customer = Customer::create([
                 'profile_id' => $profileId,
                 'name' => $request->input('name'),
