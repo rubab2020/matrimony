@@ -120,19 +120,25 @@ jQuery(document).ready(function(){
   );
   $("#height").val(Math.round(heightSlider.slider('values', 0)));
 
-  // profle height convert from cm to inch
-  let profHeightCm = $('#profileHeight').html();
-  $('#profileHeight').html(
-    formatToReadableFeet(convertCentemeterToFeet(profHeightCm))
-  );
+  // // profle height convert from cm to inch
+  // let profHeightCm = $('#profileHeight').html();
+  // $('#profileHeight').html(
+  //   formatToReadableFeet(convertCentemeterToFeet(profHeightCm))
+  // );
 
-  // profle height convert from cm to inch
-  let profHeightStartCm = $('#profileHeightStart').html();
-  $('#profileHeightStart').html(
-    formatToReadableFeet(convertCentemeterToFeet(profHeightStartCm))
-  );
-  let profHeightEndCm = $('#profileHeightEnd').html();
-  $('#profileHeightEnd').html(
-    formatToReadableFeet(convertCentemeterToFeet(profHeightEndCm))
-  );
+  // // profle height convert from cm to inch
+  // let profHeightStartCm = $('#profileHeightStart').html();
+  // $('#profileHeightStart').html(
+  //   formatToReadableFeet(convertCentemeterToFeet(profHeightStartCm))
+  // );
+  // let profHeightEndCm = $('#profileHeightEnd').html();
+  // $('#profileHeightEnd').html(
+  //   formatToReadableFeet(convertCentemeterToFeet(profHeightEndCm))
+  // );
+  $('.profileHeight').each(function(){
+    let profHeightCm2 = $(this).html();
+    $(this).html(
+      formatToReadableFeet(convertCentemeterToFeet(profHeightCm2))
+    );
+  });
 });
