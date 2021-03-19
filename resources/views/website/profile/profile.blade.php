@@ -36,7 +36,15 @@
 						<div class="user-name">{{ $profile->name }}</div>
 						<div class="icon-block">
 							<a href="#"><span class="icon"><i class="fas fa-unlock"></i></span></a>
-							<a href="#"><span class="icon"><i class="fas fa-star"></i></span></a>
+							<a href="/shortlist/{{ $profile->id }}">
+								<span class="icon">
+									@if($isProfileFavourited)
+										<i class="fas fa-star" style="color: orange"></i>
+									@else
+										<i class="fas fa-star"></i>
+									@endif
+								</span>
+							</a>
 							<a href="sendUsModal" data-toggle="modal" data-target="#sendUsModal"><span class="icon"><i
 										class="fas fa-share"></i></span></a>
 						</div>

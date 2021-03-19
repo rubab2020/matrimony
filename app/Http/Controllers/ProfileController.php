@@ -7,6 +7,7 @@ use App\Http\Helpers\ConfigHelper;
 use App\Http\Helpers\CustomHelper;
 use App\Models\Customer;
 use App\Models\Image;
+use App\Models\Shortlist;
 
 class ProfileController extends Controller
 {
@@ -220,8 +221,13 @@ class ProfileController extends Controller
 
 	public function show($pid) {
 		$profile = Customer::with('images')->where('profile_id', $pid)->first();
-		$simmilarProfiles = $this->getSimmilarProfiles($profile); 
-		return view('website.profile.profile', compact('profile', 'simmilarProfiles'));
+		$simmilarProfiles = $this->getSimmilarProfiles($profile);
+
+		$isProfileFavourited = false;
+		if(auth()->guard('customer')->check())
+			$isProfileFavourited = Shortlist::isProfileFavourited(auth()->guard('customer')->user()->id, $profile->id); 
+		
+		return view('website.profile.profile', compact('profile', 'simmilarProfiles', 'isProfileFavourited'));
 	}
 
 	// based on age, denger height and religion
@@ -235,5 +241,27 @@ class ProfileController extends Controller
 						->Where('religion', $profile->religion)
 						->where('id', '!=', $profile->id)
 						->get();
+	}
+
+	public function shortListProfile($id)
+	{
+		$shortlist = Shortlist::where('shortlisted_by_id', auth()->guard('customer')->user()->id)
+					->where('shortlisted_id', $id)->first();
+
+		if($shortlist){
+			$shortlist->delete();
+			return redirect()->back();
+		}
+
+		$shortlist = new Shortlist();
+		$shortlist->shortlisted_by_id = auth()->guard('customer')->user()->id;
+		$shortlist->shortlisted_id = $id;
+
+		if(!$shortlist->save()) {
+			return redirect()->back()
+                ->withErrors('Failed shortlisting Profile');
+		}
+
+		return redirect()->back();
 	}
 }

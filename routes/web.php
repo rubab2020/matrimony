@@ -29,8 +29,10 @@ Route::get('/setting', function () {
 
 Route::get('/search', 'SearchController@search');
 
-Route::get('/profiles/{id}', 'ProfileController@show');
+Route::get('/profiles/{pid}', 'ProfileController@show');
 Route::get('/shareprofile/share', 'ShareProfileController@share')->name('shareprofile.share');
+
+Route::get('/shortlist/{id}', 'ProfileController@shortListProfile');
 
 Route::get('/item/add/{id}', 'CartController@addItem')->name('cart.item.add');
 Route::get('/item/remove/{rowId}', 'CartController@removeItem')->name('cart.item.remove');
