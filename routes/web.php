@@ -20,7 +20,8 @@ Route::get('/', function () {
     $ages = array_combine($ages, $ages);
 
     $religions = ConfigHelper::getReligionList();
-    return view('website.welcome', compact('ages', 'religions'));
+    $settings = App\Models\Setting::all()->toArray();
+    return view('website.welcome', compact('ages', 'religions', 'settings'));
 });
 
 Route::get('/setting', function () {

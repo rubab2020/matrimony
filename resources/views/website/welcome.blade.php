@@ -1,5 +1,21 @@
 @section('style')
 <style>
+    header.masthead {
+        padding-top: 10rem;
+        padding-bottom: calc(10rem - 4.5rem);
+        background: linear-gradient(
+                to bottom,
+                rgba(248, 142, 66, 0.294) 0%,
+                rgba(255, 255, 255, 0.274) 100%
+            ),
+            url("{{ url($settings[6]['content']) }}");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-size: cover;
+    }
+
+
     #mainNav {
         box-shadow: none;
         background-color: transparent;
@@ -303,8 +319,8 @@
                             Please downlaod <button class="btn btn-primary btn-sm">this form</button>
                         </li>
                         <li>
-                            Fill Up the form and send it back to <a href="mailto:info@matrimony.com">
-                                info@matrimony.com
+                            Fill Up the form and send it back to <a href="mailto:info@marriagefair.com">
+                                info@marriagefair.com
                             </a> or to our messanger fb.com/matrimony
                         </li>
                     </ul>
