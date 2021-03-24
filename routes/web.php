@@ -63,19 +63,18 @@ Route::post('message/send', 'MessageController@sendMessage');
 Route::get('/checkout', 'CartController@index')->name('checkout');
 Route::group(['middleware' => ['auth:customer']], function () {
     Route::get('home', function () {
-        return view('website.dashboard.home');
+        return view('website.customer.home');
     })->name('home');
 
-    Route::get('profiles/shortlisted', 'SettingController@index')->name('shortlistedProfiles');
+    Route::get('profiles/shortlisted', 'ShortlistController@index')->name('shortlistedProfiles');
     Route::post('shortlist/delete', 'ShortlistController@destroy');
 
-    Route::get('profiles/unlocked', function () {
-        return view('website.dashboard.unlocked-profiles');
-    })->name('unlockedProfiles');
+    Route::get('orders', function () {
+        return view('website.customer.orders');
+    })->name('orders'); //show orders and unlcoked profiles list
 
-    Route::get('settings', function () {
-        return view('website.dashboard.settings');
-    })->name('settings');    
+    Route::get('settings', 'SettingController@edit')->name('customer.settings');
+    Route::post('settings/update', 'SettingController@update')->name('customer.udpate-settings');
 
     Route::get('profile/create', 'ProfileController@create');
     Route::post('profile/save', 'ProfileController@store');

@@ -12,7 +12,7 @@ class ShortlistController extends Controller
 	{
 		$shortlists = ShortList::with('profile')->get();
 
-		return view('website/dashboard/shortlisted-profiles', compact('shortlists'));
+		return view('website.customer.shortlisted-profiles', compact('shortlists'));
 	}
 
 	public function destroy($id)

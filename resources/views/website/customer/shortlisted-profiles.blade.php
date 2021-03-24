@@ -14,9 +14,9 @@
                         </a>
                     </li>
                     <li>
-                        <a href="/profiles/shortlisted">
+                        <a href="/orders">
                             <span class="sidebar-icon"><i class="fa fa-user-lock"></i></span>
-                            <span class="sidebar-title">Unlocked Profiles</span>
+                            <span class="sidebar-title">Orders</span>
                         </a>
                     </li>
                     <li>
