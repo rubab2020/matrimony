@@ -240,25 +240,25 @@
             <aside id="sidebar">
                 <ul id="sidemenu" class="sidebar-nav">
                     <li>
-                        <a href="#">
+                        <a href="/home">
                             <span class="sidebar-icon"><i class="fa fa-home"></i></span>
                             <span class="sidebar-title">Home</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="/profiles/shortlisted">
                             <span class="sidebar-icon"><i class="fa fa-user-lock"></i></span>
                             <span class="sidebar-title">Unlocked Profiles</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="/profiles/unlocked">
                             <span class="sidebar-icon"><i class="fa fa-users"></i></span>
                             <span class="sidebar-title">Short List</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="/settings">
                             <span class="sidebar-icon"><i class="fa fa-cogs"></i></span>
                             <span class="sidebar-title">Settings</span>
                         </a>
@@ -622,3 +622,4 @@
         </main>
     </div> 
 </div>
+@endsection

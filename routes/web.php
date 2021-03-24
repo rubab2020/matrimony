@@ -40,7 +40,7 @@ Route::get('/item/remove/{rowId}', 'CartController@removeItem')->name('cart.item
 
 // auth
 Route::get('/register', function () {
-    return view('website..auth.register');
+    return view('website.auth.register');
 });
 Route::post('/register', 'Auth\RegisterController@register')->name('customer.register');
 Route::get('/login', function () {
@@ -63,8 +63,19 @@ Route::post('message/send', 'MessageController@sendMessage');
 Route::get('/checkout', 'CartController@index')->name('checkout');
 Route::group(['middleware' => ['auth:customer']], function () {
     Route::get('home', function () {
-        return view('website.home');
+        return view('website.dashboard.home');
     })->name('home');
+
+    Route::get('profiles/shortlisted', 'SettingController@index')->name('shortlistedProfiles');
+    Route::post('shortlist/delete', 'ShortlistController@destroy');
+
+    Route::get('profiles/unlocked', function () {
+        return view('website.dashboard.unlocked-profiles');
+    })->name('unlockedProfiles');
+
+    Route::get('settings', function () {
+        return view('website.dashboard.settings');
+    })->name('settings');    
 
     Route::get('profile/create', 'ProfileController@create');
     Route::post('profile/save', 'ProfileController@store');

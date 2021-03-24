@@ -15,4 +15,9 @@ class Shortlist extends Model
 
 		return $shortlist ? true : false;
     }
+
+    public function profile()
+    {
+    	return $this->belongsTo('App\Models\Customer');
+    }
 }
