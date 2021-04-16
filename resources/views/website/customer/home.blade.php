@@ -89,7 +89,7 @@
 		    <div class="col-md-3">
 		      <div class="card-counter primary">
 		        <i class="fa fa-star"></i>
-		        <span class="count-numbers">12</span>
+		        <span class="count-numbers">{{ $shortlistedProfiles }}</span>
 		        <span class="count-name">Shortlisted Profiles</span>
 		      </div>
 		    </div>
@@ -97,7 +97,7 @@
 		    <div class="col-md-3">
 		      <div class="card-counter info">
 		        <i class="fa fa-circle-notch"></i>
-		        <span class="count-numbers">35</span>
+		        <span class="count-numbers">{{ $pendingProfiles }}</span>
 		        <span class="count-name">Pending Profiles</span>
 		      </div>
 		    </div>
@@ -105,7 +105,7 @@
 		    <div class="col-md-3">
 		      <div class="card-counter success">
 		        <i class="fa fa-check"></i>
-		        <span class="count-numbers">6875</span>
+		        <span class="count-numbers">{{ $acceptedProfiles }}</span>
 		        <span class="count-name">Accepted Profiles</span>
 		      </div>
 		    </div>
@@ -113,7 +113,7 @@
 		    <div class="col-md-3">
 		      <div class="card-counter danger">
 		        <i class="fa fa-times"></i>
-		        <span class="count-numbers">599</span>
+		        <span class="count-numbers">{{ $rejectedProfiles }}</span>
 		        <span class="count-name">Rejected Profiles</span>
 		      </div>
 		    </div>

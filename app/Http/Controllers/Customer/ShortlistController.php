@@ -10,7 +10,7 @@ class ShortlistController extends Controller
 {
 	public function index()
 	{
-		$shortlists = ShortList::with('profile')->get();
+		$shortlists = ShortList::with('profile')->where('shortlisted_by_id', \Auth::user()->id)->get();
 
 		return view('website.customer.shortlisted-profiles', compact('shortlists'));
 	}

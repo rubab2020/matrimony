@@ -62,9 +62,7 @@ Route::post('message/send', 'MessageController@sendMessage');
 
 Route::get('/checkout', 'CartController@index')->name('checkout');
 Route::group(['middleware' => ['auth:customer']], function () {
-    Route::get('home', function () {
-        return view('website.customer.home');
-    })->name('home');
+    Route::get('home', 'Customer\HomeController@index')->name('home');
 
     Route::get('shortlisted-profiles', 'Customer\ShortlistController@index')->name('shortlistedProfiles');
     Route::post('shortlist/delete/{id}', 'Customer\ShortlistController@destroy');
