@@ -10,4 +10,9 @@ class Order extends Model
     use HasFactory;
 
     protected $guarded = ['id'];
+
+    public function unlockedProfiles()
+    {
+        return $this->hasMany('App\Models\OrderDetail', 'order_id', 'id');
+    }
 }

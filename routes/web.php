@@ -66,12 +66,10 @@ Route::group(['middleware' => ['auth:customer']], function () {
         return view('website.customer.home');
     })->name('home');
 
-    Route::get('profiles/shortlisted', 'ShortlistController@index')->name('shortlistedProfiles');
+    Route::get('shortlisted-profiles', 'ShortlistController@index')->name('shortlistedProfiles');
     Route::post('shortlist/delete', 'ShortlistController@destroy');
 
-    Route::get('orders', function () {
-        return view('website.customer.orders');
-    })->name('orders'); //show orders and unlcoked profiles list
+    Route::get('unlocked-profiles', 'Customer\UnlockedProfileController@index')->name('unlocked-Profiles');
 
     Route::get('settings', 'SettingController@edit')->name('customer.settings');
     Route::post('settings/update', 'SettingController@update')->name('customer.udpate-settings');

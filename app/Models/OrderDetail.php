@@ -10,4 +10,9 @@ class OrderDetail extends Model
     use HasFactory;
 
     protected $guarded = ['id'];
+
+    public function profile()
+    {
+        return $this->belongsTo('App\Models\Customer');
+    }
 }

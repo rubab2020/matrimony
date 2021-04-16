@@ -246,13 +246,13 @@
                         </a>
                     </li>
                     <li>
-                        <a href="/orders">
+                        <a href="/unlocked-profiles">
                             <span class="sidebar-icon"><i class="fa fa-user-lock"></i></span>
-                            <span class="sidebar-title">Orders</span>
+                            <span class="sidebar-title">Unlocked profiles</span>
                         </a>
                     </li>
                     <li>
-                        <a href="/profiles/unlocked">
+                        <a href="/shortlisted-profiles">
                             <span class="sidebar-icon"><i class="fa fa-users"></i></span>
                             <span class="sidebar-title">Short List</span>
                         </a>
