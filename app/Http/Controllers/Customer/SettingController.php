@@ -6,7 +6,8 @@ use App\Http\Controllers\Controller;
 use App\Models\ShortList;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
-
+use App\Models\Customer;
+use Illuminate\Support\Facades\Hash;
 
 class SettingController extends Controller
 {
@@ -17,18 +18,18 @@ class SettingController extends Controller
 
 	public function update(Request $request)
 	{
-		$user = User::find(\Auth::user()->id);
+		$user = Customer::find(\Auth::user()->id);
         
         if (!$user) 
         	return redirect()->back()
                 ->withErrors("User Not found");
 
-        Validator::extend('old_password', function ($attribute, $value, $parameters, $validator) {
+        Validator::extend('current_password', function ($attribute, $value, $parameters, $validator) {
             return Hash::check($value, current($parameters));
         },'Current Password is not correct');
 
         $validator = Validator::make($request->all(), [
-            'current_password' => 'required|old_password:' . $user->password,
+            'current_password' => 'required|current_password:' . $user->password,
             'new_password' => 'required|string|min:8',
             'confirm_password' => 'required|same:new_password|min:8',
         ]);

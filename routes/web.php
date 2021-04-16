@@ -71,8 +71,8 @@ Route::group(['middleware' => ['auth:customer']], function () {
 
     Route::get('unlocked-profiles', 'Customer\UnlockedProfileController@index')->name('unlocked-Profiles');
 
-    Route::get('settings', 'SettingController@edit')->name('customer.settings');
-    Route::post('settings/update', 'SettingController@update')->name('customer.udpate-settings');
+    Route::get('settings', 'Customer\SettingController@edit')->name('customer.settings');
+    Route::post('settings/update', 'Customer\SettingController@update')->name('customer.udpate-settings');
 
     Route::get('profile/create', 'ProfileController@create');
     Route::post('profile/save', 'ProfileController@store');
