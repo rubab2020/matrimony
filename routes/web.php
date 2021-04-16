@@ -66,8 +66,8 @@ Route::group(['middleware' => ['auth:customer']], function () {
         return view('website.customer.home');
     })->name('home');
 
-    Route::get('shortlisted-profiles', 'ShortlistController@index')->name('shortlistedProfiles');
-    Route::post('shortlist/delete', 'ShortlistController@destroy');
+    Route::get('shortlisted-profiles', 'Customer\ShortlistController@index')->name('shortlistedProfiles');
+    Route::post('shortlist/delete/{id}', 'Customer\ShortlistController@destroy');
 
     Route::get('unlocked-profiles', 'Customer\UnlockedProfileController@index')->name('unlocked-Profiles');
 

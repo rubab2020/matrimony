@@ -18,6 +18,6 @@ class Shortlist extends Model
 
     public function profile()
     {
-    	return $this->belongsTo('App\Models\Customer');
+    	return $this->belongsTo('App\Models\Customer', 'shortlisted_id', 'id');
     }
 }
