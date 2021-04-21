@@ -220,7 +220,7 @@ class ProfileController extends Controller
 	}
 
 	public function show($pid) {
-		$profile = Customer::with('images')->where('profile_id', $pid)->first();
+		$profile = Customer::with('images')->where('profile_id', $pid)->where('phone_verified_at', '!=', null)->first();
 		$simmilarProfiles = $this->getSimmilarProfiles($profile);
 
 		$isProfileFavourited = false;

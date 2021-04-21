@@ -53,6 +53,8 @@ class OTPController extends Controller
       {
             if ($this->OTP->getOTP(session('customer')->phone, $request->otp)) {
                   $customer = Customer::where('phone', session('customer')->phone)->first();
+                  $customer->phone_verified_at = date('Y-m-d H:i:s');
+                  $customer->save();
                   Auth::guard('customer')->login($customer);
                   return redirect('/')->with('success', 'Welcome');
             }

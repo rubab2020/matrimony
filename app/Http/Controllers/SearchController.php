@@ -32,7 +32,7 @@ class SearchController extends Controller
 
 	public function applyFilters($filters)
 	{
-		$profiles = Customer::where('email_verified_at', '!=', null);
+		$profiles = Customer::where('phone_verified_at', '!=', null);
 
 		foreach($filters as $filterName=> $value){
 			if($value != null && $value = ""){
