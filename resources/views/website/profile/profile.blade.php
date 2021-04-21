@@ -335,7 +335,7 @@
 				<h4>Similar Profiles</h4>
 				<div class="list-group">
 					<!-- profile -->
-					@if($simmilarProfiles->count() == 0)
+					@if(count($simmilarProfiles) == 0)
 						No Similar Profiles Found
 					@endif
 					@foreach($simmilarProfiles as $simmilarProfile) 
