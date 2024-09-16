@@ -1,71 +1,78 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# Matrimony Project
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+This is a Laravel-based matrimony application designed to offer a comprehensive platform for users seeking life partners. The project integrates various features such as profile management, communication tools, and order/payment handling.
 
-## Setting Up This App
+## Features
 
-Set app url in `.env`
+- **User Management**: Admin can manage users, approve or reject profiles, and handle subscriptions.
+- **Profile Management**: Users can create and update their profiles, including photos and personal information.
+- **Order Management**: Manage user orders and subscriptions for unlocking features like profile views or messaging.
+- **Pages Management**: Admin can manage static pages such as terms and conditions, privacy policy, etc.
+- **Settings**: Admin can configure system-wide settings like SMS providers, payment gateways, and more.
+- **Project Initiation**: Covers initial steps such as project planning and setup.
+- **Database Design**: Structured and normalized database design for optimal performance and scalability.
+- **Dashboard**: A dashboard for users and admins to view key stats, updates, and actions.
+- **SMS**: Integrated SMS notifications for registration, profile matches, and more.
+- **Front-End Design**: Responsive and user-friendly UI for an excellent user experience.
+- **Payment**: Integration with payment gateways for handling subscriptions, unlocking profiles, and other transactions.
+- **Multi Profile Unlocking**: Allows users to unlock multiple profiles simultaneously based on their subscription plans.
+- **Messaging**: Secure messaging system for users to communicate with their matches.
+- **Share Profile**: Users can share their profiles via social media or email.
+- **User Personal Profile**: A dedicated section for users to manage their personal information.
+- **Candidate Profile Design**: User-friendly candidate profile layout, optimized for viewing.
+- **Candidate Profile**: Users can view detailed profiles of potential matches.
+- **Login & Logout**: Secure authentication using Laravel Sanctum.
+- **Homepage**: A welcoming and informative homepage for all users, with links to registration and search features.
+- **Search Profile**: Advanced search functionality based on age, location, profession, and other criteria.
+- **Registration Design**: Intuitive and easy-to-use registration process.
+- **Create Profile**: New users can create detailed profiles with personal and professional information.
+- **Gallery Management**: Users can manage profile photos and albums.
+- **Registration**: Simple and secure user registration with validation.
 
-`APP_URL=http://localhost/matrimony/public`
+## Requirements
 
-`php artisan storage:link`
+- **PHP**: >= 8.1
+- **Laravel**: >= 10.x
+- **MySQL**: >= 5.7 (or PostgreSQL)
+- **Node.js**: >= 14.x
+- **Composer**
+- **NPM/Yarn** for managing frontend assets
 
-After creating new permission add it to `database/seeders/PermissionSeeder.php` file
+## Installation
 
-## About Laravel
+1. Clone the repository:
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+   ```bash
+   git clone https://github.com/rubab2020/matrimony.git
+   cd matrimony-project
+2. Install dependencies: composer install
+3. Configure environment variables: cp .env.example .env
+4. Set up the database in .env:
+   ```bash
+    DB_CONNECTION=mysql
+    DB_HOST=127.0.0.1
+    DB_PORT=3306
+    DB_DATABASE=your_database_name
+    DB_USERNAME=your_db_username
+    DB_PASSWORD=your_db_password
+5. Run migrations and seed the database: php artisan migrate --seed
+6. Start the application: php artisan serve
 
--   [Simple, fast routing engine](https://laravel.com/docs/routing).
--   [Powerful dependency injection container](https://laravel.com/docs/container).
--   Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
--   Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
--   Database agnostic [schema migrations](https://laravel.com/docs/migrations).
--   [Robust background job processing](https://laravel.com/docs/queues).
--   [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
--   **[Vehikl](https://vehikl.com/)**
--   **[Tighten Co.](https://tighten.co)**
--   **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
--   **[64 Robots](https://64robots.com)**
--   **[Cubet Techno Labs](https://cubettech.com)**
--   **[Cyber-Duck](https://cyber-duck.co.uk)**
--   **[Many](https://www.many.co.uk)**
--   **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
--   **[DevSquad](https://devsquad.com)**
--   **[OP.GG](https://op.gg)**
+## Usage
+Register as a user, complete your profile, and browse the candidate profiles.
+Admin users can manage profiles, orders, settings, and pages from the dashboard.
+Users can search for potential matches, message them, and share profiles.
+Users can unlock multiple profiles based on their subscription.
+Payments for premium features are handled through integrated payment gateways.
 
 ## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Fork the repository.
+Create a new branch (git checkout -b feature/your-feature).
+Commit your changes (git commit -m 'Add some feature').
+Push to the branch (git push origin feature/your-feature).
+Open a pull request.
 
 ## License
+This project is licensed under the MIT License. See the LICENSE file for more details.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
