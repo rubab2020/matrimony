@@ -43,8 +43,12 @@ This is a Laravel-based matrimony application designed to offer a comprehensive 
    ```bash
    git clone https://github.com/rubab2020/matrimony.git
    cd matrimony-project
-2. Install dependencies: composer install
-3. Configure environment variables: cp .env.example .env
+2. Install dependencies: 
+   ```bash
+   composer install
+3. Configure environment variables: 
+   ```bash
+   cp .env.example .env
 4. Set up the database in .env:
    ```bash
     DB_CONNECTION=mysql
@@ -53,8 +57,12 @@ This is a Laravel-based matrimony application designed to offer a comprehensive 
     DB_DATABASE=your_database_name
     DB_USERNAME=your_db_username
     DB_PASSWORD=your_db_password
-5. Run migrations and seed the database: php artisan migrate --seed
-6. Start the application: php artisan serve
+5. Run migrations and seed the database: 
+   ```bash
+   php artisan migrate --seed
+6. Start the application: 
+   ```bash
+   php artisan serve
 
 ## Usage
 Register as a user, complete your profile, and browse the candidate profiles.
