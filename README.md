@@ -31,12 +31,10 @@ This is a Laravel-based matrimony application designed to offer a comprehensive 
 
 ## Requirements
 
-- **PHP**: >= 8.1
-- **Laravel**: >= 10.x
-- **MySQL**: >= 5.7 (or PostgreSQL)
-- **Node.js**: >= 14.x
+- **PHP**: >= 7.3
+- **Laravel**: >= 8.x
+- **MySQL**: >= 5.7
 - **Composer**
-- **NPM/Yarn** for managing frontend assets
 
 ## Installation
 
